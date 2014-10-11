@@ -1,0 +1,334 @@
+---
+layout: default
+title: Space Station
+---
+
+<p class="tag">
+    highly extensible, highly enjoyable, PHP testing framework.
+</p>
+
+<div class="jumbotron">
+    <p>
+        Peridot is a modern testing tool for PHP 5.4+. It makes testing fun again. It can easily be extended via an awesome event system, allowing developers to create plugins and custom reporters with ease. Follow and contribute on <a href="https://github.com/peridot-php/peridot" target="_blank">GitHub.</a>
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <h2 id="features">Features</h2>
+        <ul>
+            <li>BDD testing interface</li>
+            <li>Event driven plugin architecture</li>
+            <li>Easily add user defined cli options</li>
+            <li>Easily create custom test reporters</li>
+            <li>Pass/fail based on exceptions</li>
+        </ul>
+
+        <h2 id="installation">Installation</h2>
+        <p>
+            Peridot can be installed via composer, or it can be downloaded as an
+            executable phar.
+        </p>
+        {% highlight bash %}
+        composer require peridot-php/peridot:dev-master
+        {% endhighlight %}
+        <p>
+            The latest stable phar can be downloaded <a href="#">here</a>.
+        </p>
+
+        <h2 id="getting-started">Getting Started</h2>
+
+{% highlight php %}
+<?php //arrayobject.spec.php
+describe('ArrayObject', function() {
+    beforeEach(function() {
+        $this->arrayObject = new ArrayObject(['one', 'two', 'three']);
+    });
+
+    describe('->count()', function() {
+        it("should return the number of items", function() {
+            $count = $this->arrayObject->count();
+            assert($count === 3, "expected 3");
+        });
+    });
+});
+?>
+
+$ peridot arrayobject.spec.php
+
+  ArrayObject
+    ->count()
+      ✓ should return the number of items
+
+
+  1 passing (19 ms)
+
+{% endhighlight %}
+
+        <h2 id="assertions">Assertions</h2>
+        <p>
+            A peridot spec fails when an exception is thrown. Peridot configures the default behavior of PHP's native <a target="_blank" href="http://us3.php.net/manual/en/function.assert.php">assert</a> function to throw exceptions, but you could just as easily use an existing matcher library or roll your own.
+        </p>
+
+        <p>
+            If you're looking for an existing PHP matcher library, you might want to look at <a href="https://github.com/hamcrest/hamcrest-php">Hamcrest</a>.
+        </p>
+
+        <h2 id="plugins">Plugins</h2>
+        <p>
+            Peridot plugins are easy to write. Peridot exposes a handful of <a href="event-reference">events</a> that can be hooked into via a configuration file.
+        </p>
+
+        <p>
+            Peridot will look for a file called <code>peridot.php</code> in the current working directory, or one can be specified using the <code>--configuration</code> option via the console. The configuration file will be included once, and it should return a function that accepts a single <a target="_blank" href="https://github.com/igorw/evenement/blob/master/src/Evenement/EventEmitterTrait.php">EventEmitter</a> containing <code>->on()</code> and <code>->emit()</code> methods.
+        </p>
+
+{% highlight php %}
+<?php //peridot.php
+return function(EventEmitterInterface $emitter) {
+    $emitter->on('spec.failed', function($spec) {
+        //do something with the failed spec
+    });
+}
+?>
+{% endhighlight %}
+
+        <p>
+            For more information see: <a href="#">creating peridot plugins</a>.
+        </p>
+
+        <h2 id="reporters">Reporters</h2>
+
+        <p>
+            Peridot ships with a spec reporter for printing test results in a hierarchal matter. However, you can easily create your own reporters.
+        </p>
+
+        <p>
+            Reporters can be registered via the configuration file like any other plugin, typically through the <code>peridot.preExecute</code> event.
+        </p>
+
+{% highlight php %}
+<?php //peridot.php
+use Evenement\EventEmitterInterface;
+
+/**
+ * Demonstrate registering a runner via peridot config
+ */
+return function(EventEmitterInterface $emitter) {
+    $counts = ['pass' => 0, 'fail' => 0, 'pending' => 0];
+
+    $emitter->on('spec.failed', function() use (&$counts) {
+        $counts['fail']++;
+    });
+
+    $emitter->on('spec.passed', function() use (&$counts) {
+        $counts['pass']++;
+    });
+
+    $emitter->on('spec.pending', function() use (&$counts) {
+        $counts['pending']++;
+    });
+
+    $emitter->on('peridot.preExecute', function($runner, $config, $reporters, $input) use (&$counts, $emitter) {
+
+        //ReporterFactory::register is used to add reporters
+        $reporters->register('basic', 'a simple summary', function($reporter) use (&$counts, $banner) {
+            $output = $reporter->getOutput();
+
+            $reporter->getEventEmitter()->on('runner.end', function() use ($output, &$counts) {
+                $output->writeln(sprintf(
+                    '%d run, %d failed, %d pending',
+                    $counts['pass'],
+                    $counts['fail'],
+                    $counts['pending']
+                ));
+            });
+        });
+    });
+};
+?>
+{% endhighlight %}
+
+        <p>
+            Go ahead! Try adding the above to your configuration file.
+        </p>
+
+        <h2 id="peridot-cli">peridot</h2>
+
+<pre>
+Usage:
+ peridot [specs]
+
+Options:
+ --grep (-g)          Run tests matching &lt;pattern&gt;
+ --no-colors (-C)     Disable output colors
+ --reporter (-r)      Select reporter to use as listed by --reporters
+ --bail (-b)          Stop on failure
+ --configuration (-c) A php file containing peridot configuration
+ --reporters          List all available reporters
+ --help (-h)          Display this help message.
+</pre>
+
+        <h3>-g, --grep</h3>
+        <p>
+            Only run spec files whose name matches the provided pattern. The default grep pattern is <code>*.spec.php</code>
+        </p>
+
+        <h3>-C, --no-colors</h3>
+        <p>
+            Disable colors in output.
+        </p>
+
+        <h3>-r, --reporter</h3>
+        <p>
+            Select which reporter to use. This is the reporter name registered via <a target="_blank" href="#">ReporterFactory::register</a>.
+        </p>
+
+        <h3>-b, --bail</h3>
+        <p>
+            Tell peridot to stop running specs as soon as there is a failure.
+        </p>
+
+        <h3>-c, --configuration</h3>
+        <p>
+            A path to a peridot configuration file. Defaults to <code>getcwd() . '/peridot.php'</code>
+        </p>
+
+        <h3>--reporters</h3>
+        <p>
+            List available test reporters.
+        </p>
+
+        <h2 id="event-reference">Event Reference</h2>
+
+        <p>The following events are exposed by Peridot's event emitter:</p>
+
+        <ul class="reference-list">
+            <li>
+                <div><code>peridot.start</code></div>
+                <p>
+                    Fires when the peridot application first starts. Useful for defining additional CLI arguments and options.
+                </p>
+                <p>
+                    <strong>Arguments:</strong><br> 
+                    <a target="_blank" href="#">InputDefinition</a> <code>$definition</code>
+                </p>
+            </li>
+            <li>
+                <div><code>peridot.preExecute</code></div>
+                <p>
+                    Fires right before peridot starts execution. Happens after CLI options are parsed and before specs are loaded.
+                </p>
+                <p>
+                    <strong>Arguments:</strong><br>
+                    <a target="_blank" href="#">Runner</a> <code>$runner</code><br>
+                    <a target="_blank" href="#">Configuration</a> <code>$config</code><br>
+                    <a target="_blank" href="#">ReporterFactory</a> <code>$reporters</code><br>
+                    <a target="_blank" href="#">InputInterface</a> <code>$input</code><br>
+                    <a target="_blank" href="#">OutputInterface</a> <code>$output</code><br>
+                </p>
+            </li>
+            <li>
+                <div><code>runner.start</code></div>
+                <p>
+                    Fires right before the suite runner starts.
+                </p>
+                <p>
+                    <strong>Arguments:</strong> No arguments
+                </p>
+            </li>
+            <li>
+                <div><code>runner.end</code></div>
+                <p>
+                    Fires right after the suite runner ends.
+                </p>
+                <p>
+                    <strong>Arguments:</strong> No arguments
+                </p>
+            </li>
+            <li>
+                <div><code>suite.start</code></div>
+                <p>
+                    Fires right before a suite runs.
+                </p>
+                <p>
+                    <strong>Arguments:</strong><br>
+                    <a target="_blank" href="#">Suite</a> <code>$suite</code>
+                </p>
+            </li>
+            <li>
+                <div><code>suite.end</code></div>
+                <p>
+                    Fires right after a suite runs.
+                </p>
+                <p>
+                    <strong>Arguments:</strong><br>
+                    <a target="_blank" href="#">Suite</a> <code>$suite</code>
+                </p>
+            </li>
+            <li>
+                <div><code>suite.halt</code></div>
+                <p>
+                    When fired, this event signals a suite to stop running.
+                </p>
+                <p>
+                    <strong>Arguments:</strong> No arguments
+                </p>
+            </li>
+            <li>
+                <div><code>spec.passed</code></div>
+                <p>
+                    Fires when a spec passes.
+                </p>
+                <p>
+                    <strong>Arguments:</strong><br>
+                    <a target="_blank" href="#">Spec</a> <code>$spec</code>
+                </p>
+            </li>
+            <li>
+                <div><code>spec.pending</code></div>
+                <p>
+                    Fires when a spec pends.
+                </p>
+                <p>
+                    <strong>Arguments:</strong><br>
+                    <a target="_blank" href="#">Spec</a> <code>$spec</code>
+                </p>
+            </li>
+            <li>
+                <div><code>spec.failed</code></div>
+                <p>
+                    Fires when a spec fails.
+                </p>
+                <p>
+                    <strong>Arguments:</strong><br>
+                    <a target="_blank" href="#">Spec</a> <code>$spec</code><br>
+                    <a target="_blank" href="#">Exception</a> <code>$exception</code>
+                </p>
+            </li>
+            <li>
+                <div><code>error</code></div>
+                <p>
+                    Fires when a PHP error occurs. The standard error arguments passed to a function registered via PHP's native <code>set_error_handler</code> will be passed to this event.
+                </p>
+                <p>
+                    <strong>Arguments:</strong><br>
+                    integer <code>$errno</code><br>
+                    string <code>$errstr</code><br>
+                    string <code>$errfile</code><br>
+                    string <code>$errline</code>
+                </p>
+            </li>
+        </ul>
+
+        <h2 id="peridot-tests">Running peridot's tests</h2>
+
+        <p>
+            Peridot's tests were written using Peridot. After cloning peridot, you can run tests using:
+        </p>
+
+{% highlight bash %}
+bin/peridot specs/
+{% endhighlight %}
+    </div>
+</div>

@@ -1,0 +1,114 @@
+/**************
+ * Base Styles
+ **************/
+a:link,
+a:visited {
+	color: #308C43;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+
+ body {
+ 	background: #fff url('../img/cream_pixels.png') repeat left top;
+ 	font-family: 'Open Sans', sans-serif;
+ 	padding-top:40px;
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+ 	font-family: 'Nunito', sans-serif;
+ }
+
+ ul {
+ 	list-style:circle;
+ 	list-style-position: inside;
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+ li {
+ 	margin-bottom:6px;
+ }
+
+ p {
+ 	font-size:14px;
+ 	line-height:22px;
+ }
+
+ pre {
+ 	white-space: pre !important;
+ 	word-wrap: normal !important;
+ 	overflow: auto !important;
+ }
+
+ footer {
+ 	color:#d3d3d3;
+ 	font-style: italic;
+ 	margin-top:100px;
+ }
+
+/**************
+ * Logo
+ **************/
+ .logo {
+ 	background-image: url('../img/logo.png');
+ 	background-repeat: no-repeat;
+ 	background-position: left top;
+ 	background-size: 217px 66px;
+ 	height: 66px;
+ 	margin: 0 auto 20px auto;
+ 	text-indent: -9999px;
+ 	width:217px;
+ }
+
+/**************
+ * Tag
+ **************/
+ .tag {
+ 	color: #1A4C25;
+ 	font-size: 22px;
+ 	text-align: center;
+ }
+
+/*****************
+ * Reference List
+ *****************/
+.reference-list p {
+	margin:0 0 20px 0;
+	padding-left:18px;
+	width:300px;
+}
+
+/*****************
+ * Jumbotron
+ *****************/
+ .jumbotron {
+ 	margin-top:60px;
+ }
+
+ .jumbotron p {
+ 	font-size: 22px;
+ 	line-height: 34px;
+ }
+
+@media only screen and (min-width : 1224px) {
+
+	/**************
+	 * Base Styles
+	 **************/
+	 body {
+	 	padding: 60px;
+	 }
+
+	/**************
+ 	 * Logo
+ 	 **************/
+	.logo {
+		background-size: 434px 131.5px;
+		height: 131.5px;
+		width:434px;
+	}
+}
