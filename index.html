@@ -80,7 +80,7 @@ $ peridot arrayobject.spec.php
         </p>
 
         <p>
-            Peridot will look for a file called <code>peridot.php</code> in the current working directory, or one can be specified using the <code>--configuration</code> option via the console. The configuration file will be included once, and it should return a function that accepts a single <a target="_blank" href="https://github.com/igorw/evenement/blob/master/src/Evenement/EventEmitterTrait.php">EventEmitter</a> containing <code>->on()</code> and <code>->emit()</code> methods.
+            Peridot will look for a file called <code>peridot.php</code> in the current working directory, or one can be specified using the <code>--configuration</code> option via the console. The configuration file will be included once, and it should return a function that accepts a single <a target="_blank" href="/docs/class-Evenement.EventEmitterInterface.html">EventEmitter</a> containing <code>->on()</code> and <code>->emit()</code> methods.
         </p>
 
 {% highlight php %}
@@ -211,7 +211,7 @@ Options:
                 </p>
                 <p>
                     <strong>Arguments:</strong><br> 
-                    <a target="_blank" href="#">InputDefinition</a> <code>$definition</code>
+                    <a target="_blank" href="/docs/class-Peridot.Console.InputDefinition.html">InputDefinition</a> <code>$definition</code>
                 </p>
             </li>
             <li>
@@ -221,11 +221,11 @@ Options:
                 </p>
                 <p>
                     <strong>Arguments:</strong><br>
-                    <a target="_blank" href="#">Runner</a> <code>$runner</code><br>
-                    <a target="_blank" href="#">Configuration</a> <code>$config</code><br>
-                    <a target="_blank" href="#">ReporterFactory</a> <code>$reporters</code><br>
-                    <a target="_blank" href="#">InputInterface</a> <code>$input</code><br>
-                    <a target="_blank" href="#">OutputInterface</a> <code>$output</code><br>
+                    <a target="_blank" href="/docs/namespace-Peridot.Runner.html">Runner</a> <code>$runner</code><br>
+                    <a target="_blank" href="/docs/class-Peridot.Configuration.html">Configuration</a> <code>$config</code><br>
+                    <a target="_blank" href="/docs/class-Peridot.Reporter.ReporterFactory.html">ReporterFactory</a> <code>$reporters</code><br>
+                    <a target="_blank" href="/docs/class-Symfony.Component.Console.Input.InputInterface.html">InputInterface</a> <code>$input</code><br>
+                    <a target="_blank" href="/docs/class-Symfony.Component.Console.Output.OutputInterface.html">OutputInterface</a> <code>$output</code><br>
                 </p>
             </li>
             <li>
@@ -253,7 +253,7 @@ Options:
                 </p>
                 <p>
                     <strong>Arguments:</strong><br>
-                    <a target="_blank" href="#">Suite</a> <code>$suite</code>
+                    <a target="_blank" href="/docs/class-Peridot.Core.Suite.html">Suite</a> <code>$suite</code>
                 </p>
             </li>
             <li>
@@ -263,7 +263,7 @@ Options:
                 </p>
                 <p>
                     <strong>Arguments:</strong><br>
-                    <a target="_blank" href="#">Suite</a> <code>$suite</code>
+                    <a target="_blank" href="/docs/class-Peridot.Core.Suite.html">Suite</a> <code>$suite</code>
                 </p>
             </li>
             <li>
@@ -282,7 +282,7 @@ Options:
                 </p>
                 <p>
                     <strong>Arguments:</strong><br>
-                    <a target="_blank" href="#">Spec</a> <code>$spec</code>
+                    <a target="_blank" href="/docs/class-Peridot.Core.Spec.html">Spec</a> <code>$spec</code>
                 </p>
             </li>
             <li>
@@ -292,7 +292,7 @@ Options:
                 </p>
                 <p>
                     <strong>Arguments:</strong><br>
-                    <a target="_blank" href="#">Spec</a> <code>$spec</code>
+                    <a target="_blank" href="/docs/class-Peridot.Core.Spec.html">Spec</a> <code>$spec</code>
                 </p>
             </li>
             <li>
@@ -302,8 +302,8 @@ Options:
                 </p>
                 <p>
                     <strong>Arguments:</strong><br>
-                    <a target="_blank" href="#">Spec</a> <code>$spec</code><br>
-                    <a target="_blank" href="#">Exception</a> <code>$exception</code>
+                    <a target="_blank" href="/docs/class-Peridot.Core.Spec.html">Spec</a> <code>$spec</code><br>
+                    <a target="_blank" href="/docs/class-Exception.html">Exception</a> <code>$exception</code>
                 </p>
             </li>
             <li>
