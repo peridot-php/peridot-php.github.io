@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Peridot\Reporter\AbstractBaseReporter | Peridot</title>
+
+	<link rel="stylesheet" href="resources/style.css?1648332946">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Evenement.html">Evenement</a>
+						</li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li class="active"><a href="namespace-Peridot.html">Peridot<span></span></a>
+						<ul>
+				<li><a href="namespace-Peridot.Console.html">Console</a>
+						</li>
+				<li><a href="namespace-Peridot.Core.html">Core</a>
+						</li>
+				<li class="active"><a href="namespace-Peridot.Reporter.html">Reporter</a>
+						</li>
+				<li><a href="namespace-Peridot.Runner.html">Runner</a>
+						</li>
+				<li><a href="namespace-Peridot.Test.html">Test</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li><a href="namespace-Symfony.html">Symfony<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.Console.html">Console<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.Console.Command.html">Command</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Descriptor.html">Descriptor</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Formatter.html">Formatter</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Input.html">Input</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Logger.html">Logger</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Output.html">Output</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Question.html">Question</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tester.html">Tester</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.html">Tests<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Command.html">Command</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Descriptor.html">Descriptor</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Fixtures.html">Fixtures</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Formatter.html">Formatter</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Input.html">Input</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Logger.html">Logger</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Output.html">Output</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Tester.html">Tester</a>
+						</li>
+							</ul></li></ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Peridot.Reporter.AbstractBaseReporter.html">AbstractBaseReporter</a></li>
+				<li><a href="class-Peridot.Reporter.AnonymousReporter.html">AnonymousReporter</a></li>
+				<li><a href="class-Peridot.Reporter.ReporterFactory.html">ReporterFactory</a></li>
+				<li><a href="class-Peridot.Reporter.SpecReporter.html">SpecReporter</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Peridot.Reporter.ReporterInterface.html">ReporterInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Peridot.Reporter.html" title="Summary of Peridot\Reporter"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class AbstractBaseReporter</h1>
+
+
+	<div class="description">
+	<p>The base class for all Peridot reporters. Sits on top of an OutputInterface
+and an EventEmitter in order to report Peridot results.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>Peridot\Reporter\AbstractBaseReporter</span></b>			
+			 implements 
+				<a href="class-Peridot.Reporter.ReporterInterface.html"><span>Peridot\Reporter\ReporterInterface</span></a>
+			
+			 uses 
+					<a href="class-Peridot.Core.HasEventEmitterTrait.html"><span>Peridot\Core\HasEventEmitterTrait</span></a>
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Peridot.Reporter.AnonymousReporter.html">Peridot\Reporter\AnonymousReporter</a>, 
+			<a href="class-Peridot.Reporter.SpecReporter.html">Peridot\Reporter\SpecReporter</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br>
+		
+		<b>Namespace:</b> Peridot\Reporter<br>
+		<b>Package:</b> Peridot\Reporter<br>
+
+		<b>Located at</b> <a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#11-190" title="Go to source code">Reporter/AbstractBaseReporter.php</a><br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#73-109" title="Go to source code">__construct</a>( <span><code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code> <var>$configuration</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span>, <span><code><a href="class-Evenement.EventEmitterInterface.html">Evenement\EventEmitterInterface</a></code> <var>$eventEmitter</var></span> )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$configuration</var></dt>
+					<dd>
+</dd>
+					<dt><var>$output</var></dt>
+					<dd>
+</dd>
+					<dt><var>$eventEmitter</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="color" id="_color">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_color">#</a>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#111-128" title="Go to source code">color</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$text</var></span> )</code>
+
+		<div class="description short">
+			<p>Given a color name, colorize the provided text in that
+color</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Given a color name, colorize the provided text in that
+color</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>
+</dd>
+					<dt><var>$text</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Peridot.Reporter.ReporterInterface.html#_color">Peridot\Reporter\ReporterInterface::color()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="symbol" id="_symbol">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_symbol">#</a>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#130-139" title="Go to source code">symbol</a>( <span>mixed <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Fetch a symbol by name</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Fetch a symbol by name</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Peridot.Reporter.ReporterInterface.html#_symbol">Peridot\Reporter\ReporterInterface::symbol()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOutput" id="_getOutput">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOutput">#</a>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#141-149" title="Go to source code">getOutput</a>( )</code>
+
+		<div class="description short">
+			<p>Return the OutputInterface associated with the Reporter</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return the OutputInterface associated with the Reporter</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Peridot.Reporter.ReporterInterface.html#_getOutput">Peridot\Reporter\ReporterInterface::getOutput()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConfiguration" id="_getConfiguration">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConfiguration">#</a>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#151-159" title="Go to source code">getConfiguration</a>( )</code>
+
+		<div class="description short">
+			<p>Return the Configuration associated with the Reporter</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return the Configuration associated with the Reporter</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Peridot.Reporter.ReporterInterface.html#_getConfiguration">Peridot\Reporter\ReporterInterface::getConfiguration()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="footer" id="_footer">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_footer">#</a>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#161-182" title="Go to source code">footer</a>( )</code>
+
+		<div class="description short">
+			<p>Output result footer</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Output result footer</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="init" id="_init">
+
+		<td class="attributes"><code>
+			abstract public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_init">#</a>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#184-189" title="Go to source code">init</a>( )</code>
+
+		<div class="description short">
+			<p>Initialize reporter. Setup and listen for events</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initialize reporter. Setup and listen for events</p>
+
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Peridot.Reporter.ReporterInterface.html#_init">Peridot\Reporter\ReporterInterface::init()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Peridot.Reporter.ReporterInterface.html#methods">Peridot\Reporter\ReporterInterface</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Peridot.Reporter.ReporterInterface.html#_getEventEmitter">getEventEmitter()</a>
+		</code></td>
+	</tr>
+	</table>
+
+	<table class="summary used">
+	<caption>Methods used from <a href="class-Peridot.Core.HasEventEmitterTrait.html#methods">Peridot\Core\HasEventEmitterTrait</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Peridot.Core.HasEventEmitterTrait.html#_getEventEmitter">getEventEmitter()</a>, 
+			<a href="class-Peridot.Core.HasEventEmitterTrait.html#_setEventEmitter">setEventEmitter()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="configuration" id="$configuration">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#21-24" title="Go to source code"><var>$configuration</var></a>
+
+			<div class="description short">
+				
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$configuration" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="output" id="$output">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#26-29" title="Go to source code"><var>$output</var></a>
+
+			<div class="description short">
+				
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$output" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="errors" id="$errors">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#31-34" title="Go to source code"><var>$errors</var></a>
+
+			<div class="description short">
+				
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$errors" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="passing" id="$passing">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#36-39" title="Go to source code"><var>$passing</var></a>
+
+			<div class="description short">
+				
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$passing" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="pending" id="$pending">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#41-44" title="Go to source code"><var>$pending</var></a>
+
+			<div class="description short">
+				
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$pending" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="time" id="$time">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#46-49" title="Go to source code"><var>$time</var></a>
+
+			<div class="description short">
+				
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$time" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="colors" id="$colors">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#51-62" title="Go to source code"><var>$colors</var></a>
+
+			<div class="description short">
+				<p>Maps color names to left and right color sequences.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Maps color names to left and right color sequences.</p>
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$colors" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(
+    <span class="php-quote">'white'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">'&lt;fg=white&gt;'</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">'&lt;/fg=white&gt;'</span>],
+    <span class="php-quote">'success'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">'&lt;fg=green&gt;'</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">'&lt;/fg=green&gt;'</span>],
+    <span class="php-quote">'error'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">'&lt;fg=red&gt;'</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">'&lt;/fg=red&gt;'</span>],
+    <span class="php-quote">'muted'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">&quot;\033[90m&quot;</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">&quot;\033[0m&quot;</span>],
+    <span class="php-quote">'pending'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">'&lt;fg=cyan&gt;'</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">'&lt;/fg=cyan&gt;'</span>],
+)</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="symbols" id="$symbols">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#64-71" title="Go to source code"><var>$symbols</var></a>
+
+			<div class="description short">
+				<p>Maps symbol names to symbols</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Maps symbol names to symbols</p>
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$symbols" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(
+    <span class="php-quote">'check'</span> =&gt; <span class="php-quote">'✓'</span>
+)</code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+	<table class="summary used">
+	<caption>Properties used from <a href="class-Peridot.Core.HasEventEmitterTrait.html#properties">Peridot\Core\HasEventEmitterTrait</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Peridot.Core.HasEventEmitterTrait.html#$eventEmitter"><var>$eventEmitter</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+</div>
+
+	<div id="footer">
+		Peridot API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?721046668"></script>
+<script src="elementlist.js?2105554943"></script>
+</body>
+</html>

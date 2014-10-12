@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Symfony\Component\Console\Output\Output | Peridot</title>
+
+	<link rel="stylesheet" href="resources/style.css?1648332946">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Evenement.html">Evenement</a>
+						</li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-Peridot.html">Peridot<span></span></a>
+						<ul>
+				<li><a href="namespace-Peridot.Console.html">Console</a>
+						</li>
+				<li><a href="namespace-Peridot.Core.html">Core</a>
+						</li>
+				<li><a href="namespace-Peridot.Reporter.html">Reporter</a>
+						</li>
+				<li><a href="namespace-Peridot.Runner.html">Runner</a>
+						</li>
+				<li><a href="namespace-Peridot.Test.html">Test</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-Symfony.html">Symfony<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-Symfony.Component.html">Component<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-Symfony.Component.Console.html">Console<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.Console.Command.html">Command</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Descriptor.html">Descriptor</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Formatter.html">Formatter</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Input.html">Input</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Logger.html">Logger</a>
+						</li>
+				<li class="active"><a href="namespace-Symfony.Component.Console.Output.html">Output</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Question.html">Question</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tester.html">Tester</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.html">Tests<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Command.html">Command</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Descriptor.html">Descriptor</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Fixtures.html">Fixtures</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Formatter.html">Formatter</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Input.html">Input</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Logger.html">Logger</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Output.html">Output</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Tester.html">Tester</a>
+						</li>
+							</ul></li></ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.Console.Output.BufferedOutput.html">BufferedOutput</a></li>
+				<li><a href="class-Symfony.Component.Console.Output.ConsoleOutput.html">ConsoleOutput</a></li>
+				<li><a href="class-Symfony.Component.Console.Output.NullOutput.html">NullOutput</a></li>
+				<li class="active"><a href="class-Symfony.Component.Console.Output.Output.html">Output</a></li>
+				<li><a href="class-Symfony.Component.Console.Output.StreamOutput.html">StreamOutput</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.Console.Output.ConsoleOutputInterface.html">ConsoleOutputInterface</a></li>
+				<li><a href="class-Symfony.Component.Console.Output.OutputInterface.html">OutputInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Symfony.Component.Console.Output.html" title="Summary of Symfony\Component\Console\Output"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Output</h1>
+
+
+	<div class="description">
+	<p>Base class for output classes.</p>
+
+<p>There are five levels of verbosity:
+ * normal: no option passed (normal output) * verbose: -v (more output) * very verbose: -vv (highly extended output) * debug: -vvv (all debug output) * quiet: -q (no output)</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>Symfony\Component\Console\Output\Output</span></b>			
+			 implements 
+				<a href="class-Symfony.Component.Console.Output.OutputInterface.html"><span>Symfony\Component\Console\Output\OutputInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Symfony.Component.Console.Output.BufferedOutput.html">Symfony\Component\Console\Output\BufferedOutput</a>, 
+			<a href="class-Symfony.Component.Console.Output.StreamOutput.html">Symfony\Component\Console\Output\StreamOutput</a>, 
+			<a href="class-Symfony.Component.Console.Tests.Output.TestOutput.html">Symfony\Component\Console\Tests\Output\TestOutput</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-Symfony.Component.Console.Output.ConsoleOutput.html">Symfony\Component\Console\Output\ConsoleOutput</a>, 
+			<a href="class-Symfony.Component.Console.Tests.Fixtures.DummyOutput.html">Symfony\Component\Console\Tests\Fixtures\DummyOutput</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br>
+		
+		<b>Namespace:</b> Symfony\Component\Console\Output<br>
+		
+
+				<b>Author:</b>
+				Fabien Potencier <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;">&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;</a>
+<br>
+				<b>Api</b>
+				
+<br>
+		<b>Located at</b> <a href="source-class-Symfony.Component.Console.Output.Output.html#17-165" title="Go to source code">Symfony/Component/Console/Output/Output.php</a><br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#37-51" title="Go to source code">__construct</a>( <span>integer <var>$verbosity</var> = <code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#VERBOSITY_NORMAL">Symfony\Component\Console\Output\OutputInterface::<b>VERBOSITY_NORMAL</b></a></code></span>, <span>boolean <var>$decorated</var> = <span class="php-keyword1">false</span></span>, <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code> <var>$formatter</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$verbosity</var></dt>
+					<dd>The verbosity level (one of the VERBOSITY constants in OutputInterface)
+</dd>
+					<dt><var>$decorated</var></dt>
+					<dd>Whether to decorate messages
+</dd>
+					<dt><var>$formatter</var></dt>
+					<dd>Output formatter instance (null to use default OutputFormatter)
+</dd>
+				</dl></div>
+
+
+
+				<h4>Api</h4>
+				<div class="list">
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFormatter" id="_setFormatter">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFormatter">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#53-59" title="Go to source code">setFormatter</a>( <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code> <var>$formatter</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets output formatter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets output formatter.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$formatter</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#_setFormatter">Symfony\Component\Console\Output\OutputInterface::setFormatter()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFormatter" id="_getFormatter">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFormatter">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#61-67" title="Go to source code">getFormatter</a>( )</code>
+
+		<div class="description short">
+			<p>Returns current output formatter instance.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns current output formatter instance.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#_getFormatter">Symfony\Component\Console\Output\OutputInterface::getFormatter()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDecorated" id="_setDecorated">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDecorated">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#69-75" title="Go to source code">setDecorated</a>( <span>boolean <var>$decorated</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the decorated flag.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the decorated flag.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$decorated</var></dt>
+					<dd>Whether to decorate the messages
+</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#_setDecorated">Symfony\Component\Console\Output\OutputInterface::setDecorated()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isDecorated" id="_isDecorated">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isDecorated">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#77-83" title="Go to source code">isDecorated</a>( )</code>
+
+		<div class="description short">
+			<p>Gets the decorated flag.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets the decorated flag.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if the output will decorate messages, false otherwise
+
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#_isDecorated">Symfony\Component\Console\Output\OutputInterface::isDecorated()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setVerbosity" id="_setVerbosity">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setVerbosity">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#85-91" title="Go to source code">setVerbosity</a>( <span>integer <var>$level</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the verbosity of the output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the verbosity of the output.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$level</var></dt>
+					<dd>The level of verbosity (one of the VERBOSITY constants)
+</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#_setVerbosity">Symfony\Component\Console\Output\OutputInterface::setVerbosity()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getVerbosity" id="_getVerbosity">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getVerbosity">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#93-99" title="Go to source code">getVerbosity</a>( )</code>
+
+		<div class="description short">
+			<p>Gets the current verbosity of the output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets the current verbosity of the output.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>The current level of verbosity (one of the VERBOSITY constants)
+
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#_getVerbosity">Symfony\Component\Console\Output\OutputInterface::getVerbosity()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isQuiet" id="_isQuiet">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isQuiet">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#101-104" title="Go to source code">isQuiet</a>( )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isVerbose" id="_isVerbose">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isVerbose">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#106-109" title="Go to source code">isVerbose</a>( )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isVeryVerbose" id="_isVeryVerbose">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isVeryVerbose">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#111-114" title="Go to source code">isVeryVerbose</a>( )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isDebug" id="_isDebug">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isDebug">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#116-119" title="Go to source code">isDebug</a>( )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="writeln" id="_writeln">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_writeln">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#121-127" title="Go to source code">writeln</a>( <span>string|array <var>$messages</var></span>, <span>integer <var>$type</var> = <code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#OUTPUT_NORMAL">Symfony\Component\Console\Output\OutputInterface::<b>OUTPUT_NORMAL</b></a></code></span> )</code>
+
+		<div class="description short">
+			<p>Writes a message to the output and adds a newline at the end.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Writes a message to the output and adds a newline at the end.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$messages</var></dt>
+					<dd>The message as an array of lines of a single string
+</dd>
+					<dt><var>$type</var></dt>
+					<dd>The type of output (one of the OUTPUT constants)
+</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code><br>When unknown output type is given
+
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#_writeln">Symfony\Component\Console\Output\OutputInterface::writeln()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="write" id="_write">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_write">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#129-156" title="Go to source code">write</a>( <span>string|array <var>$messages</var></span>, <span>boolean <var>$newline</var> = <span class="php-keyword1">false</span></span>, <span>integer <var>$type</var> = <code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#OUTPUT_NORMAL">Symfony\Component\Console\Output\OutputInterface::<b>OUTPUT_NORMAL</b></a></code></span> )</code>
+
+		<div class="description short">
+			<p>Writes a message to the output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Writes a message to the output.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$messages</var></dt>
+					<dd>The message as an array of lines or a single string
+</dd>
+					<dt><var>$newline</var></dt>
+					<dd>Whether to add a newline
+</dd>
+					<dt><var>$type</var></dt>
+					<dd>The type of output (one of the OUTPUT constants)
+</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code><br>When unknown output type is given
+
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#_write">Symfony\Component\Console\Output\OutputInterface::write()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="doWrite" id="_doWrite">
+
+		<td class="attributes"><code>
+			abstract protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_doWrite">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#158-164" title="Go to source code">doWrite</a>( <span>string <var>$message</var></span>, <span>boolean <var>$newline</var></span> )</code>
+
+		<div class="description short">
+			<p>Writes a message to the output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Writes a message to the output.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$message</var></dt>
+					<dd>A message to write to the output
+</dd>
+					<dt><var>$newline</var></dt>
+					<dd>Whether to add a newline or not
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-Symfony.Component.Console.Output.OutputInterface.html#constants">Symfony\Component\Console\Output\OutputInterface</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Symfony.Component.Console.Output.OutputInterface.html#OUTPUT_NORMAL"><b>OUTPUT_NORMAL</b></a>, 
+			<a href="class-Symfony.Component.Console.Output.OutputInterface.html#OUTPUT_PLAIN"><b>OUTPUT_PLAIN</b></a>, 
+			<a href="class-Symfony.Component.Console.Output.OutputInterface.html#OUTPUT_RAW"><b>OUTPUT_RAW</b></a>, 
+			<a href="class-Symfony.Component.Console.Output.OutputInterface.html#VERBOSITY_DEBUG"><b>VERBOSITY_DEBUG</b></a>, 
+			<a href="class-Symfony.Component.Console.Output.OutputInterface.html#VERBOSITY_NORMAL"><b>VERBOSITY_NORMAL</b></a>, 
+			<a href="class-Symfony.Component.Console.Output.OutputInterface.html#VERBOSITY_QUIET"><b>VERBOSITY_QUIET</b></a>, 
+			<a href="class-Symfony.Component.Console.Output.OutputInterface.html#VERBOSITY_VERBOSE"><b>VERBOSITY_VERBOSE</b></a>, 
+			<a href="class-Symfony.Component.Console.Output.OutputInterface.html#VERBOSITY_VERY_VERBOSE"><b>VERBOSITY_VERY_VERBOSE</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Peridot API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?721046668"></script>
+<script src="elementlist.js?2105554943"></script>
+</body>
+</html>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Peridot\Runner\Context | Peridot</title>
+
+	<link rel="stylesheet" href="resources/style.css?1648332946">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Evenement.html">Evenement</a>
+						</li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li class="active"><a href="namespace-Peridot.html">Peridot<span></span></a>
+						<ul>
+				<li><a href="namespace-Peridot.Console.html">Console</a>
+						</li>
+				<li><a href="namespace-Peridot.Core.html">Core</a>
+						</li>
+				<li><a href="namespace-Peridot.Reporter.html">Reporter</a>
+						</li>
+				<li class="active"><a href="namespace-Peridot.Runner.html">Runner</a>
+						</li>
+				<li><a href="namespace-Peridot.Test.html">Test</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li><a href="namespace-Symfony.html">Symfony<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.Console.html">Console<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.Console.Command.html">Command</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Descriptor.html">Descriptor</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Formatter.html">Formatter</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Input.html">Input</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Logger.html">Logger</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Output.html">Output</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Question.html">Question</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tester.html">Tester</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.html">Tests<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Command.html">Command</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Descriptor.html">Descriptor</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Fixtures.html">Fixtures</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Formatter.html">Formatter</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Input.html">Input</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Logger.html">Logger</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Output.html">Output</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Tests.Tester.html">Tester</a>
+						</li>
+							</ul></li></ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Peridot.Runner.Context.html">Context</a></li>
+				<li><a href="class-Peridot.Runner.Runner.html">Runner</a></li>
+				<li><a href="class-Peridot.Runner.SuiteLoader.html">SuiteLoader</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Peridot.Runner.html" title="Summary of Peridot\Runner"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Context</h1>
+
+
+	<div class="description">
+	<p>Context tracks the state of the runner - i.e the current Suite, and provides access to
+Peridot's global state.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> Peridot\Runner<br>
+		<b>Package:</b> Peridot\Runner<br>
+
+		<b>Located at</b> <a href="source-class-Peridot.Runner.Context.html#6-112" title="Go to source code">Runner/Context.php</a><br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getCurrentSuite" id="_getCurrentSuite">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Peridot.Core.Suite.html">Peridot\Core\Suite</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCurrentSuite">#</a>
+		<code><a href="source-class-Peridot.Runner.Context.html#32-38" title="Go to source code">getCurrentSuite</a>( )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Peridot.Core.Suite.html">Peridot\Core\Suite</a></code></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="describe" id="_describe">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_describe">#</a>
+		<code><a href="source-class-Peridot.Runner.Context.html#40-59" title="Go to source code">describe</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Creates a suite and adds it to the current suite. The newly
+created suite will become the new "current" suite</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates a suite and adds it to the current suite. The newly
+created suite will become the new "current" suite</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$description</var></dt>
+					<dd>
+</dd>
+					<dt><var>$fn</var></dt>
+					<dd>
+</dd>
+					<dt><var>$pending</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="it" id="_it">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_it">#</a>
+		<code><a href="source-class-Peridot.Runner.Context.html#61-76" title="Go to source code">it</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Create a spec and add it to the current suite</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create a spec and add it to the current suite</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$description</var></dt>
+					<dd>
+</dd>
+					<dt><var>$fn</var></dt>
+					<dd>
+</dd>
+					<dt><var>$pending</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="beforeEach" id="_beforeEach">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_beforeEach">#</a>
+		<code><a href="source-class-Peridot.Runner.Context.html#78-87" title="Go to source code">beforeEach</a>( <span>callable <var>$fn</var></span> )</code>
+
+		<div class="description short">
+			<p>Add a setup function for all specs in the
+current suite</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add a setup function for all specs in the
+current suite</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fn</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="afterEach" id="_afterEach">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_afterEach">#</a>
+		<code><a href="source-class-Peridot.Runner.Context.html#89-97" title="Go to source code">afterEach</a>( <span>callable <var>$fn</var></span> )</code>
+
+		<div class="description short">
+			<p>Add a tear down function for all specs in the current suite</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add a tear down function for all specs in the current suite</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fn</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getInstance" id="_getInstance">
+
+		<td class="attributes"><code>
+			 public static
+
+			<code><a href="class-Peridot.Runner.Context.html">Peridot\Runner\Context</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getInstance">#</a>
+		<code><a href="source-class-Peridot.Runner.Context.html#99-111" title="Go to source code">getInstance</a>( )</code>
+
+		<div class="description short">
+			<p>Singleton access to Context</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Singleton access to Context</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Peridot.Runner.Context.html">Peridot\Runner\Context</a></code></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="suites" id="$suites">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Runner.Context.html#14-17" title="Go to source code"><var>$suites</var></a>
+
+			<div class="description short">
+				
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$suites" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Peridot API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?721046668"></script>
+<script src="elementlist.js?2105554943"></script>
+</body>
+</html>
