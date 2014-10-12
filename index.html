@@ -65,6 +65,61 @@ $ peridot arrayobject.spec.php
 
 {% endhighlight %}
 
+        <p>
+            Here's the breakdown of functions Peridot uses to describe your code's behavior:
+        </p>
+
+        <ul class="reference-list">
+            <li>
+                <div><code>describe($description, $func)</code></div>
+                <p>
+                    This function creates a suite, and is used to organize behaviors. It fair game to nest these.
+                </p>
+            </li>
+            <li>
+                <div><code>context($description, $func)</code></div>
+                <p>
+                    This function is identical to <code>describe</code>. It is provided to offer additional organization for your specs.
+                </p>
+            </li>
+            <li>
+                <div><code>beforeEach($setupFunc)</code></div>
+                <p>
+                    You can add setup functions that execute for all specs using this function. If you set variables on <code>$this</code> inside of the function body, it will create instance variables that are inherited by specs and suites.
+                </p>
+            </li>
+            <li>
+                <div><code>afterEach($tearDownFunc)</code></div>
+                <p>
+                    You can add teardown functions that execute for all specs using this function.
+                </p>
+            </li>
+            <li>
+                <div><code>it($description, $func)</code></div>
+                <p>
+                    This function creates a single spec and adds it to the suite it is nested in. 
+                </p>
+            </li>
+        </ul>
+
+        <h2 id="pending-specs">Pending Specs</h2>
+
+        <p>
+            You can make any spec our suite pending by prefixing the function with an <strong>x</strong>.
+        </p>
+
+{% highlight php %}
+<?php
+xdescribe("A pending suite", function() {
+    xcontext("when using a pending context", function() {
+        xit("should have a pending spec", function() {
+
+        });
+    });
+});
+?>
+{% endhighlight %}
+
         <h2 id="assertions">Assertions</h2>
         <p>
             A peridot spec fails when an exception is thrown. Peridot configures the default behavior of PHP's native <a target="_blank" href="http://us3.php.net/manual/en/function.assert.php">assert</a> function to throw exceptions, but you could just as easily use an existing matcher library or roll your own.
@@ -318,6 +373,18 @@ Options:
                     string <code>$errfile</code><br>
                     string <code>$errline</code>
                 </p>
+            </li>
+        </ul>
+
+        <h2 id="examples">Example Test Suites</h2>
+
+        <p>
+            Below are examples of real projects in the wild using Peridot.
+        </p>
+
+        <ul>
+            <li>
+                <a href="https://github.com/peridot-php/peridot" target="_blank">Peridot</a>
             </li>
         </ul>
 
