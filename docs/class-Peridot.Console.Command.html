@@ -61,29 +61,7 @@
 						</li>
 				<li><a href="namespace-Symfony.Component.Console.Question.html">Question</a>
 						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tester.html">Tester</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.html">Tests<span></span></a>
-						<ul>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Command.html">Command</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Descriptor.html">Descriptor</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Fixtures.html">Fixtures</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Formatter.html">Formatter</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Helper.html">Helper</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Input.html">Input</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Logger.html">Logger</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Output.html">Output</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Tester.html">Tester</a>
-						</li>
-							</ul></li></ul></li></ul></li></ul></li>
+							</ul></li></ul></li></ul></li>
 			</ul>
 		</div>
 
@@ -145,7 +123,7 @@
 
 	<div class="description">
 	<p>The default Peridot CLI command. Responsible for loading and
-executing specs.</p>
+executing tests.</p>
 
 	</div>
 
@@ -179,7 +157,7 @@ executing specs.</p>
 		<b>Namespace:</b> Peridot\Console<br>
 		<b>Package:</b> Peridot\Console<br>
 
-		<b>Located at</b> <a href="source-class-Peridot.Console.Command.html#15-113" title="Go to source code">Console/Command.php</a><br>
+		<b>Located at</b> <a href="source-class-Peridot.Console.Command.html#16-151" title="Go to source code">Console/Command.php</a><br>
 	</div>
 
 
@@ -198,7 +176,7 @@ executing specs.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Peridot.Console.Command.html#40-58" title="Go to source code">__construct</a>( <span><code><a href="class-Peridot.Runner.Runner.html">Peridot\Runner\Runner</a></code> <var>$runner</var></span>, <span><code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code> <var>$configuration</var></span>, <span><code><a href="class-Peridot.Reporter.ReporterFactory.html">Peridot\Reporter\ReporterFactory</a></code> <var>$factory</var></span>, <span><code><a href="class-Evenement.EventEmitterInterface.html">Evenement\EventEmitterInterface</a></code> <var>$eventEmitter</var></span> )</code>
+		<code><a href="source-class-Peridot.Console.Command.html#46-64" title="Go to source code">__construct</a>( <span><code><a href="class-Peridot.Runner.Runner.html">Peridot\Runner\Runner</a></code> <var>$runner</var></span>, <span><code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code> <var>$configuration</var></span>, <span><code><a href="class-Peridot.Reporter.ReporterFactory.html">Peridot\Reporter\ReporterFactory</a></code> <var>$factory</var></span>, <span><code><a href="class-Evenement.EventEmitterInterface.html">Evenement\EventEmitterInterface</a></code> <var>$eventEmitter</var></span> )</code>
 
 		<div class="description short">
 			
@@ -240,6 +218,125 @@ executing specs.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="setLoader" id="_setLoader">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLoader">#</a>
+		<code><a href="source-class-Peridot.Console.Command.html#66-76" title="Go to source code">setLoader</a>( <span><code><a href="class-Peridot.Runner.SuiteLoaderInterface.html">Peridot\Runner\SuiteLoaderInterface</a></code> <var>$loader</var></span> )</code>
+
+		<div class="description short">
+			<p>Set the loader used by the Peridot command</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set the loader used by the Peridot command</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$loader</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this
+
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLoader" id="_getLoader">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Peridot.Runner.SuiteLoaderInterface.html">Peridot\Runner\SuiteLoaderInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLoader">#</a>
+		<code><a href="source-class-Peridot.Console.Command.html#78-90" title="Go to source code">getLoader</a>( )</code>
+
+		<div class="description short">
+			<p>Fetch the loader used by the Peridot command. Defaults to
+a glob based loader</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Fetch the loader used by the Peridot command. Defaults to
+a glob based loader</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Peridot.Runner.SuiteLoaderInterface.html">Peridot\Runner\SuiteLoaderInterface</a></code></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSynopsis" id="_getSynopsis">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSynopsis">#</a>
+		<code><a href="source-class-Peridot.Console.Command.html#92-100" title="Go to source code">getSynopsis</a>( )</code>
+
+		<div class="description short">
+			<p>Returns the synopsis for the command.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the synopsis for the command.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Symfony.Component.Console.Command.Command.html#_getSynopsis">Symfony\Component\Console\Command\Command::getSynopsis()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="execute" id="_execute">
 
 		<td class="attributes"><code>
@@ -252,15 +349,15 @@ executing specs.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_execute">#</a>
-		<code><a href="source-class-Peridot.Console.Command.html#60-98" title="Go to source code">execute</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
+		<code><a href="source-class-Peridot.Console.Command.html#102-136" title="Go to source code">execute</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
 
 		<div class="description short">
-			<p>Load and run Suites and Specs</p>
+			<p>Load and run Suites and Tests</p>
 
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Load and run Suites and Specs</p>
+			<p>Load and run Suites and Tests</p>
 
 
 
@@ -304,7 +401,7 @@ executing specs.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_listReporters">#</a>
-		<code><a href="source-class-Peridot.Console.Command.html#100-112" title="Go to source code">listReporters</a>( <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
+		<code><a href="source-class-Peridot.Console.Command.html#138-150" title="Go to source code">listReporters</a>( <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
 
 		<div class="description short">
 			<p>Output available reporters</p>
@@ -349,7 +446,6 @@ executing specs.</p>
 			<a href="class-Symfony.Component.Console.Command.Command.html#_getName">getName()</a>, 
 			<a href="class-Symfony.Component.Console.Command.Command.html#_getNativeDefinition">getNativeDefinition()</a>, 
 			<a href="class-Symfony.Component.Console.Command.Command.html#_getProcessedHelp">getProcessedHelp()</a>, 
-			<a href="class-Symfony.Component.Console.Command.Command.html#_getSynopsis">getSynopsis()</a>, 
 			<a href="class-Symfony.Component.Console.Command.Command.html#_ignoreValidationErrors">ignoreValidationErrors()</a>, 
 			<a href="class-Symfony.Component.Console.Command.Command.html#_initialize">initialize()</a>, 
 			<a href="class-Symfony.Component.Console.Command.Command.html#_interact">interact()</a>, 
@@ -397,7 +493,7 @@ executing specs.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peridot.Console.Command.html#25-28" title="Go to source code"><var>$runner</var></a>
+				<a href="source-class-Peridot.Console.Command.html#26-29" title="Go to source code"><var>$runner</var></a>
 
 			<div class="description short">
 				
@@ -424,7 +520,7 @@ executing specs.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peridot.Console.Command.html#30-33" title="Go to source code"><var>$configuration</var></a>
+				<a href="source-class-Peridot.Console.Command.html#31-34" title="Go to source code"><var>$configuration</var></a>
 
 			<div class="description short">
 				
@@ -451,7 +547,7 @@ executing specs.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peridot.Console.Command.html#35-38" title="Go to source code"><var>$factory</var></a>
+				<a href="source-class-Peridot.Console.Command.html#36-39" title="Go to source code"><var>$factory</var></a>
 
 			<div class="description short">
 				
@@ -467,6 +563,33 @@ executing specs.</p>
 		<td class="value">
 			<div>
 				<a href="#$factory" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="loader" id="$loader">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-Peridot.Runner.SuiteLoaderInterface.html">Peridot\Runner\SuiteLoaderInterface</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Console.Command.html#41-44" title="Go to source code"><var>$loader</var></a>
+
+			<div class="description short">
+				
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$loader" class="anchor">#</a>
 				<code></code>
 			</div>
 		</td>
@@ -494,6 +617,6 @@ executing specs.</p>
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?2105554943"></script>
+<script src="elementlist.js?3919343691"></script>
 </body>
 </html>

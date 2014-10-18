@@ -61,29 +61,7 @@
 						</li>
 				<li><a href="namespace-Symfony.Component.Console.Question.html">Question</a>
 						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tester.html">Tester</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.html">Tests<span></span></a>
-						<ul>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Command.html">Command</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Descriptor.html">Descriptor</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Fixtures.html">Fixtures</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Formatter.html">Formatter</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Helper.html">Helper</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Input.html">Input</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Logger.html">Logger</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Output.html">Output</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Tester.html">Tester</a>
-						</li>
-							</ul></li></ul></li></ul></li></ul></li>
+							</ul></li></ul></li></ul></li>
 			</ul>
 		</div>
 
@@ -139,16 +117,16 @@
 
 
 	<div class="description">
-	<p>ItWasRun - the first of the specs. Before there was Peridot, there was ItWasRun</p>
+	<p>ItWasRun - the first of the tests. Before there was Peridot, there was ItWasRun</p>
 
 	</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
-			<a href="class-Peridot.Core.AbstractSpec.html"><span>Peridot\Core\AbstractSpec</span></a>
+			<a href="class-Peridot.Core.AbstractTest.html"><span>Peridot\Core\AbstractTest</span></a>
 			
 			 implements 
-				<a href="class-Peridot.Core.SpecInterface.html"><span>Peridot\Core\SpecInterface</span></a>
+				<a href="class-Peridot.Core.TestInterface.html"><span>Peridot\Core\TestInterface</span></a>
 			
 			 uses 
 					<a href="class-Peridot.Core.HasEventEmitterTrait.html"><span>Peridot\Core\HasEventEmitterTrait</span></a>
@@ -156,7 +134,7 @@
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-			<a href="class-Peridot.Core.Spec.html"><span>Peridot\Core\Spec</span></a>
+			<a href="class-Peridot.Core.Test.html"><span>Peridot\Core\Test</span></a>
 			
 			
 			
@@ -227,7 +205,7 @@
 
 
 				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-Peridot.Core.AbstractSpec.html#___construct">Peridot\Core\AbstractSpec::__construct()</a></code></div>
+				<div class="list"><code><a href="class-Peridot.Core.AbstractTest.html#___construct">Peridot\Core\AbstractTest::__construct()</a></code></div>
 
 		</div>
 		</div></td>
@@ -299,40 +277,41 @@
 	</table>
 
 	<table class="summary inherited">
-	<caption>Methods inherited from <a href="class-Peridot.Core.Spec.html#methods">Peridot\Core\Spec</a></caption>
+	<caption>Methods inherited from <a href="class-Peridot.Core.Test.html#methods">Peridot\Core\Test</a></caption>
 	<tr>
 		<td><code>
-			<a href="class-Peridot.Core.Spec.html#_getBoundDefinition">getBoundDefinition()</a>, 
-			<a href="class-Peridot.Core.Spec.html#_run">run()</a>, 
-			<a href="class-Peridot.Core.Spec.html#_runTearDown">runTearDown()</a>
+			<a href="class-Peridot.Core.Test.html#_getBoundDefinition">getBoundDefinition()</a>, 
+			<a href="class-Peridot.Core.Test.html#_run">run()</a>, 
+			<a href="class-Peridot.Core.Test.html#_runTearDown">runTearDown()</a>
 		</code></td>
 	</tr>
 	</table>
 	<table class="summary inherited">
-	<caption>Methods inherited from <a href="class-Peridot.Core.AbstractSpec.html#methods">Peridot\Core\AbstractSpec</a></caption>
+	<caption>Methods inherited from <a href="class-Peridot.Core.AbstractTest.html#methods">Peridot\Core\AbstractTest</a></caption>
 	<tr>
 		<td><code>
-			<a href="class-Peridot.Core.AbstractSpec.html#_addSetUpFunction">addSetUpFunction()</a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#_addTearDownFunction">addTearDownFunction()</a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#_getDefinition">getDefinition()</a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#_getDescription">getDescription()</a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#_getParent">getParent()</a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#_getPending">getPending()</a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#_getScope">getScope()</a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#_getSetUpFunctions">getSetUpFunctions()</a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#_getTearDownFunctions">getTearDownFunctions()</a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#_getTitle">getTitle()</a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#_setParent">setParent()</a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#_setPending">setPending()</a>
+			<a href="class-Peridot.Core.AbstractTest.html#_addSetupFunction">addSetupFunction()</a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#_addTearDownFunction">addTearDownFunction()</a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#_getDefinition">getDefinition()</a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#_getDescription">getDescription()</a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#_getParent">getParent()</a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#_getPending">getPending()</a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#_getScope">getScope()</a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#_getSetupFunctions">getSetupFunctions()</a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#_getTearDownFunctions">getTearDownFunctions()</a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#_getTitle">getTitle()</a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#_setParent">setParent()</a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#_setPending">setPending()</a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#_setScope">setScope()</a>
 		</code></td>
 	</tr>
 	</table>
 	<table class="summary inherited">
-	<caption>Methods inherited from <a href="class-Peridot.Core.SpecInterface.html#methods">Peridot\Core\SpecInterface</a></caption>
+	<caption>Methods inherited from <a href="class-Peridot.Core.TestInterface.html#methods">Peridot\Core\TestInterface</a></caption>
 	<tr>
 		<td><code>
-			<a href="class-Peridot.Core.SpecInterface.html#_getEventEmitter">getEventEmitter()</a>, 
-			<a href="class-Peridot.Core.SpecInterface.html#_setEventEmitter">setEventEmitter()</a>
+			<a href="class-Peridot.Core.TestInterface.html#_getEventEmitter">getEventEmitter()</a>, 
+			<a href="class-Peridot.Core.TestInterface.html#_setEventEmitter">setEventEmitter()</a>
 		</code></td>
 	</tr>
 	</table>
@@ -358,16 +337,16 @@
 
 
 	<table class="summary inherited">
-	<caption>Properties inherited from <a href="class-Peridot.Core.AbstractSpec.html#properties">Peridot\Core\AbstractSpec</a></caption>
+	<caption>Properties inherited from <a href="class-Peridot.Core.AbstractTest.html#properties">Peridot\Core\AbstractTest</a></caption>
 	<tr>
 		<td><code>
-			<a href="class-Peridot.Core.AbstractSpec.html#$definition"><var>$definition</var></a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#$description"><var>$description</var></a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#$parent"><var>$parent</var></a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#$pending"><var>$pending</var></a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#$scope"><var>$scope</var></a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#$setUpFns"><var>$setUpFns</var></a>, 
-			<a href="class-Peridot.Core.AbstractSpec.html#$tearDownFns"><var>$tearDownFns</var></a>
+			<a href="class-Peridot.Core.AbstractTest.html#$definition"><var>$definition</var></a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#$description"><var>$description</var></a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#$parent"><var>$parent</var></a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#$pending"><var>$pending</var></a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#$scope"><var>$scope</var></a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#$setUpFns"><var>$setUpFns</var></a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#$tearDownFns"><var>$tearDownFns</var></a>
 		</code></td>
 	</tr>
 	</table>
@@ -392,6 +371,6 @@
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?2105554943"></script>
+<script src="elementlist.js?3919343691"></script>
 </body>
 </html>

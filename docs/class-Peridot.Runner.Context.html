@@ -61,29 +61,7 @@
 						</li>
 				<li><a href="namespace-Symfony.Component.Console.Question.html">Question</a>
 						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tester.html">Tester</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.html">Tests<span></span></a>
-						<ul>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Command.html">Command</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Descriptor.html">Descriptor</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Fixtures.html">Fixtures</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Formatter.html">Formatter</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Helper.html">Helper</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Input.html">Input</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Logger.html">Logger</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Output.html">Output</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Tester.html">Tester</a>
-						</li>
-							</ul></li></ul></li></ul></li></ul></li>
+							</ul></li></ul></li></ul></li>
 			</ul>
 		</div>
 
@@ -98,6 +76,10 @@
 				<li><a href="class-Peridot.Runner.SuiteLoader.html">SuiteLoader</a></li>
 			</ul>
 
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Peridot.Runner.SuiteLoaderInterface.html">SuiteLoaderInterface</a></li>
+			</ul>
 
 
 
@@ -203,7 +185,7 @@ Peridot's global state.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="describe" id="_describe">
+	<tr data-order="addSuite" id="_addSuite">
 
 		<td class="attributes"><code>
 			 public 
@@ -214,8 +196,8 @@ Peridot's global state.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_describe">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#40-59" title="Go to source code">describe</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
+		<a class="anchor" href="#_addSuite">#</a>
+		<code><a href="source-class-Peridot.Runner.Context.html#40-59" title="Go to source code">addSuite</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Creates a suite and adds it to the current suite. The newly
@@ -249,7 +231,7 @@ created suite will become the new "current" suite</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="it" id="_it">
+	<tr data-order="addTest" id="_addTest">
 
 		<td class="attributes"><code>
 			 public 
@@ -260,16 +242,16 @@ created suite will become the new "current" suite</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_it">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#61-76" title="Go to source code">it</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
+		<a class="anchor" href="#_addTest">#</a>
+		<code><a href="source-class-Peridot.Runner.Context.html#61-76" title="Go to source code">addTest</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
-			<p>Create a spec and add it to the current suite</p>
+			<p>Create a test and add it to the current suite</p>
 
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Create a spec and add it to the current suite</p>
+			<p>Create a test and add it to the current suite</p>
 
 
 
@@ -293,7 +275,7 @@ created suite will become the new "current" suite</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="beforeEach" id="_beforeEach">
+	<tr data-order="addSetupFunction" id="_addSetupFunction">
 
 		<td class="attributes"><code>
 			 public 
@@ -304,17 +286,17 @@ created suite will become the new "current" suite</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_beforeEach">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#78-87" title="Go to source code">beforeEach</a>( <span>callable <var>$fn</var></span> )</code>
+		<a class="anchor" href="#_addSetupFunction">#</a>
+		<code><a href="source-class-Peridot.Runner.Context.html#78-87" title="Go to source code">addSetupFunction</a>( <span>callable <var>$fn</var></span> )</code>
 
 		<div class="description short">
-			<p>Add a setup function for all specs in the
+			<p>Add a setup function for all tests in the
 current suite</p>
 
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Add a setup function for all specs in the
+			<p>Add a setup function for all tests in the
 current suite</p>
 
 
@@ -333,7 +315,7 @@ current suite</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="afterEach" id="_afterEach">
+	<tr data-order="addTearDownFunction" id="_addTearDownFunction">
 
 		<td class="attributes"><code>
 			 public 
@@ -344,16 +326,16 @@ current suite</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_afterEach">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#89-97" title="Go to source code">afterEach</a>( <span>callable <var>$fn</var></span> )</code>
+		<a class="anchor" href="#_addTearDownFunction">#</a>
+		<code><a href="source-class-Peridot.Runner.Context.html#89-97" title="Go to source code">addTearDownFunction</a>( <span>callable <var>$fn</var></span> )</code>
 
 		<div class="description short">
-			<p>Add a tear down function for all specs in the current suite</p>
+			<p>Add a tear down function for all tests in the current suite</p>
 
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Add a tear down function for all specs in the current suite</p>
+			<p>Add a tear down function for all tests in the current suite</p>
 
 
 
@@ -464,6 +446,6 @@ current suite</p>
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?2105554943"></script>
+<script src="elementlist.js?3919343691"></script>
 </body>
 </html>

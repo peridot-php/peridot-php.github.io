@@ -62,29 +62,7 @@
 						</li>
 				<li><a href="namespace-Symfony.Component.Console.Question.html">Question</a>
 						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tester.html">Tester</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.html">Tests<span></span></a>
-						<ul>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Command.html">Command</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Descriptor.html">Descriptor</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Fixtures.html">Fixtures</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Formatter.html">Formatter</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Helper.html">Helper</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Input.html">Input</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Logger.html">Logger</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Output.html">Output</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Tester.html">Tester</a>
-						</li>
-							</ul></li></ul></li></ul></li></ul></li>
+							</ul></li></ul></li></ul></li>
 			</ul>
 		</div>
 
@@ -99,6 +77,10 @@
 				<li class="active"><a href="class-Peridot.Runner.SuiteLoader.html">SuiteLoader</a></li>
 			</ul>
 
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Peridot.Runner.SuiteLoaderInterface.html">SuiteLoaderInterface</a></li>
+			</ul>
 
 
 
@@ -142,12 +124,12 @@
 </span><span id="2" class="l"><a class="l" href="#2"> 2: </a><span class="php-keyword1">namespace</span> Peridot\Runner;
 </span><span id="3" class="l"><a class="l" href="#3"> 3: </a>
 </span><span id="4" class="l"><a class="l" href="#4"> 4: </a><span class="php-comment">/**
-</span></span><span id="5" class="l"><a class="l" href="#5"> 5: </a><span class="php-comment"> * SuiteLoader will recursively load spec files given a glob friendly
+</span></span><span id="5" class="l"><a class="l" href="#5"> 5: </a><span class="php-comment"> * SuiteLoader will recursively load test files given a glob friendly
 </span></span><span id="6" class="l"><a class="l" href="#6"> 6: </a><span class="php-comment"> * pattern.
 </span></span><span id="7" class="l"><a class="l" href="#7"> 7: </a><span class="php-comment"> *
 </span></span><span id="8" class="l"><a class="l" href="#8"> 8: </a><span class="php-comment"> * @package Peridot\Runner
 </span></span><span id="9" class="l"><a class="l" href="#9"> 9: </a><span class="php-comment"> */</span>
-</span><span id="10" class="l"><a class="l" href="#10">10: </a><span class="php-keyword1">class</span> <a id="SuiteLoader" href="#SuiteLoader">SuiteLoader</a>
+</span><span id="10" class="l"><a class="l" href="#10">10: </a><span class="php-keyword1">class</span> <a id="SuiteLoader" href="#SuiteLoader">SuiteLoader</a> <span class="php-keyword1">implements</span> SuiteLoaderInterface
 </span><span id="11" class="l"><a class="l" href="#11">11: </a>{
 </span><span id="12" class="l"><a class="l" href="#12">12: </a>    <span class="php-comment">/**
 </span></span><span id="13" class="l"><a class="l" href="#13">13: </a><span class="php-comment">     * @var string
@@ -163,61 +145,58 @@
 </span><span id="23" class="l"><a class="l" href="#23">23: </a>    }
 </span><span id="24" class="l"><a class="l" href="#24">24: </a>
 </span><span id="25" class="l"><a class="l" href="#25">25: </a>    <span class="php-comment">/**
-</span></span><span id="26" class="l"><a class="l" href="#26">26: </a><span class="php-comment">     * Load specs. Runs 'include' on all specs
-</span></span><span id="27" class="l"><a class="l" href="#27">27: </a><span class="php-comment">     * returned by getSpecs
-</span></span><span id="28" class="l"><a class="l" href="#28">28: </a><span class="php-comment">     *
-</span></span><span id="29" class="l"><a class="l" href="#29">29: </a><span class="php-comment">     * @param $path
-</span></span><span id="30" class="l"><a class="l" href="#30">30: </a><span class="php-comment">     */</span>
-</span><span id="31" class="l"><a class="l" href="#31">31: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_load" href="#_load">load</a>(<span class="php-var">$path</span>)
-</span><span id="32" class="l"><a class="l" href="#32">32: </a>    {
-</span><span id="33" class="l"><a class="l" href="#33">33: </a>        <span class="php-var">$specs</span> = <span class="php-var">$this</span>-&gt;getSpecs(<span class="php-var">$path</span>);
-</span><span id="34" class="l"><a class="l" href="#34">34: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$specs</span> <span class="php-keyword1">as</span> <span class="php-var">$spec</span>) {
-</span><span id="35" class="l"><a class="l" href="#35">35: </a>            <span class="php-keyword1">include</span> <span class="php-var">$spec</span>;
-</span><span id="36" class="l"><a class="l" href="#36">36: </a>        }
-</span><span id="37" class="l"><a class="l" href="#37">37: </a>    }
-</span><span id="38" class="l"><a class="l" href="#38">38: </a>
-</span><span id="39" class="l"><a class="l" href="#39">39: </a>    <span class="php-comment">/**
-</span></span><span id="40" class="l"><a class="l" href="#40">40: </a><span class="php-comment">     * Search a path for a provided file or scan a
-</span></span><span id="41" class="l"><a class="l" href="#41">41: </a><span class="php-comment">     * directory structure for files matching the loader's
-</span></span><span id="42" class="l"><a class="l" href="#42">42: </a><span class="php-comment">     * pattern
-</span></span><span id="43" class="l"><a class="l" href="#43">43: </a><span class="php-comment">     *
-</span></span><span id="44" class="l"><a class="l" href="#44">44: </a><span class="php-comment">     * @param $path
-</span></span><span id="45" class="l"><a class="l" href="#45">45: </a><span class="php-comment">     * @return array
-</span></span><span id="46" class="l"><a class="l" href="#46">46: </a><span class="php-comment">     * @throws \RuntimeException
-</span></span><span id="47" class="l"><a class="l" href="#47">47: </a><span class="php-comment">     */</span>
-</span><span id="48" class="l"><a class="l" href="#48">48: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getSpecs" href="#_getSpecs">getSpecs</a>(<span class="php-var">$path</span>)
-</span><span id="49" class="l"><a class="l" href="#49">49: </a>    {
-</span><span id="50" class="l"><a class="l" href="#50">50: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_file</span>(<span class="php-var">$path</span>)) {
-</span><span id="51" class="l"><a class="l" href="#51">51: </a>            <span class="php-keyword1">return</span> [<span class="php-var">$path</span>];
+</span></span><span id="26" class="l"><a class="l" href="#26">26: </a><span class="php-comment">     * {@inheritdoc}
+</span></span><span id="27" class="l"><a class="l" href="#27">27: </a><span class="php-comment">     *
+</span></span><span id="28" class="l"><a class="l" href="#28">28: </a><span class="php-comment">     * @param $path
+</span></span><span id="29" class="l"><a class="l" href="#29">29: </a><span class="php-comment">     */</span>
+</span><span id="30" class="l"><a class="l" href="#30">30: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_load" href="#_load">load</a>(<span class="php-var">$path</span>)
+</span><span id="31" class="l"><a class="l" href="#31">31: </a>    {
+</span><span id="32" class="l"><a class="l" href="#32">32: </a>        <span class="php-var">$tests</span> = <span class="php-var">$this</span>-&gt;getTests(<span class="php-var">$path</span>);
+</span><span id="33" class="l"><a class="l" href="#33">33: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$tests</span> <span class="php-keyword1">as</span> <span class="php-var">$test</span>) {
+</span><span id="34" class="l"><a class="l" href="#34">34: </a>            <span class="php-keyword1">include</span> <span class="php-var">$test</span>;
+</span><span id="35" class="l"><a class="l" href="#35">35: </a>        }
+</span><span id="36" class="l"><a class="l" href="#36">36: </a>    }
+</span><span id="37" class="l"><a class="l" href="#37">37: </a>
+</span><span id="38" class="l"><a class="l" href="#38">38: </a>    <span class="php-comment">/**
+</span></span><span id="39" class="l"><a class="l" href="#39">39: </a><span class="php-comment">     * {@inheritdoc}
+</span></span><span id="40" class="l"><a class="l" href="#40">40: </a><span class="php-comment">     *
+</span></span><span id="41" class="l"><a class="l" href="#41">41: </a><span class="php-comment">     * @param $path
+</span></span><span id="42" class="l"><a class="l" href="#42">42: </a><span class="php-comment">     * @return array
+</span></span><span id="43" class="l"><a class="l" href="#43">43: </a><span class="php-comment">     * @throws \RuntimeException
+</span></span><span id="44" class="l"><a class="l" href="#44">44: </a><span class="php-comment">     */</span>
+</span><span id="45" class="l"><a class="l" href="#45">45: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getTests" href="#_getTests">getTests</a>(<span class="php-var">$path</span>)
+</span><span id="46" class="l"><a class="l" href="#46">46: </a>    {
+</span><span id="47" class="l"><a class="l" href="#47">47: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_file</span>(<span class="php-var">$path</span>)) {
+</span><span id="48" class="l"><a class="l" href="#48">48: </a>            <span class="php-keyword1">return</span> [<span class="php-var">$path</span>];
+</span><span id="49" class="l"><a class="l" href="#49">49: </a>        }
+</span><span id="50" class="l"><a class="l" href="#50">50: </a>        <span class="php-keyword1">if</span> (! <span class="php-keyword2">file_exists</span>(<span class="php-var">$path</span>)) {
+</span><span id="51" class="l"><a class="l" href="#51">51: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">&quot;Cannot load path </span><span class="php-var">$path</span><span class="php-quote">&quot;</span>);
 </span><span id="52" class="l"><a class="l" href="#52">52: </a>        }
-</span><span id="53" class="l"><a class="l" href="#53">53: </a>        <span class="php-keyword1">if</span> (! <span class="php-keyword2">file_exists</span>(<span class="php-var">$path</span>)) {
-</span><span id="54" class="l"><a class="l" href="#54">54: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">&quot;Cannot load path </span><span class="php-var">$path</span><span class="php-quote">&quot;</span>);
-</span><span id="55" class="l"><a class="l" href="#55">55: </a>        }
-</span><span id="56" class="l"><a class="l" href="#56">56: </a>        <span class="php-var">$pattern</span> = <span class="php-var">$path</span> . <span class="php-quote">'/'</span> . <span class="php-var">$this</span>-&gt;<span class="php-keyword2">pattern</span>;
+</span><span id="53" class="l"><a class="l" href="#53">53: </a>        <span class="php-var">$pattern</span> = <span class="php-var">$path</span> . <span class="php-quote">'/'</span> . <span class="php-var">$this</span>-&gt;<span class="php-keyword2">pattern</span>;
+</span><span id="54" class="l"><a class="l" href="#54">54: </a>
+</span><span id="55" class="l"><a class="l" href="#55">55: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;globRecursive(<span class="php-var">$pattern</span>);
+</span><span id="56" class="l"><a class="l" href="#56">56: </a>    }
 </span><span id="57" class="l"><a class="l" href="#57">57: </a>
-</span><span id="58" class="l"><a class="l" href="#58">58: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;globRecursive(<span class="php-var">$pattern</span>);
-</span><span id="59" class="l"><a class="l" href="#59">59: </a>    }
-</span><span id="60" class="l"><a class="l" href="#60">60: </a>
-</span><span id="61" class="l"><a class="l" href="#61">61: </a>    <span class="php-comment">/**
-</span></span><span id="62" class="l"><a class="l" href="#62">62: </a><span class="php-comment">     * Simple recursive glob
-</span></span><span id="63" class="l"><a class="l" href="#63">63: </a><span class="php-comment">     *
-</span></span><span id="64" class="l"><a class="l" href="#64">64: </a><span class="php-comment">     * @link http://php.net/manual/en/function.glob.php#106595
-</span></span><span id="65" class="l"><a class="l" href="#65">65: </a><span class="php-comment">     * @param $pattern
-</span></span><span id="66" class="l"><a class="l" href="#66">66: </a><span class="php-comment">     * @param  int   $flags
-</span></span><span id="67" class="l"><a class="l" href="#67">67: </a><span class="php-comment">     * @return array
-</span></span><span id="68" class="l"><a class="l" href="#68">68: </a><span class="php-comment">     */</span>
-</span><span id="69" class="l"><a class="l" href="#69">69: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_globRecursive" href="#_globRecursive">globRecursive</a>(<span class="php-var">$pattern</span>, <span class="php-var">$flags</span> = <span class="php-num">0</span>)
-</span><span id="70" class="l"><a class="l" href="#70">70: </a>    {
-</span><span id="71" class="l"><a class="l" href="#71">71: </a>        <span class="php-var">$files</span> = <span class="php-keyword2">glob</span>(<span class="php-var">$pattern</span>, <span class="php-var">$flags</span>);
-</span><span id="72" class="l"><a class="l" href="#72">72: </a>
-</span><span id="73" class="l"><a class="l" href="#73">73: </a>        <span class="php-keyword1">foreach</span> (<span class="php-keyword2">glob</span>(<span class="php-keyword2">dirname</span>(<span class="php-var">$pattern</span>).<span class="php-quote">'/*'</span>, GLOB_ONLYDIR|GLOB_NOSORT) <span class="php-keyword1">as</span> <span class="php-var">$dir</span>) {
-</span><span id="74" class="l"><a class="l" href="#74">74: </a>            <span class="php-var">$files</span> = <span class="php-keyword2">array_merge</span>(<span class="php-var">$files</span>, <span class="php-var">$this</span>-&gt;globRecursive(<span class="php-var">$dir</span> .<span class="php-quote">'/'</span>. <span class="php-keyword2">basename</span>(<span class="php-var">$pattern</span>), <span class="php-var">$flags</span>));
-</span><span id="75" class="l"><a class="l" href="#75">75: </a>        }
-</span><span id="76" class="l"><a class="l" href="#76">76: </a>
-</span><span id="77" class="l"><a class="l" href="#77">77: </a>        <span class="php-keyword1">return</span> <span class="php-var">$files</span>;
-</span><span id="78" class="l"><a class="l" href="#78">78: </a>    }
-</span><span id="79" class="l"><a class="l" href="#79">79: </a>}
-</span><span id="80" class="l"><a class="l" href="#80">80: </a></span></code></pre>
+</span><span id="58" class="l"><a class="l" href="#58">58: </a>    <span class="php-comment">/**
+</span></span><span id="59" class="l"><a class="l" href="#59">59: </a><span class="php-comment">     * Simple recursive glob
+</span></span><span id="60" class="l"><a class="l" href="#60">60: </a><span class="php-comment">     *
+</span></span><span id="61" class="l"><a class="l" href="#61">61: </a><span class="php-comment">     * @link http://php.net/manual/en/function.glob.php#106595
+</span></span><span id="62" class="l"><a class="l" href="#62">62: </a><span class="php-comment">     * @param $pattern
+</span></span><span id="63" class="l"><a class="l" href="#63">63: </a><span class="php-comment">     * @param  int   $flags
+</span></span><span id="64" class="l"><a class="l" href="#64">64: </a><span class="php-comment">     * @return array
+</span></span><span id="65" class="l"><a class="l" href="#65">65: </a><span class="php-comment">     */</span>
+</span><span id="66" class="l"><a class="l" href="#66">66: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_globRecursive" href="#_globRecursive">globRecursive</a>(<span class="php-var">$pattern</span>, <span class="php-var">$flags</span> = <span class="php-num">0</span>)
+</span><span id="67" class="l"><a class="l" href="#67">67: </a>    {
+</span><span id="68" class="l"><a class="l" href="#68">68: </a>        <span class="php-var">$files</span> = <span class="php-keyword2">glob</span>(<span class="php-var">$pattern</span>, <span class="php-var">$flags</span>);
+</span><span id="69" class="l"><a class="l" href="#69">69: </a>
+</span><span id="70" class="l"><a class="l" href="#70">70: </a>        <span class="php-keyword1">foreach</span> (<span class="php-keyword2">glob</span>(<span class="php-keyword2">dirname</span>(<span class="php-var">$pattern</span>).<span class="php-quote">'/*'</span>, GLOB_ONLYDIR|GLOB_NOSORT) <span class="php-keyword1">as</span> <span class="php-var">$dir</span>) {
+</span><span id="71" class="l"><a class="l" href="#71">71: </a>            <span class="php-var">$files</span> = <span class="php-keyword2">array_merge</span>(<span class="php-var">$files</span>, <span class="php-var">$this</span>-&gt;globRecursive(<span class="php-var">$dir</span> .<span class="php-quote">'/'</span>. <span class="php-keyword2">basename</span>(<span class="php-var">$pattern</span>), <span class="php-var">$flags</span>));
+</span><span id="72" class="l"><a class="l" href="#72">72: </a>        }
+</span><span id="73" class="l"><a class="l" href="#73">73: </a>
+</span><span id="74" class="l"><a class="l" href="#74">74: </a>        <span class="php-keyword1">return</span> <span class="php-var">$files</span>;
+</span><span id="75" class="l"><a class="l" href="#75">75: </a>    }
+</span><span id="76" class="l"><a class="l" href="#76">76: </a>}
+</span><span id="77" class="l"><a class="l" href="#77">77: </a></span></code></pre>
 
 	<div id="footer">
 		Peridot API documentation generated by <a href="http://apigen.org">ApiGen</a>
@@ -225,6 +204,6 @@
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?2105554943"></script>
+<script src="elementlist.js?3919343691"></script>
 </body>
 </html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Peridot\Core\TestResult | Peridot</title>
+
+	<link rel="stylesheet" href="resources/style.css?1648332946">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Evenement.html">Evenement</a>
+						</li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li class="active"><a href="namespace-Peridot.html">Peridot<span></span></a>
+						<ul>
+				<li><a href="namespace-Peridot.Console.html">Console</a>
+						</li>
+				<li class="active"><a href="namespace-Peridot.Core.html">Core</a>
+						</li>
+				<li><a href="namespace-Peridot.Reporter.html">Reporter</a>
+						</li>
+				<li><a href="namespace-Peridot.Runner.html">Runner</a>
+						</li>
+				<li><a href="namespace-Peridot.Test.html">Test</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li><a href="namespace-Symfony.html">Symfony<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.Console.html">Console<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.Console.Command.html">Command</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Descriptor.html">Descriptor</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Formatter.html">Formatter</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Input.html">Input</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Logger.html">Logger</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Output.html">Output</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Question.html">Question</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Peridot.Core.AbstractTest.html">AbstractTest</a></li>
+				<li><a href="class-Peridot.Core.Scope.html">Scope</a></li>
+				<li><a href="class-Peridot.Core.Suite.html">Suite</a></li>
+				<li><a href="class-Peridot.Core.Test.html">Test</a></li>
+				<li class="active"><a href="class-Peridot.Core.TestResult.html">TestResult</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Peridot.Core.TestInterface.html">TestInterface</a></li>
+			</ul>
+
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="class-Peridot.Core.HasEventEmitterTrait.html">HasEventEmitterTrait</a></li>
+			</ul>
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Peridot.Core.html" title="Summary of Peridot\Core"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TestResult</h1>
+
+
+	<div class="description">
+	<p>TestResults tracks passing, pending, and failing tests.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>Peridot\Core\TestResult</span></b>			
+			
+			 uses 
+					<a href="class-Peridot.Core.HasEventEmitterTrait.html"><span>Peridot\Core\HasEventEmitterTrait</span></a>
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> Peridot\Core<br>
+		<b>Package:</b> Peridot\Core<br>
+
+		<b>Located at</b> <a href="source-class-Peridot.Core.TestResult.html#7-137" title="Go to source code">Core/TestResult.php</a><br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Peridot.Core.TestResult.html#37-43" title="Go to source code">__construct</a>( <span><code><a href="class-Evenement.EventEmitterInterface.html">Evenement\EventEmitterInterface</a></code> <var>$eventEmitter</var></span> )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$eventEmitter</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSummary" id="_getSummary">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSummary">#</a>
+		<code><a href="source-class-Peridot.Core.TestResult.html#45-59" title="Go to source code">getSummary</a>( )</code>
+
+		<div class="description short">
+			<p>Returns a summary string containing total tests run and total tests
+failed</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a summary string containing total tests run and total tests
+failed</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="failTest" id="_failTest">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_failTest">#</a>
+		<code><a href="source-class-Peridot.Core.TestResult.html#61-70" title="Go to source code">failTest</a>( <span><code><a href="class-Peridot.Core.TestInterface.html">Peridot\Core\TestInterface</a></code> <var>$test</var></span>, <span><code><a href="class-Exception.html">Exception</a></code> <var>$e</var></span> )</code>
+
+		<div class="description short">
+			<p>Fail the given test.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Fail the given test.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$test</var></dt>
+					<dd>
+</dd>
+					<dt><var>$e</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="pendTest" id="_pendTest">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_pendTest">#</a>
+		<code><a href="source-class-Peridot.Core.TestResult.html#72-81" title="Go to source code">pendTest</a>( <span><code><a href="class-Peridot.Core.TestInterface.html">Peridot\Core\TestInterface</a></code> <var>$test</var></span> )</code>
+
+		<div class="description short">
+			<p>Notify result that test is pending</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Notify result that test is pending</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$test</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="passTest" id="_passTest">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_passTest">#</a>
+		<code><a href="source-class-Peridot.Core.TestResult.html#83-91" title="Go to source code">passTest</a>( <span><code><a href="class-Peridot.Core.TestInterface.html">Peridot\Core\TestInterface</a></code> <var>$test</var></span> )</code>
+
+		<div class="description short">
+			<p>Pass the given test.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Pass the given test.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$test</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="startTest" id="_startTest">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_startTest">#</a>
+		<code><a href="source-class-Peridot.Core.TestResult.html#93-102" title="Go to source code">startTest</a>( <span><code><a href="class-Peridot.Core.TestInterface.html">Peridot\Core\TestInterface</a></code> <var>$test</var></span> )</code>
+
+		<div class="description short">
+			<p>Increment test count and emit start event</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Increment test count and emit start event</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$test</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="endTest" id="_endTest">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_endTest">#</a>
+		<code><a href="source-class-Peridot.Core.TestResult.html#104-112" title="Go to source code">endTest</a>( <span><code><a href="class-Peridot.Core.TestInterface.html">Peridot\Core\TestInterface</a></code> <var>$test</var></span> )</code>
+
+		<div class="description short">
+			<p>Emit end event for a test</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Emit end event for a test</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$test</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFailureCount" id="_getFailureCount">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFailureCount">#</a>
+		<code><a href="source-class-Peridot.Core.TestResult.html#114-120" title="Go to source code">getFailureCount</a>( )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTestCount" id="_getTestCount">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTestCount">#</a>
+		<code><a href="source-class-Peridot.Core.TestResult.html#122-128" title="Go to source code">getTestCount</a>( )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPendingCount" id="_getPendingCount">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPendingCount">#</a>
+		<code><a href="source-class-Peridot.Core.TestResult.html#130-136" title="Go to source code">getPendingCount</a>( )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+	<table class="summary used">
+	<caption>Methods used from <a href="class-Peridot.Core.HasEventEmitterTrait.html#methods">Peridot\Core\HasEventEmitterTrait</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Peridot.Core.HasEventEmitterTrait.html#_getEventEmitter">getEventEmitter()</a>, 
+			<a href="class-Peridot.Core.HasEventEmitterTrait.html#_setEventEmitter">setEventEmitter()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="testCount" id="$testCount">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Core.TestResult.html#16-21" title="Go to source code"><var>$testCount</var></a>
+
+			<div class="description short">
+				<p>Tracks total tests run against this result</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Tracks total tests run against this result</p>
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$testCount" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="failureCount" id="$failureCount">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Core.TestResult.html#23-28" title="Go to source code"><var>$failureCount</var></a>
+
+			<div class="description short">
+				<p>Tracks total number of failed tests run against this result</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Tracks total number of failed tests run against this result</p>
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$failureCount" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="pendingCount" id="$pendingCount">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Core.TestResult.html#30-35" title="Go to source code"><var>$pendingCount</var></a>
+
+			<div class="description short">
+				<p>Tracks total number of pending tests run against this result</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Tracks total number of pending tests run against this result</p>
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$pendingCount" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+	<table class="summary used">
+	<caption>Properties used from <a href="class-Peridot.Core.HasEventEmitterTrait.html#properties">Peridot\Core\HasEventEmitterTrait</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Peridot.Core.HasEventEmitterTrait.html#$eventEmitter"><var>$eventEmitter</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+</div>
+
+	<div id="footer">
+		Peridot API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?721046668"></script>
+<script src="elementlist.js?3919343691"></script>
+</body>
+</html>

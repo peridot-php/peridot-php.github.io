@@ -61,29 +61,7 @@
 						</li>
 				<li><a href="namespace-Symfony.Component.Console.Question.html">Question</a>
 						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tester.html">Tester</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.html">Tests<span></span></a>
-						<ul>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Command.html">Command</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Descriptor.html">Descriptor</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Fixtures.html">Fixtures</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Formatter.html">Formatter</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Helper.html">Helper</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Input.html">Input</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Logger.html">Logger</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Output.html">Output</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Tester.html">Tester</a>
-						</li>
-							</ul></li></ul></li></ul></li></ul></li>
+							</ul></li></ul></li></ul></li>
 			</ul>
 		</div>
 
@@ -93,16 +71,16 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Peridot.Core.AbstractSpec.html">AbstractSpec</a></li>
+				<li><a href="class-Peridot.Core.AbstractTest.html">AbstractTest</a></li>
 				<li class="active"><a href="class-Peridot.Core.Scope.html">Scope</a></li>
-				<li><a href="class-Peridot.Core.Spec.html">Spec</a></li>
-				<li><a href="class-Peridot.Core.SpecResult.html">SpecResult</a></li>
 				<li><a href="class-Peridot.Core.Suite.html">Suite</a></li>
+				<li><a href="class-Peridot.Core.Test.html">Test</a></li>
+				<li><a href="class-Peridot.Core.TestResult.html">TestResult</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
 			<ul>
-				<li><a href="class-Peridot.Core.SpecInterface.html">SpecInterface</a></li>
+				<li><a href="class-Peridot.Core.TestInterface.html">TestInterface</a></li>
 			</ul>
 
 			<h3>Traits</h3>
@@ -151,8 +129,8 @@
 
 
 	<div class="description">
-	<p>Property bag for scoping spec "instance variables". This exists to
-prevent spec files from creating instance variable collisions.</p>
+	<p>Property bag for scoping tests "instance variables". This exists to
+prevent tests from creating instance variable collisions.</p>
 
 	</div>
 
@@ -170,11 +148,171 @@ prevent spec files from creating instance variable collisions.</p>
 		<b>Namespace:</b> Peridot\Core<br>
 		<b>Package:</b> Peridot\Core<br>
 
-		<b>Located at</b> <a href="source-class-Peridot.Core.Scope.html#4-13" title="Go to source code">Core/Scope.php</a><br>
+		<b>Located at</b> <a href="source-class-Peridot.Core.Scope.html#4-62" title="Go to source code">Core/Scope.php</a><br>
 	</div>
 
 
 
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="peridotAddChildScope" id="_peridotAddChildScope">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_peridotAddChildScope">#</a>
+		<code><a href="source-class-Peridot.Core.Scope.html#17-23" title="Go to source code">peridotAddChildScope</a>( <span><code><a href="class-Peridot.Core.Scope.html">Peridot\Core\Scope</a></code> <var>$scope</var></span> )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$scope</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="peridotGetChildScopes" id="_peridotGetChildScopes">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_peridotGetChildScopes">#</a>
+		<code><a href="source-class-Peridot.Core.Scope.html#25-31" title="Go to source code">peridotGetChildScopes</a>( )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___call">#</a>
+		<code><a href="source-class-Peridot.Core.Scope.html#33-46" title="Go to source code">__call</a>( <span>mixed <var>$name</var></span>, <span>mixed <var>$arguments</var></span> )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>
+</dd>
+					<dt><var>$arguments</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___get">#</a>
+		<code><a href="source-class-Peridot.Core.Scope.html#48-59" title="Go to source code">__get</a>( <span>mixed <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
 
 
 
@@ -187,6 +325,36 @@ prevent spec files from creating instance variable collisions.</p>
 
 
 
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="peridotChildScopes" id="$peridotChildScopes">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Core.Scope.html#12-15" title="Go to source code"><var>$peridotChildScopes</var></a>
+
+			<div class="description short">
+				
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$peridotChildScopes" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	</table>
 
 
 
@@ -201,6 +369,6 @@ prevent spec files from creating instance variable collisions.</p>
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?2105554943"></script>
+<script src="elementlist.js?3919343691"></script>
 </body>
 </html>

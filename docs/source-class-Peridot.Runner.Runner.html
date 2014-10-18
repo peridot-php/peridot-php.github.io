@@ -62,29 +62,7 @@
 						</li>
 				<li><a href="namespace-Symfony.Component.Console.Question.html">Question</a>
 						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tester.html">Tester</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.html">Tests<span></span></a>
-						<ul>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Command.html">Command</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Descriptor.html">Descriptor</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Fixtures.html">Fixtures</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Formatter.html">Formatter</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Helper.html">Helper</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Input.html">Input</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Logger.html">Logger</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Output.html">Output</a>
-						</li>
-				<li><a href="namespace-Symfony.Component.Console.Tests.Tester.html">Tester</a>
-						</li>
-							</ul></li></ul></li></ul></li></ul></li>
+							</ul></li></ul></li></ul></li>
 			</ul>
 		</div>
 
@@ -99,6 +77,10 @@
 				<li><a href="class-Peridot.Runner.SuiteLoader.html">SuiteLoader</a></li>
 			</ul>
 
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Peridot.Runner.SuiteLoaderInterface.html">SuiteLoaderInterface</a></li>
+			</ul>
 
 
 
@@ -144,7 +126,7 @@
 </span><span id="4" class="l"><a class="l" href="#4"> 4: </a><span class="php-keyword1">use</span> Evenement\EventEmitterInterface;
 </span><span id="5" class="l"><a class="l" href="#5"> 5: </a><span class="php-keyword1">use</span> Peridot\Configuration;
 </span><span id="6" class="l"><a class="l" href="#6"> 6: </a><span class="php-keyword1">use</span> Peridot\Core\HasEventEmitterTrait;
-</span><span id="7" class="l"><a class="l" href="#7"> 7: </a><span class="php-keyword1">use</span> Peridot\Core\SpecResult;
+</span><span id="7" class="l"><a class="l" href="#7"> 7: </a><span class="php-keyword1">use</span> Peridot\Core\TestResult;
 </span><span id="8" class="l"><a class="l" href="#8"> 8: </a><span class="php-keyword1">use</span> Peridot\Core\Suite;
 </span><span id="9" class="l"><a class="l" href="#9"> 9: </a>
 </span><span id="10" class="l"><a class="l" href="#10">10: </a><span class="php-comment">/**
@@ -181,15 +163,15 @@
 </span><span id="41" class="l"><a class="l" href="#41">41: </a>    <span class="php-comment">/**
 </span></span><span id="42" class="l"><a class="l" href="#42">42: </a><span class="php-comment">     * Run the Suite
 </span></span><span id="43" class="l"><a class="l" href="#43">43: </a><span class="php-comment">     *
-</span></span><span id="44" class="l"><a class="l" href="#44">44: </a><span class="php-comment">     * @param SpecResult $result
+</span></span><span id="44" class="l"><a class="l" href="#44">44: </a><span class="php-comment">     * @param TestResult $result
 </span></span><span id="45" class="l"><a class="l" href="#45">45: </a><span class="php-comment">     */</span>
-</span><span id="46" class="l"><a class="l" href="#46">46: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_run" href="#_run">run</a>(SpecResult <span class="php-var">$result</span>)
+</span><span id="46" class="l"><a class="l" href="#46">46: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_run" href="#_run">run</a>(TestResult <span class="php-var">$result</span>)
 </span><span id="47" class="l"><a class="l" href="#47">47: </a>    {
 </span><span id="48" class="l"><a class="l" href="#48">48: </a>        <span class="php-keyword2">set_error_handler</span>(<span class="php-keyword1">function</span> (<span class="php-var">$errno</span>, <span class="php-var">$errstr</span>, <span class="php-var">$errfile</span>, <span class="php-var">$errline</span>) {
 </span><span id="49" class="l"><a class="l" href="#49">49: </a>           <span class="php-var">$this</span>-&gt;eventEmitter-&gt;emit(<span class="php-quote">'error'</span>, [<span class="php-var">$errno</span>, <span class="php-var">$errstr</span>, <span class="php-var">$errfile</span>, <span class="php-var">$errline</span>]);
 </span><span id="50" class="l"><a class="l" href="#50">50: </a>        });
 </span><span id="51" class="l"><a class="l" href="#51">51: </a>
-</span><span id="52" class="l"><a class="l" href="#52">52: </a>        <span class="php-var">$this</span>-&gt;eventEmitter-&gt;on(<span class="php-quote">'spec.failed'</span>, <span class="php-keyword1">function</span> (<span class="php-var">$spec</span>, <span class="php-var">$e</span>) {
+</span><span id="52" class="l"><a class="l" href="#52">52: </a>        <span class="php-var">$this</span>-&gt;eventEmitter-&gt;on(<span class="php-quote">'test.failed'</span>, <span class="php-keyword1">function</span> (<span class="php-var">$test</span>, <span class="php-var">$e</span>) {
 </span><span id="53" class="l"><a class="l" href="#53">53: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;configuration-&gt;shouldStopOnFailure()) {
 </span><span id="54" class="l"><a class="l" href="#54">54: </a>                <span class="php-var">$this</span>-&gt;eventEmitter-&gt;emit(<span class="php-quote">'suite.halt'</span>);
 </span><span id="55" class="l"><a class="l" href="#55">55: </a>            }
@@ -211,6 +193,6 @@
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?2105554943"></script>
+<script src="elementlist.js?3919343691"></script>
 </body>
 </html>
