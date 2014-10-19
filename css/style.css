@@ -82,6 +82,13 @@ a:active {
 	width:300px;
 }
 
+/*******************
+ * Terminal Section
+ *******************/
+ .terminal-section .highlight {
+ 	margin-bottom:0 !important;
+ }
+
 /*****************
  * Jumbotron
  *****************/
