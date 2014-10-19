@@ -23,7 +23,7 @@ peridot_version: 1.0.0
             <li>Easily add user defined cli options</li>
             <li>Easily create custom test reporters</li>
             <li>Pass/fail based on exceptions</li>
-            <li>Mixin functionality via child scopes</li>
+            <li>Mix in functionality via child scopes</li>
             <li>Create your own testing DSLs</li>
         </ul>
 
@@ -274,22 +274,25 @@ Options:
 <?php //peridot.php
 class WebDriverScope extends Scope
 {
-    protected $webDriverScopeDriver;
+    protected $driver;
+    protected $emitter;
 
-    public function __construct(RemoteWebDriver $driver)
+    public function __construct(RemoteWebDriver $driver, EventEmitterInterface $emitter)
     {
-        $this->webDriverScopeDriver = $driver;
+        $this->driver = $driver;
+        $this->emitter = $emitter;
+        $this->emitter->on('runner.end', function() {
+            $this->driver->quit();
+        });
     }
-
-    public function getPage($path)
+    public function getPage($url)
     {
-        $this->webDriverScopeDriver->get($path);
+        $this->driver->get($url);
     }
 
     public function findElementById($id)
     {
-        return $this->webDriverScopeDriver
-            ->findElement(WebDriverBy::id($id));
+        return $this->driver->findElement(\WebDriverBy::id($id));
     }
 }
 
@@ -297,7 +300,7 @@ return function(EventEmitterInterface $emitter) {
     $driver = RemoteWebDriver::create($host, DesiredCapabilities::chrome());
     $driverScope = new WebDriverScope($driver);
 
-    $emitter->on('test.started', function($test) use ($driverScope) {
+    $emitter->on('suite.start', function($test) use ($driverScope) {
         $test->getScope()->peridotAddChildScope($driverScope);
     });
 }
@@ -305,7 +308,11 @@ return function(EventEmitterInterface $emitter) {
 {% endhighlight %}
 
         <p>
-            By mixing in the <code>WebDriverScope</code> to our test's scopes, we have made the following possible in our tests:
+            By mixing the <code>WebDriverScope</code> in to our test's scopes, we have made the following possible in our tests:
+        </p>
+
+        <p>
+            For a fully functional example of the above checkout the <a target="_blank" href="https://github.com/peridot-php/peridot-scope-example">Peridot scope example</a> on Github.
         </p>
 
 {% highlight php %}
