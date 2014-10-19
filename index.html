@@ -32,13 +32,22 @@ peridot_version: 1.0.0
             Peridot can be installed several ways.
         </p>
         <h3>Globally (Composer)</h3>
-        {% highlight bash %}
-        $ composer global require peridot-php/peridot {{ page.peridot_version }}
-        {% endhighlight %}
+        <div class="terminal-section">
+            {% highlight bash %}
+            $ composer global require peridot-php/peridot:{{ page.peridot_version }}
+            {% endhighlight %}
+            <p>
+                And make sure the <code>.composer/vendor/bin</code> is on your <code>PATH</code>
+            </p>
+            {% highlight bash %}
+            export PATH="$PATH:$HOME/.composer/vendor/bin"
+            {% endhighlight %}
+        </div>
+
 
         <h3>Locally (per project)</h3>
         {% highlight bash %}
-        $ composer require peridot-php/peridot {{ page.peridot_version }}
+        $ composer require peridot-php/peridot:{{ page.peridot_version }}
         {% endhighlight %}
 
         <h3>Manual (local)</h3>
