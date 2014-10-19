@@ -1,5 +1,5 @@
 port: 4000
 permalink:   date
-main_title:  "Peridot PHP - BDD for PHP"
-description: "Peridot is a simple and flexible BDD testing tool for PHP 5.4+"
+main_title:  "Peridot PHP - Event driven test framework for PHP!"
+description: "Peridot is a simple and flexible BDD/TDD testing tool for PHP 5.4+"
 highlighter: pygments
