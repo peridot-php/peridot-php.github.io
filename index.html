@@ -311,20 +311,21 @@ return function(EventEmitterInterface $emitter) {
             By mixing the <code>WebDriverScope</code> in to our test's scopes, we have made the following possible in our tests:
         </p>
 
-        <p>
-            For a fully functional example of the above checkout the <a target="_blank" href="https://github.com/peridot-php/peridot-scope-example">Peridot scope example</a> on Github.
-        </p>
-
 {% highlight php %}
 <?php
 describe('The home page', function() {
     it('should have a greeting', function() {
+        $this->getPage('http://localhost:4000');
         $greeting = $this->findElementById('greeting');
-        assert($greeting->getText() === "hello", "should be hello");
+        assert($greeting->getText() === "Hello", "should be Hello");
     });
 });
 ?>
 {% endhighlight %}
+
+        <p>
+            For a fully functional example of the above checkout the <a target="_blank" href="https://github.com/peridot-php/peridot-scope-example">Peridot scope example</a> on Github.
+        </p>
 
         <p>
             Between scopes, events, and DSLs - Peridot gives you plenty of opportunities for extension.
