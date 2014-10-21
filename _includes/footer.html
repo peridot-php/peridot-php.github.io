@@ -11,5 +11,17 @@
         	</div>
         </footer>
     </div>
+
+    <script type="text/javascript">
+    function addListener(element, type, callback) {
+      if (element.addEventListener) element.addEventListener(type, callback);
+      else if (element.attachEvent) element.attachEvent('on' + type, callback);
+    }
+
+    var downloadLink = document.getElementById('downloadLink');
+    addListener(downloadLink, 'click', function() {
+        ga('send', 'event', 'button', 'click', 'download');
+    });
+    </script>
 </body>
 </html>
