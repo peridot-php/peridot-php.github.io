@@ -18,7 +18,7 @@ peridot_version: ~1.0
     <div class="col-xs-12">
         <h2 id="features">Features</h2>
         <ul>
-            <li>Flexible testing interface</li>
+            <li>Flexible BDD testing interface</li>
             <li>Event driven plugin architecture</li>
             <li>Easily add user defined cli options</li>
             <li>Easily create custom test reporters</li>
@@ -26,6 +26,60 @@ peridot_version: ~1.0
             <li>Mix in functionality via child scopes</li>
             <li>Create your own testing DSLs</li>
         </ul>
+
+        <h2 id="why-peridot">Why Peridot</h2>
+        <p>
+            There are several mature testing frameworks for PHP, and even a few BDD style tools out there. So why Peridot?
+        </p>
+
+        <ol>
+            <li>
+                <strong>style:</strong>
+                <p>
+                    Peridot defaults to the <em>describe-it</em> syntax that is popular in most BDD frameworks. We think this allows us to spend less time defining classes and heirarchies for our tests, and start focusing on the <em>how</em> - that is how our code should behave.
+                </p>
+
+                <p>
+                    However, this syntax is available in a couple of other PHP testing tools like <a target="_blank" href="https://github.com/danielstjules/pho">pho</a>, <a target="_blank" href="https://github.com/v2e4lisp/preview">preview</a>, and <a target="_blank" href="https://github.com/davedevelopment/dspec">dspec</a>. It is not syntax alone that makes Peridot stand out :)
+                </p>
+            </li>
+            <li>
+                <strong>event driven:</strong>
+                <p>
+                    We believe event driven architectures make life easier. One of the things that sets Peridot apart from the rest is this strong focus on events. It makes it <em>VERY</em> easy to extend Peridot. Just look at our <a target="_blank" href="https://github.com/peridot-php/peridot-yo-plugin">yo</a> and <a href="https://github.com/peridot-php/peridot-httpkernel-plugin" target="_blank">HttpKernel</a> plugins.
+                </p>
+
+                <p>
+                    In addition to plugins, the event system makes it easy to add ad hoc improvements to your test environment via the peridot.php file. Take a look at Peridot's own <a href="https://github.com/peridot-php/peridot/blob/master/peridot.php#L25" target="_blank">peridot.php</a> file. We leverage events to make adding code coverage to our own suite a snap.
+                </p>
+
+                <p>
+                    For more information on what events are available, see the <a href="#event-reference">event reference</a>.
+                </p>
+            </li>
+            <li>
+                <strong>reporters: </strong>
+                <p>
+                    Thanks to Peridot's event driven nature, it is easy to add your own reporters. We think you will be pleased with the default <a href="https://travis-ci.org/peridot-php/peridot/jobs/38823340" target="_blank">spec reporter</a>, but the possibilities are limitless.
+                </p>
+                <p>
+                    Just look <a href="https://github.com/peridot-php/peridot/blob/master/peridot.php#L43" target="_blank">how easy it is to add a new reporter</a>.
+                </p>
+            </li>
+            <li>
+                <strong>scopes: </strong>
+                <p>
+                    Scopes are one of Peridot's most powerful features. Every test in Peridot has a scope, which at it's simplest use is for safely setting and getting properties via <code>$this</code> in your tests. However - scopes are so much more.
+                </p>
+                <p>
+                    When a scope is asked for a property or method that does not exist, it will search its child scopes to see if that property or method exists. This allows us to mix behavior into our tests! All without creating complex object hierarchies via the <code>extends</code> keyword.
+                </p>
+
+                <p>
+                    Checkout the peridot <a href="https://github.com/peridot-php/peridot-httpkernel-plugin#using-on-a-test-by-test-basis" target="_blank">HttpKernelScope</a> for an example of mixing Symfony's <a href="http://symfony.com/components/BrowserKit" target="_blank">BrowserKit</a> into tests. More information can be found <a href="#scopes">here</a>.
+                </p>
+            </li>
+        </ol>
 
         <h2 id="installation">Installation</h2>
         <p>
