@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Trait Peridot\Core\HasEventEmitterTrait | Peridot</title>
+	<title>Class Peridot\Console\CliOptionParser | Peridot</title>
 
 	<link rel="stylesheet" href="resources/style.css?1648332946">
 
@@ -24,9 +24,9 @@
 						</li>
 				<li class="active"><a href="namespace-Peridot.html">Peridot<span></span></a>
 						<ul>
-				<li><a href="namespace-Peridot.Console.html">Console</a>
+				<li class="active"><a href="namespace-Peridot.Console.html">Console</a>
 						</li>
-				<li class="active"><a href="namespace-Peridot.Core.html">Core</a>
+				<li><a href="namespace-Peridot.Core.html">Core</a>
 						</li>
 				<li><a href="namespace-Peridot.Reporter.html">Reporter</a>
 						</li>
@@ -71,22 +71,16 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Peridot.Core.AbstractTest.html">AbstractTest</a></li>
-				<li><a href="class-Peridot.Core.Scope.html">Scope</a></li>
-				<li><a href="class-Peridot.Core.Suite.html">Suite</a></li>
-				<li><a href="class-Peridot.Core.Test.html">Test</a></li>
-				<li><a href="class-Peridot.Core.TestResult.html">TestResult</a></li>
+				<li><a href="class-Peridot.Console.Application.html">Application</a></li>
+				<li class="active"><a href="class-Peridot.Console.CliOptionParser.html">CliOptionParser</a></li>
+				<li><a href="class-Peridot.Console.Command.html">Command</a></li>
+				<li><a href="class-Peridot.Console.ConfigurationReader.html">ConfigurationReader</a></li>
+				<li><a href="class-Peridot.Console.Environment.html">Environment</a></li>
+				<li><a href="class-Peridot.Console.InputDefinition.html">InputDefinition</a></li>
+				<li><a href="class-Peridot.Console.Version.html">Version</a></li>
 			</ul>
 
-			<h3>Interfaces</h3>
-			<ul>
-				<li><a href="class-Peridot.Core.TestInterface.html">TestInterface</a></li>
-			</ul>
 
-			<h3>Traits</h3>
-			<ul>
-				<li class="active"><a href="class-Peridot.Core.HasEventEmitterTrait.html">HasEventEmitterTrait</a></li>
-			</ul>
 
 
 
@@ -110,7 +104,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="namespace-Peridot.Core.html" title="Summary of Peridot\Core"><span>Namespace</span></a>
+				<a href="namespace-Peridot.Console.html" title="Summary of Peridot\Console"><span>Namespace</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -125,11 +119,13 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Trait HasEventEmitterTrait</h1>
+	<h1>Class CliOptionParser</h1>
 
 
 	<div class="description">
-	<p>Trait indicating an object supports an EventEmitter via composition.</p>
+	<p>The CliOptionParser parser searches an array of
+arguments for the specified options and returns their
+values.</p>
 
 	</div>
 
@@ -139,40 +135,22 @@
 
 
 
-	<div>
-		<h4>Direct Known Users</h4>
-			<a href="class-Peridot.Console.Command.html">Peridot\Console\Command</a>, 
-			<a href="class-Peridot.Console.Environment.html">Peridot\Console\Environment</a>, 
-			<a href="class-Peridot.Core.AbstractTest.html">Peridot\Core\AbstractTest</a>, 
-			<a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a>, 
-			<a href="class-Peridot.Reporter.AbstractBaseReporter.html">Peridot\Reporter\AbstractBaseReporter</a>, 
-			<a href="class-Peridot.Reporter.ReporterFactory.html">Peridot\Reporter\ReporterFactory</a>, 
-			<a href="class-Peridot.Runner.Runner.html">Peridot\Runner\Runner</a>
-	</div>
 
-	<div>
-		<h4>Indirect Known Users</h4>
-			<a href="class-Peridot.Core.Suite.html">Peridot\Core\Suite</a>, 
-			<a href="class-Peridot.Core.Test.html">Peridot\Core\Test</a>, 
-			<a href="class-Peridot.Reporter.AnonymousReporter.html">Peridot\Reporter\AnonymousReporter</a>, 
-			<a href="class-Peridot.Reporter.SpecReporter.html">Peridot\Reporter\SpecReporter</a>, 
-			<a href="class-Peridot.Test.ItWasRun.html">Peridot\Test\ItWasRun</a>
-	</div>
 
 	<div class="info">
 		
 		
-		<b>Namespace:</b> Peridot\Core<br>
-		<b>Package:</b> Peridot\Core<br>
+		<b>Namespace:</b> Peridot\Console<br>
+		<b>Package:</b> Peridot\Console<br>
 
-		<b>Located at</b> <a href="source-class-Peridot.Core.HasEventEmitterTrait.html#6-35" title="Go to source code">Core/HasEventEmitterTrait.php</a><br>
+		<b>Located at</b> <a href="source-class-Peridot.Console.CliOptionParser.html#4-63" title="Go to source code">Console/CliOptionParser.php</a><br>
 	</div>
 
 
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="setEventEmitter" id="_setEventEmitter">
+	<tr data-order="__construct" id="___construct">
 
 		<td class="attributes"><code>
 			 public 
@@ -183,8 +161,8 @@
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_setEventEmitter">#</a>
-		<code><a href="source-class-Peridot.Core.HasEventEmitterTrait.html#18-26" title="Go to source code">setEventEmitter</a>( <span><code><a href="class-Evenement.EventEmitterInterface.html">Evenement\EventEmitterInterface</a></code> <var>$eventEmitter</var></span> )</code>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Peridot.Console.CliOptionParser.html#27-35" title="Go to source code">__construct</a>( <span>array <var>$search</var></span>, <span>array <var>$arguments</var></span> )</code>
 
 		<div class="description short">
 			
@@ -196,48 +174,52 @@
 
 
 
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$eventEmitter</var></dt>
-					<dd>
-</dd>
-				</dl></div>
 
 
 
+				<h4>Var</h4>
+				<div class="list">
+						array $search
+<br>
+						array $arguments
+<br>
+				</div>
 
 
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getEventEmitter" id="_getEventEmitter">
+	<tr data-order="parse" id="_parse">
 
 		<td class="attributes"><code>
 			 public 
 
-			<code><a href="class-Evenement.EventEmitterInterface.html">Evenement\EventEmitterInterface</a></code>
+			array
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_getEventEmitter">#</a>
-		<code><a href="source-class-Peridot.Core.HasEventEmitterTrait.html#28-34" title="Go to source code">getEventEmitter</a>( )</code>
+		<a class="anchor" href="#_parse">#</a>
+		<code><a href="source-class-Peridot.Console.CliOptionParser.html#37-62" title="Go to source code">parse</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Parse arguments to find any options specified
+in the search array</p>
 
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Parse arguments to find any options specified
+in the search array</p>
 
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code><code><a href="class-Evenement.EventEmitterInterface.html">Evenement\EventEmitterInterface</a></code></code>
+					<code>array</code><br>$parsed
+
 				</div>
 
 
@@ -261,29 +243,56 @@
 
 	<table class="summary properties" id="properties">
 	<caption>Properties summary</caption>
-	<tr data-order="eventEmitter" id="$eventEmitter">
+	<tr data-order="search" id="$search">
 		<td class="attributes"><code>
 			protected  
-			<code><a href="class-Evenement.EventEmitterInterface.html">Evenement\EventEmitterInterface</a></code>
+			array
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peridot.Core.HasEventEmitterTrait.html#13-16" title="Go to source code"><var>$eventEmitter</var></a>
+				<a href="source-class-Peridot.Console.CliOptionParser.html#13-18" title="Go to source code"><var>$search</var></a>
 
 			<div class="description short">
-				
+				<p>CLI options to search for</p>
 
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>CLI options to search for</p>
 
 
 			</div>
 		</td>
 		<td class="value">
 			<div>
-				<a href="#$eventEmitter" class="anchor">#</a>
+				<a href="#$search" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="arguments" id="$arguments">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Console.CliOptionParser.html#20-25" title="Go to source code"><var>$arguments</var></a>
+
+			<div class="description short">
+				<p>The CLI arguments to search against</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>The CLI arguments to search against</p>
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$arguments" class="anchor">#</a>
 				<code></code>
 			</div>
 		</td>
