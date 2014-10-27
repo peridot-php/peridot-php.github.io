@@ -148,7 +148,7 @@ prevent tests from creating instance variable collisions.</p>
 		<b>Namespace:</b> Peridot\Core<br>
 		<b>Package:</b> Peridot\Core<br>
 
-		<b>Located at</b> <a href="source-class-Peridot.Core.Scope.html#4-65" title="Go to source code">Core/Scope.php</a><br>
+		<b>Located at</b> <a href="source-class-Peridot.Core.Scope.html#4-111" title="Go to source code">Core/Scope.php</a><br>
 	</div>
 
 
@@ -198,7 +198,7 @@ prevent tests from creating instance variable collisions.</p>
 		<td class="attributes"><code>
 			 public 
 
-			array
+			<code><a href="class-SplObjectStorage.html">SplObjectStorage</a></code>
 			
 			</code>
 		</td>
@@ -220,7 +220,7 @@ prevent tests from creating instance variable collisions.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>array</code>
+					<code><code><a href="class-SplObjectStorage.html">SplObjectStorage</a></code></code>
 				</div>
 
 
@@ -241,7 +241,7 @@ prevent tests from creating instance variable collisions.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___call">#</a>
-		<code><a href="source-class-Peridot.Core.Scope.html#36-49" title="Go to source code">__call</a>( <span>mixed <var>$name</var></span>, <span>mixed <var>$arguments</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Scope.html#36-48" title="Go to source code">__call</a>( <span>mixed <var>$name</var></span>, <span>mixed <var>$arguments</var></span> )</code>
 
 		<div class="description short">
 			
@@ -286,7 +286,7 @@ prevent tests from creating instance variable collisions.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___get">#</a>
-		<code><a href="source-class-Peridot.Core.Scope.html#51-62" title="Go to source code">__get</a>( <span>mixed <var>$name</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Scope.html#50-60" title="Go to source code">__get</a>( <span>mixed <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -305,6 +305,111 @@ prevent tests from creating instance variable collisions.</p>
 </dd>
 				</dl></div>
 
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="peridotLookupScopeMethod" id="_peridotLookupScopeMethod">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_peridotLookupScopeMethod">#</a>
+		<code><a href="source-class-Peridot.Core.Scope.html#62-86" title="Go to source code">peridotLookupScopeMethod</a>( <span><code><a href="class-Peridot.Core.Scope.html">Peridot\Core\Scope</a></code> <var>$scope</var></span>, <span>mixed <var>$methodName</var></span>, <span>mixed <var>$arguments</var></span>, <span>mixed <var>&amp; $accumulator</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Return a method result by searching against a scope and
+all of its children</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return a method result by searching against a scope and
+all of its children</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$scope</var></dt>
+					<dd>
+</dd>
+					<dt><var>$methodName</var></dt>
+					<dd>
+</dd>
+					<dt><var>$arguments</var></dt>
+					<dd>
+</dd>
+					<dt><var>$accumulator</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>index 0 is the result and index 1 is whether the method was found
+
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="peridotLookupScopeProperty" id="_peridotLookupScopeProperty">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_peridotLookupScopeProperty">#</a>
+		<code><a href="source-class-Peridot.Core.Scope.html#88-110" title="Go to source code">peridotLookupScopeProperty</a>( <span><code><a href="class-Peridot.Core.Scope.html">Peridot\Core\Scope</a></code> <var>$scope</var></span>, <span>mixed <var>$propertyName</var></span>, <span>mixed <var>&amp; $accumulator</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Return a property by searching against a scope and
+all of its children</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return a property by searching against a scope and
+all of its children</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$scope</var></dt>
+					<dd>
+</dd>
+					<dt><var>$propertyName</var></dt>
+					<dd>
+</dd>
+					<dt><var>$accumulator</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>index 0 is the result and index 1 is whether the property was found
+
+				</div>
 
 
 
