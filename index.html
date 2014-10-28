@@ -216,6 +216,18 @@ xdescribe("A pending suite", function() {
 ?>
 {% endhighlight %}
 
+        <p>
+            Or you can simply omit the test function.
+        </p>
+
+{% highlight php %}
+<?php
+describe("A pending suite", function() {
+    it("should have a pending spec");    
+});
+?>
+{% endhighlight %}
+
         <h3 id="custom-dsls">Custom DSLs</h3>
 
         <p>
