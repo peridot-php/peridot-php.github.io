@@ -165,7 +165,7 @@
 		<b>Namespace:</b> Peridot\Core<br>
 		<b>Package:</b> Peridot\Core<br>
 
-		<b>Located at</b> <a href="source-class-Peridot.Core.Suite.html#4-114" title="Go to source code">Core/Suite.php</a><br>
+		<b>Located at</b> <a href="source-class-Peridot.Core.Suite.html#4-134" title="Go to source code">Core/Suite.php</a><br>
 	</div>
 
 
@@ -338,7 +338,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_run">#</a>
-		<code><a href="source-class-Peridot.Core.Suite.html#66-94" title="Go to source code">run</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Suite.html#66-86" title="Go to source code">run</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
 
 		<div class="description short">
 			<p>Run all the specs belonging to the suite</p>
@@ -368,6 +368,40 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="halt" id="_halt">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_halt">#</a>
+		<code><a href="source-class-Peridot.Core.Suite.html#88-97" title="Go to source code">halt</a>( )</code>
+
+		<div class="description short">
+			<p>Put the Suite in a halted state. A halted Suite will not run or will
+stop running if currently running.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Put the Suite in a halted state. A halted Suite will not run or will
+stop running if currently running.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="bindTest" id="_bindTest">
 
 		<td class="attributes"><code>
@@ -380,7 +414,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_bindTest">#</a>
-		<code><a href="source-class-Peridot.Core.Suite.html#96-113" title="Go to source code">bindTest</a>( <span><code><a href="class-Peridot.Core.TestInterface.html">Peridot\Core\TestInterface</a></code> <var>$test</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Suite.html#99-116" title="Go to source code">bindTest</a>( <span><code><a href="class-Peridot.Core.TestInterface.html">Peridot\Core\TestInterface</a></code> <var>$test</var></span> )</code>
 
 		<div class="description short">
 			<p>Bind the suite's callables and scopes to the provided test</p>
@@ -395,6 +429,47 @@
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$test</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="runTest" id="_runTest">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_runTest">#</a>
+		<code><a href="source-class-Peridot.Core.Suite.html#118-133" title="Go to source code">runTest</a>( <span><code><a href="class-Peridot.Core.AbstractTest.html">Peridot\Core\AbstractTest</a></code> <var>$test</var></span>, <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
+
+		<div class="description short">
+			<p>Run a test and track its results.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Run a test and track its results.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$test</var></dt>
+					<dd>$result
+</dd>
+					<dt><var>$result</var></dt>
 					<dd>
 </dd>
 				</dl></div>
