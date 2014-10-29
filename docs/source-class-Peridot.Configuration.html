@@ -163,7 +163,7 @@
 </span><span id="47" class="l"><a class="l" href="#47"> 47: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___construct" href="#___construct">__construct</a>()
 </span><span id="48" class="l"><a class="l" href="#48"> 48: </a>    {
 </span><span id="49" class="l"><a class="l" href="#49"> 49: </a>        <span class="php-var">$this</span>-&gt;path = <span class="php-keyword2">getcwd</span>();
-</span><span id="50" class="l"><a class="l" href="#50"> 50: </a>        <span class="php-var">$this</span>-&gt;configurationFile = <span class="php-var">$this</span>-&gt;path . DIRECTORY_SEPARATOR . <span class="php-quote">'peridot.php'</span>;
+</span><span id="50" class="l"><a class="l" href="#50"> 50: </a>        <span class="php-var">$this</span>-&gt;configurationFile = <span class="php-keyword2">getcwd</span>() . DIRECTORY_SEPARATOR . <span class="php-quote">'peridot.php'</span>;
 </span><span id="51" class="l"><a class="l" href="#51"> 51: </a>        <span class="php-var">$this</span>-&gt;dsl = __DIR__ . DIRECTORY_SEPARATOR . <span class="php-quote">'Dsl.php'</span>;
 </span><span id="52" class="l"><a class="l" href="#52"> 52: </a>    }
 </span><span id="53" class="l"><a class="l" href="#53"> 53: </a>
@@ -284,52 +284,53 @@
 </span></span><span id="168" class="l"><a class="l" href="#168">168: </a><span class="php-comment">     */</span>
 </span><span id="169" class="l"><a class="l" href="#169">169: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setConfigurationFile" href="#_setConfigurationFile">setConfigurationFile</a>(<span class="php-var">$configurationFile</span>)
 </span><span id="170" class="l"><a class="l" href="#170">170: </a>    {
-</span><span id="171" class="l"><a class="l" href="#171">171: </a>        <span class="php-var">$this</span>-&gt;configurationFile = <span class="php-var">$configurationFile</span>;
-</span><span id="172" class="l"><a class="l" href="#172">172: </a>
-</span><span id="173" class="l"><a class="l" href="#173">173: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="174" class="l"><a class="l" href="#174">174: </a>    }
-</span><span id="175" class="l"><a class="l" href="#175">175: </a>
-</span><span id="176" class="l"><a class="l" href="#176">176: </a>    <span class="php-comment">/**
-</span></span><span id="177" class="l"><a class="l" href="#177">177: </a><span class="php-comment">     * Return the path to the Peridot configuration file. Returns a relative
-</span></span><span id="178" class="l"><a class="l" href="#178">178: </a><span class="php-comment">     * path if it exists, otherwise return the provided value
-</span></span><span id="179" class="l"><a class="l" href="#179">179: </a><span class="php-comment">     *
-</span></span><span id="180" class="l"><a class="l" href="#180">180: </a><span class="php-comment">     * @return string
-</span></span><span id="181" class="l"><a class="l" href="#181">181: </a><span class="php-comment">     */</span>
-</span><span id="182" class="l"><a class="l" href="#182">182: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getConfigurationFile" href="#_getConfigurationFile">getConfigurationFile</a>()
-</span><span id="183" class="l"><a class="l" href="#183">183: </a>    {
-</span><span id="184" class="l"><a class="l" href="#184">184: </a>        <span class="php-var">$file</span> = <span class="php-var">$this</span>-&gt;configurationFile;
-</span><span id="185" class="l"><a class="l" href="#185">185: </a>        <span class="php-var">$relative</span> = <span class="php-keyword2">getcwd</span>() . DIRECTORY_SEPARATOR . <span class="php-var">$file</span>;
-</span><span id="186" class="l"><a class="l" href="#186">186: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">file_exists</span>(<span class="php-var">$relative</span>)) {
-</span><span id="187" class="l"><a class="l" href="#187">187: </a>            <span class="php-keyword1">return</span> <span class="php-var">$relative</span>;
-</span><span id="188" class="l"><a class="l" href="#188">188: </a>        }
-</span><span id="189" class="l"><a class="l" href="#189">189: </a>
-</span><span id="190" class="l"><a class="l" href="#190">190: </a>        <span class="php-keyword1">return</span> <span class="php-var">$file</span>;
-</span><span id="191" class="l"><a class="l" href="#191">191: </a>    }
-</span><span id="192" class="l"><a class="l" href="#192">192: </a>
-</span><span id="193" class="l"><a class="l" href="#193">193: </a>    <span class="php-comment">/**
-</span></span><span id="194" class="l"><a class="l" href="#194">194: </a><span class="php-comment">     * Set the path to a DSL file for defining
-</span></span><span id="195" class="l"><a class="l" href="#195">195: </a><span class="php-comment">     * the test language used
-</span></span><span id="196" class="l"><a class="l" href="#196">196: </a><span class="php-comment">     *
-</span></span><span id="197" class="l"><a class="l" href="#197">197: </a><span class="php-comment">     * @param string $dsl
-</span></span><span id="198" class="l"><a class="l" href="#198">198: </a><span class="php-comment">     */</span>
-</span><span id="199" class="l"><a class="l" href="#199">199: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setDsl" href="#_setDsl">setDsl</a>(<span class="php-var">$dsl</span>)
-</span><span id="200" class="l"><a class="l" href="#200">200: </a>    {
-</span><span id="201" class="l"><a class="l" href="#201">201: </a>        <span class="php-var">$this</span>-&gt;dsl = <span class="php-var">$dsl</span>;
-</span><span id="202" class="l"><a class="l" href="#202">202: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="203" class="l"><a class="l" href="#203">203: </a>    }
-</span><span id="204" class="l"><a class="l" href="#204">204: </a>
-</span><span id="205" class="l"><a class="l" href="#205">205: </a>    <span class="php-comment">/**
-</span></span><span id="206" class="l"><a class="l" href="#206">206: </a><span class="php-comment">     * Get the path to a DSL file containing
-</span></span><span id="207" class="l"><a class="l" href="#207">207: </a><span class="php-comment">     * test functions to use
-</span></span><span id="208" class="l"><a class="l" href="#208">208: </a><span class="php-comment">     *
-</span></span><span id="209" class="l"><a class="l" href="#209">209: </a><span class="php-comment">     * @return string
-</span></span><span id="210" class="l"><a class="l" href="#210">210: </a><span class="php-comment">     */</span>
-</span><span id="211" class="l"><a class="l" href="#211">211: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getDsl" href="#_getDsl">getDsl</a>()
-</span><span id="212" class="l"><a class="l" href="#212">212: </a>    {
-</span><span id="213" class="l"><a class="l" href="#213">213: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;dsl;
-</span><span id="214" class="l"><a class="l" href="#214">214: </a>    }
-</span><span id="215" class="l"><a class="l" href="#215">215: </a>}
-</span><span id="216" class="l"><a class="l" href="#216">216: </a></span></code></pre>
+</span><span id="171" class="l"><a class="l" href="#171">171: </a>        <span class="php-var">$search</span> = [<span class="php-var">$configurationFile</span>, <span class="php-keyword2">getcwd</span>() . DIRECTORY_SEPARATOR . <span class="php-var">$configurationFile</span>];
+</span><span id="172" class="l"><a class="l" href="#172">172: </a>        <span class="php-var">$found</span> = <span class="php-keyword2">array_filter</span>(<span class="php-var">$search</span>, <span class="php-quote">'file_exists'</span>);
+</span><span id="173" class="l"><a class="l" href="#173">173: </a>
+</span><span id="174" class="l"><a class="l" href="#174">174: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$found</span>) == <span class="php-num">0</span>) {
+</span><span id="175" class="l"><a class="l" href="#175">175: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">&quot;Configuration file specified but does not exist&quot;</span>);
+</span><span id="176" class="l"><a class="l" href="#176">176: </a>        }
+</span><span id="177" class="l"><a class="l" href="#177">177: </a>
+</span><span id="178" class="l"><a class="l" href="#178">178: </a>        <span class="php-var">$this</span>-&gt;configurationFile = <span class="php-var">$found</span>[<span class="php-num">0</span>];
+</span><span id="179" class="l"><a class="l" href="#179">179: </a>
+</span><span id="180" class="l"><a class="l" href="#180">180: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="181" class="l"><a class="l" href="#181">181: </a>    }
+</span><span id="182" class="l"><a class="l" href="#182">182: </a>
+</span><span id="183" class="l"><a class="l" href="#183">183: </a>    <span class="php-comment">/**
+</span></span><span id="184" class="l"><a class="l" href="#184">184: </a><span class="php-comment">     * Return the path to the Peridot configuration file. Returns a relative
+</span></span><span id="185" class="l"><a class="l" href="#185">185: </a><span class="php-comment">     * path if it exists, otherwise return the provided value
+</span></span><span id="186" class="l"><a class="l" href="#186">186: </a><span class="php-comment">     *
+</span></span><span id="187" class="l"><a class="l" href="#187">187: </a><span class="php-comment">     * @return string
+</span></span><span id="188" class="l"><a class="l" href="#188">188: </a><span class="php-comment">     */</span>
+</span><span id="189" class="l"><a class="l" href="#189">189: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getConfigurationFile" href="#_getConfigurationFile">getConfigurationFile</a>()
+</span><span id="190" class="l"><a class="l" href="#190">190: </a>    {
+</span><span id="191" class="l"><a class="l" href="#191">191: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;configurationFile;
+</span><span id="192" class="l"><a class="l" href="#192">192: </a>    }
+</span><span id="193" class="l"><a class="l" href="#193">193: </a>
+</span><span id="194" class="l"><a class="l" href="#194">194: </a>    <span class="php-comment">/**
+</span></span><span id="195" class="l"><a class="l" href="#195">195: </a><span class="php-comment">     * Set the path to a DSL file for defining
+</span></span><span id="196" class="l"><a class="l" href="#196">196: </a><span class="php-comment">     * the test language used
+</span></span><span id="197" class="l"><a class="l" href="#197">197: </a><span class="php-comment">     *
+</span></span><span id="198" class="l"><a class="l" href="#198">198: </a><span class="php-comment">     * @param string $dsl
+</span></span><span id="199" class="l"><a class="l" href="#199">199: </a><span class="php-comment">     */</span>
+</span><span id="200" class="l"><a class="l" href="#200">200: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setDsl" href="#_setDsl">setDsl</a>(<span class="php-var">$dsl</span>)
+</span><span id="201" class="l"><a class="l" href="#201">201: </a>    {
+</span><span id="202" class="l"><a class="l" href="#202">202: </a>        <span class="php-var">$this</span>-&gt;dsl = <span class="php-var">$dsl</span>;
+</span><span id="203" class="l"><a class="l" href="#203">203: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="204" class="l"><a class="l" href="#204">204: </a>    }
+</span><span id="205" class="l"><a class="l" href="#205">205: </a>
+</span><span id="206" class="l"><a class="l" href="#206">206: </a>    <span class="php-comment">/**
+</span></span><span id="207" class="l"><a class="l" href="#207">207: </a><span class="php-comment">     * Get the path to a DSL file containing
+</span></span><span id="208" class="l"><a class="l" href="#208">208: </a><span class="php-comment">     * test functions to use
+</span></span><span id="209" class="l"><a class="l" href="#209">209: </a><span class="php-comment">     *
+</span></span><span id="210" class="l"><a class="l" href="#210">210: </a><span class="php-comment">     * @return string
+</span></span><span id="211" class="l"><a class="l" href="#211">211: </a><span class="php-comment">     */</span>
+</span><span id="212" class="l"><a class="l" href="#212">212: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getDsl" href="#_getDsl">getDsl</a>()
+</span><span id="213" class="l"><a class="l" href="#213">213: </a>    {
+</span><span id="214" class="l"><a class="l" href="#214">214: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;dsl;
+</span><span id="215" class="l"><a class="l" href="#215">215: </a>    }
+</span><span id="216" class="l"><a class="l" href="#216">216: </a>}
+</span><span id="217" class="l"><a class="l" href="#217">217: </a></span></code></pre>
 
 	<div id="footer">
 		Peridot API documentation generated by <a href="http://apigen.org">ApiGen</a>

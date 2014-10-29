@@ -157,46 +157,51 @@
 </span><span id="35" class="l"><a class="l" href="#35">35: </a>    {
 </span><span id="36" class="l"><a class="l" href="#36">36: </a>        <span class="php-var">$configuration</span> = <span class="php-keyword1">new</span> Configuration();
 </span><span id="37" class="l"><a class="l" href="#37">37: </a>
-</span><span id="38" class="l"><a class="l" href="#38">38: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$path</span> = <span class="php-var">$this</span>-&gt;input-&gt;getArgument(<span class="php-quote">'path'</span>)) {
-</span><span id="39" class="l"><a class="l" href="#39">39: </a>            <span class="php-var">$configuration</span>-&gt;setPath(<span class="php-var">$path</span>);
-</span><span id="40" class="l"><a class="l" href="#40">40: </a>        }
-</span><span id="41" class="l"><a class="l" href="#41">41: </a>
-</span><span id="42" class="l"><a class="l" href="#42">42: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$grep</span> = <span class="php-var">$this</span>-&gt;input-&gt;getOption(<span class="php-quote">'grep'</span>)) {
-</span><span id="43" class="l"><a class="l" href="#43">43: </a>            <span class="php-var">$configuration</span>-&gt;setGrep(<span class="php-var">$grep</span>);
-</span><span id="44" class="l"><a class="l" href="#44">44: </a>        }
-</span><span id="45" class="l"><a class="l" href="#45">45: </a>
-</span><span id="46" class="l"><a class="l" href="#46">46: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$noColors</span> = <span class="php-var">$this</span>-&gt;input-&gt;getOption(<span class="php-quote">'no-colors'</span>)) {
-</span><span id="47" class="l"><a class="l" href="#47">47: </a>            <span class="php-var">$configuration</span>-&gt;disableColors();
-</span><span id="48" class="l"><a class="l" href="#48">48: </a>        }
-</span><span id="49" class="l"><a class="l" href="#49">49: </a>
-</span><span id="50" class="l"><a class="l" href="#50">50: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$bail</span> = <span class="php-var">$this</span>-&gt;input-&gt;getOption(<span class="php-quote">'bail'</span>)) {
-</span><span id="51" class="l"><a class="l" href="#51">51: </a>            <span class="php-var">$configuration</span>-&gt;stopOnFailure();
-</span><span id="52" class="l"><a class="l" href="#52">52: </a>        }
-</span><span id="53" class="l"><a class="l" href="#53">53: </a>
-</span><span id="54" class="l"><a class="l" href="#54">54: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$config</span> = <span class="php-var">$this</span>-&gt;input-&gt;getOption(<span class="php-quote">'configuration'</span>)) {
-</span><span id="55" class="l"><a class="l" href="#55">55: </a>            <span class="php-var">$configuration</span>-&gt;setConfigurationFile(<span class="php-var">$config</span>);
-</span><span id="56" class="l"><a class="l" href="#56">56: </a>            <span class="php-keyword1">if</span> (! <span class="php-keyword2">file_exists</span>(<span class="php-var">$configuration</span>-&gt;getConfigurationFile())) {
-</span><span id="57" class="l"><a class="l" href="#57">57: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">&quot;Configuration file specified but does not exist&quot;</span>);
-</span><span id="58" class="l"><a class="l" href="#58">58: </a>            }
-</span><span id="59" class="l"><a class="l" href="#59">59: </a>        }
-</span><span id="60" class="l"><a class="l" href="#60">60: </a>
-</span><span id="61" class="l"><a class="l" href="#61">61: </a>        <span class="php-keyword1">return</span> <span class="php-var">$configuration</span>;
-</span><span id="62" class="l"><a class="l" href="#62">62: </a>    }
-</span><span id="63" class="l"><a class="l" href="#63">63: </a>
-</span><span id="64" class="l"><a class="l" href="#64">64: </a>    <span class="php-comment">/**
-</span></span><span id="65" class="l"><a class="l" href="#65">65: </a><span class="php-comment">     * Static access to reader
-</span></span><span id="66" class="l"><a class="l" href="#66">66: </a><span class="php-comment">     *
-</span></span><span id="67" class="l"><a class="l" href="#67">67: </a><span class="php-comment">     * @param  InputInterface $input
-</span></span><span id="68" class="l"><a class="l" href="#68">68: </a><span class="php-comment">     * @return Configuration
-</span></span><span id="69" class="l"><a class="l" href="#69">69: </a><span class="php-comment">     */</span>
-</span><span id="70" class="l"><a class="l" href="#70">70: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_readInput" href="#_readInput">readInput</a>(InputInterface <span class="php-var">$input</span>)
-</span><span id="71" class="l"><a class="l" href="#71">71: </a>    {
-</span><span id="72" class="l"><a class="l" href="#72">72: </a>        <span class="php-var">$reader</span> = <span class="php-keyword1">new</span> <span class="php-keyword1">static</span>(<span class="php-var">$input</span>);
-</span><span id="73" class="l"><a class="l" href="#73">73: </a>
-</span><span id="74" class="l"><a class="l" href="#74">74: </a>        <span class="php-keyword1">return</span> <span class="php-var">$reader</span>-&gt;read();
-</span><span id="75" class="l"><a class="l" href="#75">75: </a>    }
-</span><span id="76" class="l"><a class="l" href="#76">76: </a>}
-</span><span id="77" class="l"><a class="l" href="#77">77: </a></span></code></pre>
+</span><span id="38" class="l"><a class="l" href="#38">38: </a>        <span class="php-var">$options</span> = [
+</span><span id="39" class="l"><a class="l" href="#39">39: </a>            <span class="php-quote">'grep'</span> =&gt; [<span class="php-var">$configuration</span>, <span class="php-quote">'setGrep'</span>],
+</span><span id="40" class="l"><a class="l" href="#40">40: </a>            <span class="php-quote">'no-colors'</span> =&gt; [<span class="php-var">$configuration</span>, <span class="php-quote">'disableColors'</span>],
+</span><span id="41" class="l"><a class="l" href="#41">41: </a>            <span class="php-quote">'bail'</span> =&gt; [<span class="php-var">$configuration</span>, <span class="php-quote">'stopOnFailure'</span>],
+</span><span id="42" class="l"><a class="l" href="#42">42: </a>            <span class="php-quote">'configuration'</span> =&gt; [<span class="php-var">$configuration</span>, <span class="php-quote">'setConfigurationFile'</span>]
+</span><span id="43" class="l"><a class="l" href="#43">43: </a>        ];
+</span><span id="44" class="l"><a class="l" href="#44">44: </a>
+</span><span id="45" class="l"><a class="l" href="#45">45: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$path</span> = <span class="php-var">$this</span>-&gt;input-&gt;getArgument(<span class="php-quote">'path'</span>)) {
+</span><span id="46" class="l"><a class="l" href="#46">46: </a>            <span class="php-var">$configuration</span>-&gt;setPath(<span class="php-var">$path</span>);
+</span><span id="47" class="l"><a class="l" href="#47">47: </a>        }
+</span><span id="48" class="l"><a class="l" href="#48">48: </a>
+</span><span id="49" class="l"><a class="l" href="#49">49: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$options</span> <span class="php-keyword1">as</span> <span class="php-var">$option</span> =&gt; <span class="php-var">$callable</span>) {
+</span><span id="50" class="l"><a class="l" href="#50">50: </a>            <span class="php-var">$this</span>-&gt;callForOption(<span class="php-var">$option</span>, <span class="php-var">$callable</span>);
+</span><span id="51" class="l"><a class="l" href="#51">51: </a>        }
+</span><span id="52" class="l"><a class="l" href="#52">52: </a>
+</span><span id="53" class="l"><a class="l" href="#53">53: </a>        <span class="php-keyword1">return</span> <span class="php-var">$configuration</span>;
+</span><span id="54" class="l"><a class="l" href="#54">54: </a>    }
+</span><span id="55" class="l"><a class="l" href="#55">55: </a>
+</span><span id="56" class="l"><a class="l" href="#56">56: </a>    <span class="php-comment">/**
+</span></span><span id="57" class="l"><a class="l" href="#57">57: </a><span class="php-comment">     * Static access to reader
+</span></span><span id="58" class="l"><a class="l" href="#58">58: </a><span class="php-comment">     *
+</span></span><span id="59" class="l"><a class="l" href="#59">59: </a><span class="php-comment">     * @param  InputInterface $input
+</span></span><span id="60" class="l"><a class="l" href="#60">60: </a><span class="php-comment">     * @return Configuration
+</span></span><span id="61" class="l"><a class="l" href="#61">61: </a><span class="php-comment">     */</span>
+</span><span id="62" class="l"><a class="l" href="#62">62: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_readInput" href="#_readInput">readInput</a>(InputInterface <span class="php-var">$input</span>)
+</span><span id="63" class="l"><a class="l" href="#63">63: </a>    {
+</span><span id="64" class="l"><a class="l" href="#64">64: </a>        <span class="php-var">$reader</span> = <span class="php-keyword1">new</span> <span class="php-keyword1">static</span>(<span class="php-var">$input</span>);
+</span><span id="65" class="l"><a class="l" href="#65">65: </a>
+</span><span id="66" class="l"><a class="l" href="#66">66: </a>        <span class="php-keyword1">return</span> <span class="php-var">$reader</span>-&gt;read();
+</span><span id="67" class="l"><a class="l" href="#67">67: </a>    }
+</span><span id="68" class="l"><a class="l" href="#68">68: </a>
+</span><span id="69" class="l"><a class="l" href="#69">69: </a>    <span class="php-comment">/**
+</span></span><span id="70" class="l"><a class="l" href="#70">70: </a><span class="php-comment">     * @param Configuration $config
+</span></span><span id="71" class="l"><a class="l" href="#71">71: </a><span class="php-comment">     * @param string $optionName
+</span></span><span id="72" class="l"><a class="l" href="#72">72: </a><span class="php-comment">     * @param string $method
+</span></span><span id="73" class="l"><a class="l" href="#73">73: </a><span class="php-comment">     */</span>
+</span><span id="74" class="l"><a class="l" href="#74">74: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_callForOption" href="#_callForOption">callForOption</a>(<span class="php-var">$optionName</span>, <span class="php-keyword1">callable</span> <span class="php-var">$callable</span>)
+</span><span id="75" class="l"><a class="l" href="#75">75: </a>    {
+</span><span id="76" class="l"><a class="l" href="#76">76: </a>        <span class="php-var">$value</span> = <span class="php-var">$this</span>-&gt;input-&gt;getOption(<span class="php-var">$optionName</span>);
+</span><span id="77" class="l"><a class="l" href="#77">77: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$value</span>) {
+</span><span id="78" class="l"><a class="l" href="#78">78: </a>            <span class="php-keyword2">call_user_func_array</span>(<span class="php-var">$callable</span>, [<span class="php-var">$value</span>]);
+</span><span id="79" class="l"><a class="l" href="#79">79: </a>        }
+</span><span id="80" class="l"><a class="l" href="#80">80: </a>    }
+</span><span id="81" class="l"><a class="l" href="#81">81: </a>}
+</span><span id="82" class="l"><a class="l" href="#82">82: </a></span></code></pre>
 
 	<div id="footer">
 		Peridot API documentation generated by <a href="http://apigen.org">ApiGen</a>

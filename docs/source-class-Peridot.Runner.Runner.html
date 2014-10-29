@@ -171,7 +171,7 @@
 </span><span id="49" class="l"><a class="l" href="#49">49: </a>           <span class="php-var">$this</span>-&gt;eventEmitter-&gt;emit(<span class="php-quote">'error'</span>, [<span class="php-var">$errno</span>, <span class="php-var">$errstr</span>, <span class="php-var">$errfile</span>, <span class="php-var">$errline</span>]);
 </span><span id="50" class="l"><a class="l" href="#50">50: </a>        });
 </span><span id="51" class="l"><a class="l" href="#51">51: </a>
-</span><span id="52" class="l"><a class="l" href="#52">52: </a>        <span class="php-var">$this</span>-&gt;eventEmitter-&gt;on(<span class="php-quote">'test.failed'</span>, <span class="php-keyword1">function</span> (<span class="php-var">$test</span>, <span class="php-var">$e</span>) {
+</span><span id="52" class="l"><a class="l" href="#52">52: </a>        <span class="php-var">$this</span>-&gt;eventEmitter-&gt;on(<span class="php-quote">'test.failed'</span>, <span class="php-keyword1">function</span> () {
 </span><span id="53" class="l"><a class="l" href="#53">53: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;configuration-&gt;shouldStopOnFailure()) {
 </span><span id="54" class="l"><a class="l" href="#54">54: </a>                <span class="php-var">$this</span>-&gt;eventEmitter-&gt;emit(<span class="php-quote">'suite.halt'</span>);
 </span><span id="55" class="l"><a class="l" href="#55">55: </a>            }
