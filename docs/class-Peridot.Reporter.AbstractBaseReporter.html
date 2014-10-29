@@ -159,7 +159,7 @@ and an EventEmitter in order to report Peridot results.</p>
 		<b>Namespace:</b> Peridot\Reporter<br>
 		<b>Package:</b> Peridot\Reporter<br>
 
-		<b>Located at</b> <a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#10-223" title="Go to source code">Reporter/AbstractBaseReporter.php</a><br>
+		<b>Located at</b> <a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#10-267" title="Go to source code">Reporter/AbstractBaseReporter.php</a><br>
 	</div>
 
 
@@ -178,7 +178,7 @@ and an EventEmitter in order to report Peridot results.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#72-113" title="Go to source code">__construct</a>( <span><code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code> <var>$configuration</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span>, <span><code><a href="class-Evenement.EventEmitterInterface.html">Evenement\EventEmitterInterface</a></code> <var>$eventEmitter</var></span> )</code>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#72-92" title="Go to source code">__construct</a>( <span><code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code> <var>$configuration</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span>, <span><code><a href="class-Evenement.EventEmitterInterface.html">Evenement\EventEmitterInterface</a></code> <var>$eventEmitter</var></span> )</code>
 
 		<div class="description short">
 			
@@ -222,7 +222,7 @@ and an EventEmitter in order to report Peridot results.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_color">#</a>
-		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#115-132" title="Go to source code">color</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$text</var></span> )</code>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#94-111" title="Go to source code">color</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$text</var></span> )</code>
 
 		<div class="description short">
 			<p>Given a color name, colorize the provided text in that
@@ -271,7 +271,7 @@ color</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_symbol">#</a>
-		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#134-143" title="Go to source code">symbol</a>( <span>mixed <var>$name</var></span> )</code>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#113-122" title="Go to source code">symbol</a>( <span>mixed <var>$name</var></span> )</code>
 
 		<div class="description short">
 			<p>Fetch a symbol by name</p>
@@ -315,7 +315,7 @@ color</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getOutput">#</a>
-		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#145-153" title="Go to source code">getOutput</a>( )</code>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#124-132" title="Go to source code">getOutput</a>( )</code>
 
 		<div class="description short">
 			<p>Return the OutputInterface associated with the Reporter</p>
@@ -353,7 +353,7 @@ color</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getConfiguration">#</a>
-		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#155-163" title="Go to source code">getConfiguration</a>( )</code>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#134-142" title="Go to source code">getConfiguration</a>( )</code>
 
 		<div class="description short">
 			<p>Return the Configuration associated with the Reporter</p>
@@ -391,7 +391,7 @@ color</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getTime">#</a>
-		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#165-171" title="Go to source code">getTime</a>( )</code>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#144-150" title="Go to source code">getTime</a>( )</code>
 
 		<div class="description short">
 			
@@ -427,7 +427,7 @@ color</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_footer">#</a>
-		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#173-195" title="Go to source code">footer</a>( )</code>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#152-174" title="Go to source code">footer</a>( )</code>
 
 		<div class="description short">
 			<p>Output result footer</p>
@@ -459,7 +459,7 @@ color</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasColorSupport">#</a>
-		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#197-215" title="Go to source code">hasColorSupport</a>( )</code>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#176-194" title="Go to source code">hasColorSupport</a>( )</code>
 
 		<div class="description short">
 			<p>Determine if colorized output is supported by the reporters output.
@@ -487,6 +487,38 @@ to use the reporter's output stream</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="registerSymbols" id="_registerSymbols">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerSymbols">#</a>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#196-205" title="Go to source code">registerSymbols</a>( )</code>
+
+		<div class="description short">
+			<p>Register reporter symbols, additionally checking OS compatibility.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Register reporter symbols, additionally checking OS compatibility.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="init" id="_init">
 
 		<td class="attributes"><code>
@@ -499,7 +531,7 @@ to use the reporter's output stream</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_init">#</a>
-		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#217-222" title="Go to source code">init</a>( )</code>
+		<code><a href="source-class-Peridot.Reporter.AbstractBaseReporter.html#261-266" title="Go to source code">init</a>( )</code>
 
 		<div class="description short">
 			<p>Initialize reporter. Setup and listen for events</p>
