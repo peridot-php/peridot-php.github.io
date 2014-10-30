@@ -170,8 +170,8 @@
 </span><span id="48" class="l"><a class="l" href="#48">48: </a>            <span class="php-var">$previous</span> = <span class="php-var">$this</span>-&gt;arguments[<span class="php-var">$i</span> - <span class="php-num">1</span>];
 </span><span id="49" class="l"><a class="l" href="#49">49: </a>            <span class="php-var">$arg</span> = <span class="php-var">$this</span>-&gt;arguments[<span class="php-var">$i</span>];
 </span><span id="50" class="l"><a class="l" href="#50">50: </a>
-</span><span id="51" class="l"><a class="l" href="#51">51: </a>            <span class="php-var">$needle</span> = <span class="php-keyword2">array_reduce</span>(<span class="php-var">$this</span>-&gt;search, <span class="php-keyword1">function</span>(<span class="php-var">$result</span>, <span class="php-var">$search</span>) <span class="php-keyword1">use</span> (<span class="php-var">$previous</span>) {
-</span><span id="52" class="l"><a class="l" href="#52">52: </a>                <span class="php-keyword1">return</span> (<span class="php-var">$previous</span> == <span class="php-var">$search</span>) ? <span class="php-var">$search</span> : <span class="php-var">$result</span>; 
+</span><span id="51" class="l"><a class="l" href="#51">51: </a>            <span class="php-var">$needle</span> = <span class="php-keyword2">array_reduce</span>(<span class="php-var">$this</span>-&gt;search, <span class="php-keyword1">function</span> (<span class="php-var">$result</span>, <span class="php-var">$search</span>) <span class="php-keyword1">use</span> (<span class="php-var">$previous</span>) {
+</span><span id="52" class="l"><a class="l" href="#52">52: </a>                <span class="php-keyword1">return</span> (<span class="php-var">$previous</span> == <span class="php-var">$search</span>) ? <span class="php-var">$search</span> : <span class="php-var">$result</span>;
 </span><span id="53" class="l"><a class="l" href="#53">53: </a>            });
 </span><span id="54" class="l"><a class="l" href="#54">54: </a>
 </span><span id="55" class="l"><a class="l" href="#55">55: </a>            <span class="php-keyword1">if</span> (!<span class="php-var">$needle</span>) {
