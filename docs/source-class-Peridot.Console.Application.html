@@ -155,7 +155,7 @@
 </span><span id="33" class="l"><a class="l" href="#33"> 33: </a>            <span class="php-keyword2">fwrite</span>(STDERR, <span class="php-quote">&quot;Configuration file specified but does not exist&quot;</span> . PHP_EOL);
 </span><span id="34" class="l"><a class="l" href="#34"> 34: </a>            <span class="php-keyword1">exit</span>(<span class="php-num">1</span>);
 </span><span id="35" class="l"><a class="l" href="#35"> 35: </a>        }
-</span><span id="36" class="l"><a class="l" href="#36"> 36: </a>        <span class="php-var">$this</span>-&gt;environment-&gt;getEventEmitter()-&gt;emit(<span class="php-quote">'peridot.start'</span>, [<span class="php-var">$this</span>-&gt;environment]);
+</span><span id="36" class="l"><a class="l" href="#36"> 36: </a>        <span class="php-var">$this</span>-&gt;environment-&gt;getEventEmitter()-&gt;emit(<span class="php-quote">'peridot.start'</span>, [<span class="php-var">$this</span>-&gt;environment, <span class="php-var">$this</span>]);
 </span><span id="37" class="l"><a class="l" href="#37"> 37: </a>        parent::__construct(Version::NAME, Version::NUMBER);
 </span><span id="38" class="l"><a class="l" href="#38"> 38: </a>    }
 </span><span id="39" class="l"><a class="l" href="#39"> 39: </a>
