@@ -151,7 +151,7 @@ pattern.</p>
 		<b>Namespace:</b> Peridot\Runner<br>
 		<b>Package:</b> Peridot\Runner<br>
 
-		<b>Located at</b> <a href="source-class-Peridot.Runner.SuiteLoader.html#4-76" title="Go to source code">Runner/SuiteLoader.php</a><br>
+		<b>Located at</b> <a href="source-class-Peridot.Runner.SuiteLoader.html#4-98" title="Go to source code">Runner/SuiteLoader.php</a><br>
 	</div>
 
 
@@ -170,7 +170,7 @@ pattern.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Peridot.Runner.SuiteLoader.html#17-23" title="Go to source code">__construct</a>( <span>string <var>$pattern</var></span> )</code>
+		<code><a href="source-class-Peridot.Runner.SuiteLoader.html#22-28" title="Go to source code">__construct</a>( <span>string <var>$pattern</var></span> )</code>
 
 		<div class="description short">
 			
@@ -208,7 +208,7 @@ pattern.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_load">#</a>
-		<code><a href="source-class-Peridot.Runner.SuiteLoader.html#25-36" title="Go to source code">load</a>( <span>mixed <var>$path</var></span> )</code>
+		<code><a href="source-class-Peridot.Runner.SuiteLoader.html#30-46" title="Go to source code">load</a>( <span>mixed <var>$path</var></span> )</code>
 
 		<div class="description short">
 			<p>Load tests</p>
@@ -236,6 +236,44 @@ pattern.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="hasLoaded" id="_hasLoaded">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasLoaded">#</a>
+		<code><a href="source-class-Peridot.Runner.SuiteLoader.html#48-56" title="Go to source code">hasLoaded</a>( <span>mixed <var>$path</var></span> )</code>
+
+		<div class="description short">
+			<p>Should return true if the suite loader has already loaded a path</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Should return true if the suite loader has already loaded a path</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Peridot.Runner.SuiteLoaderInterface.html#_hasLoaded">Peridot\Runner\SuiteLoaderInterface::hasLoaded()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="getTests" id="_getTests">
 
 		<td class="attributes"><code>
@@ -248,7 +286,7 @@ pattern.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getTests">#</a>
-		<code><a href="source-class-Peridot.Runner.SuiteLoader.html#38-56" title="Go to source code">getTests</a>( <span>mixed <var>$path</var></span> )</code>
+		<code><a href="source-class-Peridot.Runner.SuiteLoader.html#58-76" title="Go to source code">getTests</a>( <span>mixed <var>$path</var></span> )</code>
 
 		<div class="description short">
 			<p>Search a path for a provided file or scan a
@@ -300,7 +338,7 @@ conditions</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_globRecursive">#</a>
-		<code><a href="source-class-Peridot.Runner.SuiteLoader.html#58-75" title="Go to source code">globRecursive</a>( <span>mixed <var>$pattern</var></span>, <span>integer <var>$flags</var> = <span class="php-num">0</span></span> )</code>
+		<code><a href="source-class-Peridot.Runner.SuiteLoader.html#80-97" title="Go to source code">globRecursive</a>( <span>mixed <var>$pattern</var></span>, <span>integer <var>$flags</var> = <span class="php-num">0</span></span> )</code>
 
 		<div class="description short">
 			<p>Simple recursive glob</p>
@@ -376,6 +414,33 @@ conditions</p>
 			<div>
 				<a href="#$pattern" class="anchor">#</a>
 				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="loadedPaths" id="$loadedPaths">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Runner.SuiteLoader.html#17-20" title="Go to source code"><var>$loadedPaths</var></a>
+
+			<div class="description short">
+				
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$loadedPaths" class="anchor">#</a>
+				<code>[]</code>
 			</div>
 		</td>
 	</tr>
