@@ -176,34 +176,34 @@
 </span><span id="48" class="l"><a class="l" href="#48">48: </a>    }
 </span><span id="49" class="l"><a class="l" href="#49">49: </a>
 </span><span id="50" class="l"><a class="l" href="#50">50: </a>    <span class="php-comment">/**
-</span></span><span id="51" class="l"><a class="l" href="#51">51: </a><span class="php-comment">     * Execute this test's tear down functions.
-</span></span><span id="52" class="l"><a class="l" href="#52">52: </a><span class="php-comment">     */</span>
-</span><span id="53" class="l"><a class="l" href="#53">53: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_runTearDown" href="#_runTearDown">runTearDown</a>()
-</span><span id="54" class="l"><a class="l" href="#54">54: </a>    {
-</span><span id="55" class="l"><a class="l" href="#55">55: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;tearDownFns <span class="php-keyword1">as</span> <span class="php-var">$tearDown</span>) {
-</span><span id="56" class="l"><a class="l" href="#56">56: </a>            <span class="php-keyword1">try</span> {
-</span><span id="57" class="l"><a class="l" href="#57">57: </a>                <span class="php-var">$tearDown</span>();
-</span><span id="58" class="l"><a class="l" href="#58">58: </a>            } <span class="php-keyword1">catch</span> (Exception <span class="php-var">$e</span>) {
-</span><span id="59" class="l"><a class="l" href="#59">59: </a>                <span class="php-keyword1">continue</span>;
+</span></span><span id="51" class="l"><a class="l" href="#51">51: </a><span class="php-comment">     * Attempt to execute setup functions and run the test definition
+</span></span><span id="52" class="l"><a class="l" href="#52">52: </a><span class="php-comment">     *
+</span></span><span id="53" class="l"><a class="l" href="#53">53: </a><span class="php-comment">     * @param TestResult $result
+</span></span><span id="54" class="l"><a class="l" href="#54">54: </a><span class="php-comment">     */</span>
+</span><span id="55" class="l"><a class="l" href="#55">55: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_executeTest" href="#_executeTest">executeTest</a>(TestResult <span class="php-var">$result</span>)
+</span><span id="56" class="l"><a class="l" href="#56">56: </a>    {
+</span><span id="57" class="l"><a class="l" href="#57">57: </a>        <span class="php-keyword1">try</span> {
+</span><span id="58" class="l"><a class="l" href="#58">58: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;setUpFns <span class="php-keyword1">as</span> <span class="php-var">$setUp</span>) {
+</span><span id="59" class="l"><a class="l" href="#59">59: </a>                <span class="php-var">$setUp</span>();
 </span><span id="60" class="l"><a class="l" href="#60">60: </a>            }
-</span><span id="61" class="l"><a class="l" href="#61">61: </a>        }
-</span><span id="62" class="l"><a class="l" href="#62">62: </a>    }
-</span><span id="63" class="l"><a class="l" href="#63">63: </a>
-</span><span id="64" class="l"><a class="l" href="#64">64: </a>    <span class="php-comment">/**
-</span></span><span id="65" class="l"><a class="l" href="#65">65: </a><span class="php-comment">     * Attempt to execute setup functions and run the test definition
-</span></span><span id="66" class="l"><a class="l" href="#66">66: </a><span class="php-comment">     *
-</span></span><span id="67" class="l"><a class="l" href="#67">67: </a><span class="php-comment">     * @param TestResult $result
-</span></span><span id="68" class="l"><a class="l" href="#68">68: </a><span class="php-comment">     */</span>
-</span><span id="69" class="l"><a class="l" href="#69">69: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_executeTest" href="#_executeTest">executeTest</a>(TestResult <span class="php-var">$result</span>)
-</span><span id="70" class="l"><a class="l" href="#70">70: </a>    {
-</span><span id="71" class="l"><a class="l" href="#71">71: </a>        <span class="php-keyword1">try</span> {
-</span><span id="72" class="l"><a class="l" href="#72">72: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;setUpFns <span class="php-keyword1">as</span> <span class="php-var">$setUp</span>) {
-</span><span id="73" class="l"><a class="l" href="#73">73: </a>                <span class="php-var">$setUp</span>();
-</span><span id="74" class="l"><a class="l" href="#74">74: </a>            }
-</span><span id="75" class="l"><a class="l" href="#75">75: </a>            <span class="php-keyword2">call_user_func</span>(<span class="php-var">$this</span>-&gt;getDefinition());
-</span><span id="76" class="l"><a class="l" href="#76">76: </a>            <span class="php-var">$result</span>-&gt;passTest(<span class="php-var">$this</span>);
-</span><span id="77" class="l"><a class="l" href="#77">77: </a>        } <span class="php-keyword1">catch</span> (Exception <span class="php-var">$e</span>) {
-</span><span id="78" class="l"><a class="l" href="#78">78: </a>            <span class="php-var">$result</span>-&gt;failTest(<span class="php-var">$this</span>, <span class="php-var">$e</span>);
+</span><span id="61" class="l"><a class="l" href="#61">61: </a>            <span class="php-keyword2">call_user_func</span>(<span class="php-var">$this</span>-&gt;getDefinition());
+</span><span id="62" class="l"><a class="l" href="#62">62: </a>            <span class="php-var">$result</span>-&gt;passTest(<span class="php-var">$this</span>);
+</span><span id="63" class="l"><a class="l" href="#63">63: </a>        } <span class="php-keyword1">catch</span> (Exception <span class="php-var">$e</span>) {
+</span><span id="64" class="l"><a class="l" href="#64">64: </a>            <span class="php-var">$result</span>-&gt;failTest(<span class="php-var">$this</span>, <span class="php-var">$e</span>);
+</span><span id="65" class="l"><a class="l" href="#65">65: </a>        }
+</span><span id="66" class="l"><a class="l" href="#66">66: </a>    }
+</span><span id="67" class="l"><a class="l" href="#67">67: </a>
+</span><span id="68" class="l"><a class="l" href="#68">68: </a>    <span class="php-comment">/**
+</span></span><span id="69" class="l"><a class="l" href="#69">69: </a><span class="php-comment">     * Execute this test's tear down functions.
+</span></span><span id="70" class="l"><a class="l" href="#70">70: </a><span class="php-comment">     */</span>
+</span><span id="71" class="l"><a class="l" href="#71">71: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_runTearDown" href="#_runTearDown">runTearDown</a>()
+</span><span id="72" class="l"><a class="l" href="#72">72: </a>    {
+</span><span id="73" class="l"><a class="l" href="#73">73: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;tearDownFns <span class="php-keyword1">as</span> <span class="php-var">$tearDown</span>) {
+</span><span id="74" class="l"><a class="l" href="#74">74: </a>            <span class="php-keyword1">try</span> {
+</span><span id="75" class="l"><a class="l" href="#75">75: </a>                <span class="php-var">$tearDown</span>();
+</span><span id="76" class="l"><a class="l" href="#76">76: </a>            } <span class="php-keyword1">catch</span> (Exception <span class="php-var">$e</span>) {
+</span><span id="77" class="l"><a class="l" href="#77">77: </a>                <span class="php-keyword1">continue</span>;
+</span><span id="78" class="l"><a class="l" href="#78">78: </a>            }
 </span><span id="79" class="l"><a class="l" href="#79">79: </a>        }
 </span><span id="80" class="l"><a class="l" href="#80">80: </a>    }
 </span><span id="81" class="l"><a class="l" href="#81">81: </a>}
