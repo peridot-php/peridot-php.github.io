@@ -167,7 +167,7 @@
 		<b>Namespace:</b> Peridot\Core<br>
 		<b>Package:</b> Peridot\Core<br>
 
-		<b>Located at</b> <a href="source-class-Peridot.Core.AbstractTest.html#8-216" title="Go to source code">Core/AbstractTest.php</a><br>
+		<b>Located at</b> <a href="source-class-Peridot.Core.AbstractTest.html#8-212" title="Go to source code">Core/AbstractTest.php</a><br>
 	</div>
 
 
@@ -227,7 +227,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addSetupFunction">#</a>
-		<code><a href="source-class-Peridot.Core.AbstractTest.html#70-79" title="Go to source code">addSetupFunction</a>( <span>callable <var>$setupFn</var></span>, <span>integer <var>$behavior</var> = <code><a href="class-Peridot.Core.Scope.html#BEHAVIOR_BIND">Peridot\Core\Scope::<b>BEHAVIOR_BIND</b></a></code></span> )</code>
+		<code><a href="source-class-Peridot.Core.AbstractTest.html#70-79" title="Go to source code">addSetupFunction</a>( <span>callable <var>$setupFn</var></span> )</code>
 
 		<div class="description short">
 			<p>Add a function to execute before the test runs</p>
@@ -243,11 +243,6 @@
 				<div class="list"><dl>
 					<dt><var>$setupFn</var></dt>
 					<dd>
-</dd>
-					<dt><var>$behavior</var></dt>
-					<dd>&lt;ul&gt;
-&lt;li&gt;a Scope behavior constant&lt;/li&gt;
-&lt;/ul&gt;
 </dd>
 				</dl></div>
 
@@ -272,7 +267,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addTearDownFunction">#</a>
-		<code><a href="source-class-Peridot.Core.AbstractTest.html#81-90" title="Go to source code">addTearDownFunction</a>( <span>callable <var>$tearDownFn</var></span>, <span>integer <var>$behavior</var> = <code><a href="class-Peridot.Core.Scope.html#BEHAVIOR_BIND">Peridot\Core\Scope::<b>BEHAVIOR_BIND</b></a></code></span> )</code>
+		<code><a href="source-class-Peridot.Core.AbstractTest.html#81-90" title="Go to source code">addTearDownFunction</a>( <span>callable <var>$tearDownFn</var></span> )</code>
 
 		<div class="description short">
 			<p>Add a function to execute after the test runs</p>
@@ -288,11 +283,6 @@
 				<div class="list"><dl>
 					<dt><var>$tearDownFn</var></dt>
 					<dd>
-</dd>
-					<dt><var>$behavior</var></dt>
-					<dd>&lt;ul&gt;
-&lt;li&gt;a Scope behavior constant&lt;/li&gt;
-&lt;/ul&gt;
 </dd>
 				</dl></div>
 
@@ -355,7 +345,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDefinition">#</a>
-		<code><a href="source-class-Peridot.Core.AbstractTest.html#102-115" title="Go to source code">getDefinition</a>( )</code>
+		<code><a href="source-class-Peridot.Core.AbstractTest.html#102-110" title="Go to source code">getDefinition</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the callable definition of the TestInterface</p>
@@ -393,7 +383,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setParent">#</a>
-		<code><a href="source-class-Peridot.Core.AbstractTest.html#117-126" title="Go to source code">setParent</a>( <span><code><a href="class-Peridot.Core.TestInterface.html">Peridot\Core\TestInterface</a></code> <var>$parent</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.AbstractTest.html#112-122" title="Go to source code">setParent</a>( <span><code><a href="class-Peridot.Core.TestInterface.html">Peridot\Core\TestInterface</a></code> <var>$parent</var></span> )</code>
 
 		<div class="description short">
 			
@@ -437,7 +427,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getParent">#</a>
-		<code><a href="source-class-Peridot.Core.AbstractTest.html#128-136" title="Go to source code">getParent</a>( )</code>
+		<code><a href="source-class-Peridot.Core.AbstractTest.html#124-132" title="Go to source code">getParent</a>( )</code>
 
 		<div class="description short">
 			
@@ -475,7 +465,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getTitle">#</a>
-		<code><a href="source-class-Peridot.Core.AbstractTest.html#138-153" title="Go to source code">getTitle</a>( )</code>
+		<code><a href="source-class-Peridot.Core.AbstractTest.html#134-149" title="Go to source code">getTitle</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the full description including parent descriptions</p>
@@ -513,7 +503,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPending">#</a>
-		<code><a href="source-class-Peridot.Core.AbstractTest.html#155-163" title="Go to source code">getPending</a>( )</code>
+		<code><a href="source-class-Peridot.Core.AbstractTest.html#151-159" title="Go to source code">getPending</a>( )</code>
 
 		<div class="description short">
 			<p>Return whether or not the test is pending</p>
@@ -551,7 +541,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPending">#</a>
-		<code><a href="source-class-Peridot.Core.AbstractTest.html#165-173" title="Go to source code">setPending</a>( <span>boolean <var>$state</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.AbstractTest.html#161-169" title="Go to source code">setPending</a>( <span>boolean <var>$state</var></span> )</code>
 
 		<div class="description short">
 			<p>Set the pending status of the test</p>
@@ -591,7 +581,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getSetupFunctions">#</a>
-		<code><a href="source-class-Peridot.Core.AbstractTest.html#175-183" title="Go to source code">getSetupFunctions</a>( )</code>
+		<code><a href="source-class-Peridot.Core.AbstractTest.html#171-179" title="Go to source code">getSetupFunctions</a>( )</code>
 
 		<div class="description short">
 			<p>Return all registered setup functions</p>
@@ -629,7 +619,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getTearDownFunctions">#</a>
-		<code><a href="source-class-Peridot.Core.AbstractTest.html#185-193" title="Go to source code">getTearDownFunctions</a>( )</code>
+		<code><a href="source-class-Peridot.Core.AbstractTest.html#181-189" title="Go to source code">getTearDownFunctions</a>( )</code>
 
 		<div class="description short">
 			<p>Return all registered tear down functions</p>
@@ -667,7 +657,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getScope">#</a>
-		<code><a href="source-class-Peridot.Core.AbstractTest.html#195-203" title="Go to source code">getScope</a>( )</code>
+		<code><a href="source-class-Peridot.Core.AbstractTest.html#191-199" title="Go to source code">getScope</a>( )</code>
 
 		<div class="description short">
 			<p>Return scope for this test. Scope contains instance variables
@@ -707,7 +697,7 @@ for a spec</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setScope">#</a>
-		<code><a href="source-class-Peridot.Core.AbstractTest.html#205-215" title="Go to source code">setScope</a>( <span><code><a href="class-Peridot.Core.Scope.html">Peridot\Core\Scope</a></code> <var>$scope</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.AbstractTest.html#201-211" title="Go to source code">setScope</a>( <span><code><a href="class-Peridot.Core.Scope.html">Peridot\Core\Scope</a></code> <var>$scope</var></span> )</code>
 
 		<div class="description short">
 			<p>Set the scope object for a test</p>
@@ -986,6 +976,6 @@ for a spec</p>
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?2738881921"></script>
+<script src="elementlist.js?2106660689"></script>
 </body>
 </html>
