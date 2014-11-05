@@ -169,7 +169,7 @@
 		<b>Namespace:</b> Peridot\Core<br>
 		<b>Package:</b> Peridot\Core<br>
 
-		<b>Located at</b> <a href="source-class-Peridot.Core.Test.html#7-129" title="Go to source code">Core/Test.php</a><br>
+		<b>Located at</b> <a href="source-class-Peridot.Core.Test.html#7-132" title="Go to source code">Core/Test.php</a><br>
 	</div>
 
 
@@ -231,7 +231,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_run">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#29-48" title="Go to source code">run</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#29-45" title="Go to source code">run</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
 
 		<div class="description short">
 			<p>Execute the test along with any setup and tear down functions.</p>
@@ -269,7 +269,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_executeTest">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#50-64" title="Go to source code">executeTest</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#47-62" title="Go to source code">executeTest</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
 
 		<div class="description short">
 			<p>Attempt to execute setup functions and run the test definition</p>
@@ -307,7 +307,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_runSetup">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#66-77" title="Go to source code">runSetup</a>( )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#64-75" title="Go to source code">runSetup</a>( )</code>
 
 		<div class="description short">
 			<p>Excecute the test's setup functions</p>
@@ -339,18 +339,29 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_runTearDown">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#79-94" title="Go to source code">runTearDown</a>( )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#77-97" title="Go to source code">runTearDown</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span>, <span>array <var>$action</var></span> )</code>
 
 		<div class="description short">
-			<p>Execute this test's tear down functions.</p>
+			<p>Run the tests tear down methods and have the result
+perform the method indicated by $action</p>
 
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Execute this test's tear down functions.</p>
+			<p>Run the tests tear down methods and have the result
+perform the method indicated by $action</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$result</var></dt>
+					<dd>
+</dd>
+					<dt><var>$action</var></dt>
+					<dd>
+</dd>
+				</dl></div>
 
 
 
@@ -371,7 +382,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_forEachNodeBottomToTop">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#96-109" title="Go to source code">forEachNodeBottomToTop</a>( <span>callable <var>$fn</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#99-112" title="Go to source code">forEachNodeBottomToTop</a>( <span>callable <var>$fn</var></span> )</code>
 
 		<div class="description short">
 			<p>Execute a callback for each node in this test, starting
@@ -411,7 +422,7 @@ at the bottom of the tree.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_forEachNodeTopToBottom">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#111-128" title="Go to source code">forEachNodeTopToBottom</a>( <span>callable <var>$fn</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#114-131" title="Go to source code">forEachNodeTopToBottom</a>( <span>callable <var>$fn</var></span> )</code>
 
 		<div class="description short">
 			<p>Execute a callback for each node in this test, starting
