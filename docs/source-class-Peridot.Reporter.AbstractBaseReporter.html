@@ -176,11 +176,11 @@
 </span></span><span id="53" class="l"><a class="l" href="#53"> 53: </a><span class="php-comment">     * @var array
 </span></span><span id="54" class="l"><a class="l" href="#54"> 54: </a><span class="php-comment">     */</span>
 </span><span id="55" class="l"><a class="l" href="#55"> 55: </a>    <span class="php-keyword1">protected</span> <span class="php-var"><a id="$colors" href="#$colors">$colors</a></span> = <span class="php-keyword1">array</span>(
-</span><span id="56" class="l"><a class="l" href="#56"> 56: </a>        <span class="php-quote">'white'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">'&lt;fg=white&gt;'</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">'&lt;/fg=white&gt;'</span>],
-</span><span id="57" class="l"><a class="l" href="#57"> 57: </a>        <span class="php-quote">'success'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">'&lt;fg=green&gt;'</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">'&lt;/fg=green&gt;'</span>],
-</span><span id="58" class="l"><a class="l" href="#58"> 58: </a>        <span class="php-quote">'error'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">'&lt;fg=red&gt;'</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">'&lt;/fg=red&gt;'</span>],
+</span><span id="56" class="l"><a class="l" href="#56"> 56: </a>        <span class="php-quote">'white'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">&quot;\033[37m&quot;</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">&quot;\033[39m&quot;</span>],
+</span><span id="57" class="l"><a class="l" href="#57"> 57: </a>        <span class="php-quote">'success'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">&quot;\033[32m&quot;</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">&quot;\033[39m&quot;</span>],
+</span><span id="58" class="l"><a class="l" href="#58"> 58: </a>        <span class="php-quote">'error'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">&quot;\033[31m&quot;</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">&quot;\033[39m&quot;</span>],
 </span><span id="59" class="l"><a class="l" href="#59"> 59: </a>        <span class="php-quote">'muted'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">&quot;\033[90m&quot;</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">&quot;\033[0m&quot;</span>],
-</span><span id="60" class="l"><a class="l" href="#60"> 60: </a>        <span class="php-quote">'pending'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">'&lt;fg=cyan&gt;'</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">'&lt;/fg=cyan&gt;'</span>],
+</span><span id="60" class="l"><a class="l" href="#60"> 60: </a>        <span class="php-quote">'pending'</span> =&gt; [<span class="php-quote">'left'</span> =&gt; <span class="php-quote">&quot;\033[36m&quot;</span>, <span class="php-quote">'right'</span> =&gt; <span class="php-quote">&quot;\033[39m&quot;</span>],
 </span><span id="61" class="l"><a class="l" href="#61"> 61: </a>    );
 </span><span id="62" class="l"><a class="l" href="#62"> 62: </a>
 </span><span id="63" class="l"><a class="l" href="#63"> 63: </a>    <span class="php-comment">/**
@@ -377,17 +377,25 @@
 </span></span><span id="254" class="l"><a class="l" href="#254">254: </a><span class="php-comment">     */</span>
 </span><span id="255" class="l"><a class="l" href="#255">255: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="_hasTty" href="#_hasTty">hasTty</a>()
 </span><span id="256" class="l"><a class="l" href="#256">256: </a>    {
-</span><span id="257" class="l"><a class="l" href="#257">257: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">function_exists</span>(<span class="php-quote">'posix_isatty'</span>) &amp;&amp; @<span class="php-keyword2">posix_isatty</span>(<span class="php-var">$this</span>-&gt;output-&gt;getStream());
-</span><span id="258" class="l"><a class="l" href="#258">258: </a>    }
-</span><span id="259" class="l"><a class="l" href="#259">259: </a>
-</span><span id="260" class="l"><a class="l" href="#260">260: </a>    <span class="php-comment">/**
-</span></span><span id="261" class="l"><a class="l" href="#261">261: </a><span class="php-comment">     * Initialize reporter. Setup and listen for events
-</span></span><span id="262" class="l"><a class="l" href="#262">262: </a><span class="php-comment">     *
-</span></span><span id="263" class="l"><a class="l" href="#263">263: </a><span class="php-comment">     * @return void
-</span></span><span id="264" class="l"><a class="l" href="#264">264: </a><span class="php-comment">     */</span>
-</span><span id="265" class="l"><a class="l" href="#265">265: </a>    <span class="php-keyword1">abstract</span> <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_init" href="#_init">init</a>();
-</span><span id="266" class="l"><a class="l" href="#266">266: </a>}
-</span><span id="267" class="l"><a class="l" href="#267">267: </a></span></code></pre>
+</span><span id="257" class="l"><a class="l" href="#257">257: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">getenv</span>(<span class="php-quote">&quot;PERIDOT_TTY&quot;</span>)) {
+</span><span id="258" class="l"><a class="l" href="#258">258: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
+</span><span id="259" class="l"><a class="l" href="#259">259: </a>        }
+</span><span id="260" class="l"><a class="l" href="#260">260: </a>
+</span><span id="261" class="l"><a class="l" href="#261">261: </a>        <span class="php-var">$tty</span> = <span class="php-keyword2">function_exists</span>(<span class="php-quote">'posix_isatty'</span>) &amp;&amp; @<span class="php-keyword2">posix_isatty</span>(<span class="php-var">$this</span>-&gt;output-&gt;getStream());
+</span><span id="262" class="l"><a class="l" href="#262">262: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$tty</span>) {
+</span><span id="263" class="l"><a class="l" href="#263">263: </a>            <span class="php-keyword2">putenv</span>(<span class="php-quote">&quot;PERIDOT_TTY=1&quot;</span>);
+</span><span id="264" class="l"><a class="l" href="#264">264: </a>        }
+</span><span id="265" class="l"><a class="l" href="#265">265: </a>        <span class="php-keyword1">return</span> <span class="php-var">$tty</span>;
+</span><span id="266" class="l"><a class="l" href="#266">266: </a>    }
+</span><span id="267" class="l"><a class="l" href="#267">267: </a>
+</span><span id="268" class="l"><a class="l" href="#268">268: </a>    <span class="php-comment">/**
+</span></span><span id="269" class="l"><a class="l" href="#269">269: </a><span class="php-comment">     * Initialize reporter. Setup and listen for events
+</span></span><span id="270" class="l"><a class="l" href="#270">270: </a><span class="php-comment">     *
+</span></span><span id="271" class="l"><a class="l" href="#271">271: </a><span class="php-comment">     * @return void
+</span></span><span id="272" class="l"><a class="l" href="#272">272: </a><span class="php-comment">     */</span>
+</span><span id="273" class="l"><a class="l" href="#273">273: </a>    <span class="php-keyword1">abstract</span> <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_init" href="#_init">init</a>();
+</span><span id="274" class="l"><a class="l" href="#274">274: </a>}
+</span><span id="275" class="l"><a class="l" href="#275">275: </a></span></code></pre>
 
 	<div id="footer">
 		Peridot API documentation generated by <a href="http://apigen.org">ApiGen</a>
