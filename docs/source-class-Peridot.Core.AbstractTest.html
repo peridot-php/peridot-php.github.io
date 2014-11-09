@@ -337,8 +337,40 @@
 </span><span id="209" class="l"><a class="l" href="#209">209: </a>        <span class="php-var">$this</span>-&gt;scope = <span class="php-var">$scope</span>;
 </span><span id="210" class="l"><a class="l" href="#210">210: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
 </span><span id="211" class="l"><a class="l" href="#211">211: </a>    }
-</span><span id="212" class="l"><a class="l" href="#212">212: </a>}
-</span><span id="213" class="l"><a class="l" href="#213">213: </a></span></code></pre>
+</span><span id="212" class="l"><a class="l" href="#212">212: </a>
+</span><span id="213" class="l"><a class="l" href="#213">213: </a>    <span class="php-comment">/**
+</span></span><span id="214" class="l"><a class="l" href="#214">214: </a><span class="php-comment">     * {@inheritdoc}
+</span></span><span id="215" class="l"><a class="l" href="#215">215: </a><span class="php-comment">     *
+</span></span><span id="216" class="l"><a class="l" href="#216">216: </a><span class="php-comment">     * @param callable $fn
+</span></span><span id="217" class="l"><a class="l" href="#217">217: </a><span class="php-comment">     */</span>
+</span><span id="218" class="l"><a class="l" href="#218">218: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_forEachNodeBottomUp" href="#_forEachNodeBottomUp">forEachNodeBottomUp</a>(<span class="php-keyword1">callable</span> <span class="php-var">$fn</span>)
+</span><span id="219" class="l"><a class="l" href="#219">219: </a>    {
+</span><span id="220" class="l"><a class="l" href="#220">220: </a>        <span class="php-var">$node</span> = <span class="php-var">$this</span>;
+</span><span id="221" class="l"><a class="l" href="#221">221: </a>        <span class="php-keyword1">while</span> (!<span class="php-keyword2">is_null</span>(<span class="php-var">$node</span>)) {
+</span><span id="222" class="l"><a class="l" href="#222">222: </a>            <span class="php-var">$fn</span>(<span class="php-var">$node</span>);
+</span><span id="223" class="l"><a class="l" href="#223">223: </a>            <span class="php-var">$node</span> = <span class="php-var">$node</span>-&gt;getParent();
+</span><span id="224" class="l"><a class="l" href="#224">224: </a>        }
+</span><span id="225" class="l"><a class="l" href="#225">225: </a>    }
+</span><span id="226" class="l"><a class="l" href="#226">226: </a>
+</span><span id="227" class="l"><a class="l" href="#227">227: </a>    <span class="php-comment">/**
+</span></span><span id="228" class="l"><a class="l" href="#228">228: </a><span class="php-comment">     * {@inheritdoc}
+</span></span><span id="229" class="l"><a class="l" href="#229">229: </a><span class="php-comment">     *
+</span></span><span id="230" class="l"><a class="l" href="#230">230: </a><span class="php-comment">     * @param callable $fn
+</span></span><span id="231" class="l"><a class="l" href="#231">231: </a><span class="php-comment">     */</span>
+</span><span id="232" class="l"><a class="l" href="#232">232: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_forEachNodeTopDown" href="#_forEachNodeTopDown">forEachNodeTopDown</a>(<span class="php-keyword1">callable</span> <span class="php-var">$fn</span>)
+</span><span id="233" class="l"><a class="l" href="#233">233: </a>    {
+</span><span id="234" class="l"><a class="l" href="#234">234: </a>        <span class="php-var">$node</span> = <span class="php-var">$this</span>;
+</span><span id="235" class="l"><a class="l" href="#235">235: </a>        <span class="php-var">$nodes</span> = [];
+</span><span id="236" class="l"><a class="l" href="#236">236: </a>        <span class="php-keyword1">while</span> (!<span class="php-keyword2">is_null</span>(<span class="php-var">$node</span>)) {
+</span><span id="237" class="l"><a class="l" href="#237">237: </a>            <span class="php-keyword2">array_unshift</span>(<span class="php-var">$nodes</span>, <span class="php-var">$node</span>);
+</span><span id="238" class="l"><a class="l" href="#238">238: </a>            <span class="php-var">$node</span> = <span class="php-var">$node</span>-&gt;getParent();
+</span><span id="239" class="l"><a class="l" href="#239">239: </a>        }
+</span><span id="240" class="l"><a class="l" href="#240">240: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$nodes</span> <span class="php-keyword1">as</span> <span class="php-var">$node</span>) {
+</span><span id="241" class="l"><a class="l" href="#241">241: </a>            <span class="php-var">$fn</span>(<span class="php-var">$node</span>);
+</span><span id="242" class="l"><a class="l" href="#242">242: </a>        }
+</span><span id="243" class="l"><a class="l" href="#243">243: </a>    }
+</span><span id="244" class="l"><a class="l" href="#244">244: </a>}
+</span><span id="245" class="l"><a class="l" href="#245">245: </a></span></code></pre>
 
 	<div id="footer">
 		Peridot API documentation generated by <a href="http://apigen.org">ApiGen</a>
