@@ -32,6 +32,8 @@
 						</li>
 				<li><a href="namespace-Peridot.Runner.html">Runner</a>
 						</li>
+				<li><a href="namespace-Peridot.Scope.html">Scope</a>
+						</li>
 				<li><a href="namespace-Peridot.Test.html">Test</a>
 						</li>
 							</ul></li>
@@ -84,6 +86,7 @@
 				<li><a href="class-Peridot.Console.InputDefinition.html">Peridot\Console\InputDefinition</a></li>
 				<li><a href="class-Peridot.Console.Version.html">Peridot\Console\Version</a></li>
 				<li><a href="class-Peridot.Core.AbstractTest.html">Peridot\Core\AbstractTest</a></li>
+				<li><a href="class-Peridot.Core.Scope.html">Peridot\Core\Scope</a></li>
 				<li><a href="class-Peridot.Core.Suite.html">Peridot\Core\Suite</a></li>
 				<li><a href="class-Peridot.Core.Test.html">Peridot\Core\Test</a></li>
 				<li><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></li>
@@ -94,7 +97,9 @@
 				<li><a href="class-Peridot.Runner.Context.html">Peridot\Runner\Context</a></li>
 				<li><a href="class-Peridot.Runner.Runner.html">Peridot\Runner\Runner</a></li>
 				<li><a href="class-Peridot.Runner.SuiteLoader.html">Peridot\Runner\SuiteLoader</a></li>
+				<li><a href="class-Peridot.Scope.Scope.html">Peridot\Scope\Scope</a></li>
 				<li><a href="class-Peridot.Test.ItWasRun.html">Peridot\Test\ItWasRun</a></li>
+				<li><a href="class-SplObjectStorage.html">SplObjectStorage</a></li>
 				<li><a href="class-Symfony.Component.Console.Application.html">Symfony\Component\Console\Application</a></li>
 				<li><a href="class-Symfony.Component.Console.Command.Command.html">Symfony\Component\Console\Command\Command</a></li>
 				<li><a href="class-Symfony.Component.Console.Command.HelpCommand.html">Symfony\Component\Console\Command\HelpCommand</a></li>
@@ -144,11 +149,15 @@
 
 			<h3>Interfaces</h3>
 			<ul>
+				<li><a href="class-ArrayAccess.html">ArrayAccess</a></li>
+				<li><a href="class-Countable.html">Countable</a></li>
 				<li><a href="class-Evenement.EventEmitterInterface.html">Evenement\EventEmitterInterface</a></li>
+				<li><a href="class-Iterator.html">Iterator</a></li>
 				<li><a href="class-IteratorAggregate.html">IteratorAggregate</a></li>
 				<li><a href="class-Peridot.Core.TestInterface.html">Peridot\Core\TestInterface</a></li>
 				<li><a href="class-Peridot.Reporter.ReporterInterface.html">Peridot\Reporter\ReporterInterface</a></li>
 				<li><a href="class-Peridot.Runner.SuiteLoaderInterface.html">Peridot\Runner\SuiteLoaderInterface</a></li>
+				<li><a href="class-Serializable.html">Serializable</a></li>
 				<li><a href="class-Symfony.Component.Console.Descriptor.DescriptorInterface.html">Symfony\Component\Console\Descriptor\DescriptorInterface</a></li>
 				<li><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></li>
 				<li><a href="class-Symfony.Component.Console.Formatter.OutputFormatterStyleInterface.html">Symfony\Component\Console\Formatter\OutputFormatterStyleInterface</a></li>
@@ -164,10 +173,12 @@
 			<ul>
 				<li><a href="class-Evenement.EventEmitterTrait.html">Evenement\EventEmitterTrait</a></li>
 				<li><a href="class-Peridot.Core.HasEventEmitterTrait.html">Peridot\Core\HasEventEmitterTrait</a></li>
+				<li><a href="class-Peridot.Scope.ScopeTrait.html">Peridot\Scope\ScopeTrait</a></li>
 			</ul>
 
 			<h3>Exceptions</h3>
 			<ul>
+				<li><a href="class-DomainException.html">DomainException</a></li>
 				<li><a href="class-Exception.html">Exception</a></li>
 				<li><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></li>
 				<li><a href="class-LogicException.html">LogicException</a></li>
@@ -301,8 +312,7 @@
 			<br><span class="padding"></span> uses 
 					<a href="class-Peridot.Core.HasEventEmitterTrait.html"><span>Peridot\Core\HasEventEmitterTrait</span></a>, 
 			
-					Peridot\Scope\ScopeTrait (not available)
-
+					<a href="class-Peridot.Scope.ScopeTrait.html"><span>Peridot\Scope\ScopeTrait</span></a>
 			
 			</div>
 
@@ -397,6 +407,20 @@
 
 				</li>
 
+			<li><div class="notlast"><a href="class-Peridot.Scope.Scope.html"><span>Peridot\Scope\Scope</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="class-Peridot.Core.Scope.html"><span>Peridot\Core\Scope</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
 			<li><div class="notlast"><span>Psr\Log\AbstractLogger</span>			
 			
 			</div>
@@ -409,6 +433,23 @@
 			</div>
 
 				</ul></li>
+
+			<li><div class="notlast"><a href="class-SplObjectStorage.html"><span>SplObjectStorage</span></a>
+			 implements 
+				<a href="class-Countable.html"><span>Countable</span></a>, 
+			
+				<a href="class-Iterator.html"><span>Iterator</span></a>, 
+			
+				<a href="class-Traversable.html"><span>Traversable</span></a>, 
+			
+				<a href="class-Serializable.html"><span>Serializable</span></a>, 
+			
+				<a href="class-ArrayAccess.html"><span>ArrayAccess</span></a>
+			
+			
+			</div>
+
+				</li>
 
 			<li><div class="notlast"><a href="class-Symfony.Component.Console.Application.html"><span>Symfony\Component\Console\Application</span></a>
 			
@@ -774,7 +815,30 @@
 <div class="tree">
 	<ul>
 
+			<li><div class="notlast"><a href="class-ArrayAccess.html"><span>ArrayAccess</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="class-Countable.html"><span>Countable</span></a>
+			
+			
+			</div>
+
+				</li>
+
 			<li><div class="notlast"><a href="class-Evenement.EventEmitterInterface.html"><span>Evenement\EventEmitterInterface</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="class-Iterator.html"><span>Iterator</span></a>
+			 implements 
+				<a href="class-Traversable.html"><span>Traversable</span></a>
 			
 			
 			</div>
@@ -805,6 +869,13 @@
 				</li>
 
 			<li><div class="notlast"><a href="class-Peridot.Runner.SuiteLoaderInterface.html"><span>Peridot\Runner\SuiteLoaderInterface</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="class-Serializable.html"><span>Serializable</span></a>
 			
 			
 			</div>
@@ -890,7 +961,14 @@
 
 				</li>
 
-			<li class="last"><div class="last"><a href="class-Peridot.Core.HasEventEmitterTrait.html"><span>Peridot\Core\HasEventEmitterTrait</span></a>
+			<li><div class="notlast"><a href="class-Peridot.Core.HasEventEmitterTrait.html"><span>Peridot\Core\HasEventEmitterTrait</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="class-Peridot.Scope.ScopeTrait.html"><span>Peridot\Scope\ScopeTrait</span></a>
 			
 			
 			</div>
@@ -918,6 +996,13 @@
 
 				<ul>
 
+			<li><div class="notlast"><a href="class-DomainException.html"><span>DomainException</span></a>
+			
+			
+			</div>
+
+				</li>
+
 			<li class="last"><div class="last"><a href="class-InvalidArgumentException.html"><span>InvalidArgumentException</span></a>
 			
 			
@@ -942,6 +1027,6 @@
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?402888218"></script>
+<script src="elementlist.js?2657723767"></script>
 </body>
 </html>
