@@ -161,10 +161,10 @@
 </span><span id="32" class="l"><a class="l" href="#32"> 32: </a>    <span class="php-comment">/**
 </span></span><span id="33" class="l"><a class="l" href="#33"> 33: </a><span class="php-comment">     * Constructor.
 </span></span><span id="34" class="l"><a class="l" href="#34"> 34: </a><span class="php-comment">     *
-</span></span><span id="35" class="l"><a class="l" href="#35"> 35: </a><span class="php-comment">     * @param string  $name        The argument name
-</span></span><span id="36" class="l"><a class="l" href="#36"> 36: </a><span class="php-comment">     * @param int     $mode        The argument mode: self::REQUIRED or self::OPTIONAL
-</span></span><span id="37" class="l"><a class="l" href="#37"> 37: </a><span class="php-comment">     * @param string  $description A description text
-</span></span><span id="38" class="l"><a class="l" href="#38"> 38: </a><span class="php-comment">     * @param mixed   $default     The default value (for self::OPTIONAL mode only)
+</span></span><span id="35" class="l"><a class="l" href="#35"> 35: </a><span class="php-comment">     * @param string $name        The argument name
+</span></span><span id="36" class="l"><a class="l" href="#36"> 36: </a><span class="php-comment">     * @param int    $mode        The argument mode: self::REQUIRED or self::OPTIONAL
+</span></span><span id="37" class="l"><a class="l" href="#37"> 37: </a><span class="php-comment">     * @param string $description A description text
+</span></span><span id="38" class="l"><a class="l" href="#38"> 38: </a><span class="php-comment">     * @param mixed  $default     The default value (for self::OPTIONAL mode only)
 </span></span><span id="39" class="l"><a class="l" href="#39"> 39: </a><span class="php-comment">     *
 </span></span><span id="40" class="l"><a class="l" href="#40"> 40: </a><span class="php-comment">     * @throws \InvalidArgumentException When argument mode is not valid
 </span></span><span id="41" class="l"><a class="l" href="#41"> 41: </a><span class="php-comment">     *
@@ -178,8 +178,8 @@
 </span><span id="49" class="l"><a class="l" href="#49"> 49: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \InvalidArgumentException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">'Argument mode &quot;%s&quot; is not valid.'</span>, <span class="php-var">$mode</span>));
 </span><span id="50" class="l"><a class="l" href="#50"> 50: </a>        }
 </span><span id="51" class="l"><a class="l" href="#51"> 51: </a>
-</span><span id="52" class="l"><a class="l" href="#52"> 52: </a>        <span class="php-var">$this</span>-&gt;name        = <span class="php-var">$name</span>;
-</span><span id="53" class="l"><a class="l" href="#53"> 53: </a>        <span class="php-var">$this</span>-&gt;mode        = <span class="php-var">$mode</span>;
+</span><span id="52" class="l"><a class="l" href="#52"> 52: </a>        <span class="php-var">$this</span>-&gt;name = <span class="php-var">$name</span>;
+</span><span id="53" class="l"><a class="l" href="#53"> 53: </a>        <span class="php-var">$this</span>-&gt;mode = <span class="php-var">$mode</span>;
 </span><span id="54" class="l"><a class="l" href="#54"> 54: </a>        <span class="php-var">$this</span>-&gt;description = <span class="php-var">$description</span>;
 </span><span id="55" class="l"><a class="l" href="#55"> 55: </a>
 </span><span id="56" class="l"><a class="l" href="#56"> 56: </a>        <span class="php-var">$this</span>-&gt;setDefault(<span class="php-var">$default</span>);
@@ -198,7 +198,7 @@
 </span><span id="69" class="l"><a class="l" href="#69"> 69: </a>    <span class="php-comment">/**
 </span></span><span id="70" class="l"><a class="l" href="#70"> 70: </a><span class="php-comment">     * Returns true if the argument is required.
 </span></span><span id="71" class="l"><a class="l" href="#71"> 71: </a><span class="php-comment">     *
-</span></span><span id="72" class="l"><a class="l" href="#72"> 72: </a><span class="php-comment">     * @return bool    true if parameter mode is self::REQUIRED, false otherwise
+</span></span><span id="72" class="l"><a class="l" href="#72"> 72: </a><span class="php-comment">     * @return bool true if parameter mode is self::REQUIRED, false otherwise
 </span></span><span id="73" class="l"><a class="l" href="#73"> 73: </a><span class="php-comment">     */</span>
 </span><span id="74" class="l"><a class="l" href="#74"> 74: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isRequired" href="#_isRequired">isRequired</a>()
 </span><span id="75" class="l"><a class="l" href="#75"> 75: </a>    {
@@ -208,7 +208,7 @@
 </span><span id="79" class="l"><a class="l" href="#79"> 79: </a>    <span class="php-comment">/**
 </span></span><span id="80" class="l"><a class="l" href="#80"> 80: </a><span class="php-comment">     * Returns true if the argument can take multiple values.
 </span></span><span id="81" class="l"><a class="l" href="#81"> 81: </a><span class="php-comment">     *
-</span></span><span id="82" class="l"><a class="l" href="#82"> 82: </a><span class="php-comment">     * @return bool    true if mode is self::IS_ARRAY, false otherwise
+</span></span><span id="82" class="l"><a class="l" href="#82"> 82: </a><span class="php-comment">     * @return bool true if mode is self::IS_ARRAY, false otherwise
 </span></span><span id="83" class="l"><a class="l" href="#83"> 83: </a><span class="php-comment">     */</span>
 </span><span id="84" class="l"><a class="l" href="#84"> 84: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isArray" href="#_isArray">isArray</a>()
 </span><span id="85" class="l"><a class="l" href="#85"> 85: </a>    {
@@ -267,6 +267,6 @@
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?2657723767"></script>
+<script src="elementlist.js?337797666"></script>
 </body>
 </html>

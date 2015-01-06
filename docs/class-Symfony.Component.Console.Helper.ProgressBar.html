@@ -73,11 +73,13 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
+				<li><a href="class-Symfony.Component.Console.Helper.DebugFormatterHelper.html">DebugFormatterHelper</a></li>
 				<li><a href="class-Symfony.Component.Console.Helper.DescriptorHelper.html">DescriptorHelper</a></li>
 				<li><a href="class-Symfony.Component.Console.Helper.FormatterHelper.html">FormatterHelper</a></li>
 				<li><a href="class-Symfony.Component.Console.Helper.Helper.html">Helper</a></li>
 				<li><a href="class-Symfony.Component.Console.Helper.HelperSet.html">HelperSet</a></li>
 				<li><a href="class-Symfony.Component.Console.Helper.InputAwareHelper.html">InputAwareHelper</a></li>
+				<li><a href="class-Symfony.Component.Console.Helper.ProcessHelper.html">ProcessHelper</a></li>
 				<li class="active"><a href="class-Symfony.Component.Console.Helper.ProgressBar.html">ProgressBar</a></li>
 				<li><a href="class-Symfony.Component.Console.Helper.QuestionHelper.html">QuestionHelper</a></li>
 				<li><a href="class-Symfony.Component.Console.Helper.Table.html">Table</a></li>
@@ -156,7 +158,7 @@
 				<b>Author:</b>
 				Chris Jones <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#108;&#101;&#x65;&#107;&#x65;d&#64;&#x67;&#109;&#x61;i&#108;&#x2e;&#99;&#x6f;&#x6d;">&#108;&#101;&#x65;&#107;&#x65;d&#64;&#x67;&#109;&#x61;i&#108;&#x2e;&#99;&#x6f;&#x6d;</a>
 <br>
-		<b>Located at</b> <a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#17-559" title="Go to source code">Symfony/Component/Console/Helper/ProgressBar.php</a><br>
+		<b>Located at</b> <a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#16-611" title="Go to source code">Symfony/Component/Console/Helper/ProgressBar.php</a><br>
 	</div>
 
 
@@ -175,7 +177,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#50-72" title="Go to source code">__construct</a>( <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span>, <span>integer <var>$max</var> = <span class="php-num">0</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#49-73" title="Go to source code">__construct</a>( <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span>, <span>integer <var>$max</var> = <span class="php-num">0</span></span> )</code>
 
 		<div class="description short">
 			<p>Constructor.</p>
@@ -216,7 +218,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPlaceholderFormatterDefinition">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#74-89" title="Go to source code">setPlaceholderFormatterDefinition</a>( <span>string <var>$name</var></span>, <span>callable <var>$callable</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#75-90" title="Go to source code">setPlaceholderFormatterDefinition</a>( <span>string <var>$name</var></span>, <span>callable <var>$callable</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets a placeholder formatter for a given name.</p>
@@ -259,7 +261,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPlaceholderFormatterDefinition">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#91-105" title="Go to source code">getPlaceholderFormatterDefinition</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#92-106" title="Go to source code">getPlaceholderFormatterDefinition</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			<p>Gets the placeholder formatter for a given name.</p>
@@ -302,7 +304,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setFormatDefinition">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#107-122" title="Go to source code">setFormatDefinition</a>( <span>string <var>$name</var></span>, <span>string <var>$format</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#108-123" title="Go to source code">setFormatDefinition</a>( <span>string <var>$name</var></span>, <span>string <var>$format</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets a format for a given name.</p>
@@ -345,7 +347,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getFormatDefinition">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#124-138" title="Go to source code">getFormatDefinition</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#125-139" title="Go to source code">getFormatDefinition</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			<p>Gets the format for a given name.</p>
@@ -388,7 +390,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setMessage">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#140-143" title="Go to source code">setMessage</a>( <span>mixed <var>$message</var></span>, <span>mixed <var>$name</var> = <span class="php-quote">'message'</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#141-144" title="Go to source code">setMessage</a>( <span>mixed <var>$message</var></span>, <span>mixed <var>$name</var> = <span class="php-quote">'message'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -420,7 +422,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getMessage">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#145-148" title="Go to source code">getMessage</a>( <span>mixed <var>$name</var> = <span class="php-quote">'message'</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#146-149" title="Go to source code">getMessage</a>( <span>mixed <var>$name</var> = <span class="php-quote">'message'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -452,7 +454,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getStartTime">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#150-158" title="Go to source code">getStartTime</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#151-159" title="Go to source code">getStartTime</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the progress bar start time.</p>
@@ -489,7 +491,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getMaxSteps">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#160-168" title="Go to source code">getMaxSteps</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#161-169" title="Go to source code">getMaxSteps</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the progress bar maximal steps.</p>
@@ -514,7 +516,7 @@
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getStep" id="_getStep">
+	<tr data-order="getProgress" id="_getProgress">
 
 		<td class="attributes"><code>
 			 public 
@@ -525,16 +527,16 @@
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_getStep">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#170-178" title="Go to source code">getStep</a>( )</code>
+		<a class="anchor" href="#_getProgress">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#183-191" title="Go to source code">getProgress</a>( )</code>
 
 		<div class="description short">
-			<p>Gets the progress bar step.</p>
+			<p>Gets the current step position.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Gets the progress bar step.</p>
+			<p>Gets the current step position.</p>
 
 
 
@@ -563,7 +565,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getStepWidth">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#180-188" title="Go to source code">getStepWidth</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#193-203" title="Go to source code">getStepWidth</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the progress bar step width.</p>
@@ -593,14 +595,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			integer
+			float
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getProgressPercent">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#190-198" title="Go to source code">getProgressPercent</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#205-213" title="Go to source code">getProgressPercent</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the current progress bar percent.</p>
@@ -615,7 +617,7 @@
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>integer</code><br>The current progress bar percent
+					<code>float</code><br>The current progress bar percent
 
 				</div>
 
@@ -637,7 +639,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setBarWidth">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#200-208" title="Go to source code">setBarWidth</a>( <span>integer <var>$size</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#215-223" title="Go to source code">setBarWidth</a>( <span>integer <var>$size</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the progress bar width.</p>
@@ -675,7 +677,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getBarWidth">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#210-218" title="Go to source code">getBarWidth</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#225-233" title="Go to source code">getBarWidth</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the progress bar width.</p>
@@ -712,7 +714,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setBarCharacter">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#220-228" title="Go to source code">setBarCharacter</a>( <span>string <var>$char</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#235-243" title="Go to source code">setBarCharacter</a>( <span>string <var>$char</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the bar character.</p>
@@ -750,7 +752,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getBarCharacter">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#230-238" title="Go to source code">getBarCharacter</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#245-257" title="Go to source code">getBarCharacter</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the bar character.</p>
@@ -787,7 +789,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setEmptyBarCharacter">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#240-248" title="Go to source code">setEmptyBarCharacter</a>( <span>string <var>$char</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#259-267" title="Go to source code">setEmptyBarCharacter</a>( <span>string <var>$char</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the empty bar character.</p>
@@ -825,7 +827,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getEmptyBarCharacter">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#250-258" title="Go to source code">getEmptyBarCharacter</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#269-277" title="Go to source code">getEmptyBarCharacter</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the empty bar character.</p>
@@ -862,7 +864,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setProgressCharacter">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#260-268" title="Go to source code">setProgressCharacter</a>( <span>string <var>$char</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#279-287" title="Go to source code">setProgressCharacter</a>( <span>string <var>$char</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the progress bar character.</p>
@@ -900,7 +902,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getProgressCharacter">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#270-278" title="Go to source code">getProgressCharacter</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#289-297" title="Go to source code">getProgressCharacter</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the progress bar character.</p>
@@ -937,7 +939,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setFormat">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#280-297" title="Go to source code">setFormat</a>( <span>string <var>$format</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#299-316" title="Go to source code">setFormat</a>( <span>string <var>$format</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the progress bar format.</p>
@@ -975,7 +977,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setRedrawFrequency">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#299-307" title="Go to source code">setRedrawFrequency</a>( <span>integer <var>$freq</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#318-326" title="Go to source code">setRedrawFrequency</a>( <span>integer <var>$freq</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the redraw frequency.</p>
@@ -1013,7 +1015,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_start">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#309-326" title="Go to source code">start</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#328-344" title="Go to source code">start</a>( <span>integer|null <var>$max</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Starts the progress output.</p>
@@ -1025,6 +1027,12 @@
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$max</var></dt>
+					<dd>Number of steps to complete the bar (0 if indeterminate), null to leave unchanged
+</dd>
+				</dl></div>
 
 
 
@@ -1045,7 +1053,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_advance">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#328-338" title="Go to source code">advance</a>( <span>integer <var>$step</var> = <span class="php-num">1</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#346-356" title="Go to source code">advance</a>( <span>integer <var>$step</var> = <span class="php-num">1</span></span> )</code>
 
 		<div class="description short">
 			<p>Advances the progress output X steps.</p>
@@ -1075,7 +1083,7 @@
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="setCurrent" id="_setCurrent">
+	<tr data-order="setOverwrite" id="_setOverwrite">
 
 		<td class="attributes"><code>
 			 public 
@@ -1086,8 +1094,46 @@
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_setCurrent">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#340-369" title="Go to source code">setCurrent</a>( <span>integer <var>$step</var></span> )</code>
+		<a class="anchor" href="#_setOverwrite">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#372-380" title="Go to source code">setOverwrite</a>( <span>boolean <var>$overwrite</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets whether to overwrite the progressbar, false for new line</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets whether to overwrite the progressbar, false for new line</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$overwrite</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setProgress" id="_setProgress">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setProgress">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#382-407" title="Go to source code">setProgress</a>( <span>integer <var>$step</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the current progress.</p>
@@ -1129,7 +1175,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_finish">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#371-391" title="Go to source code">finish</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#409-424" title="Go to source code">finish</a>( )</code>
 
 		<div class="description short">
 			<p>Finishes the progress output.</p>
@@ -1161,7 +1207,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_display">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#393-423" title="Go to source code">display</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#426-454" title="Go to source code">display</a>( )</code>
 
 		<div class="description short">
 			<p>Outputs the current progress string.</p>
@@ -1175,10 +1221,6 @@
 
 
 
-				<h4>Throws</h4>
-				<div class="list">
-					<code><a href="class-LogicException.html">LogicException</a></code>
-				</div>
 
 
 
@@ -1197,7 +1239,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_clear">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#425-435" title="Go to source code">clear</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProgressBar.html#456-470" title="Go to source code">clear</a>( )</code>
 
 		<div class="description short">
 			<p>Removes the progress bar from the current line.</p>
@@ -1248,6 +1290,6 @@ Call display() to show the progress bar again.</p>
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?2657723767"></script>
+<script src="elementlist.js?337797666"></script>
 </body>
 </html>

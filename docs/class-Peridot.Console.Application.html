@@ -157,7 +157,7 @@
 		<b>Namespace:</b> Peridot\Console<br>
 		<b>Package:</b> Peridot\Console<br>
 
-		<b>Located at</b> <a href="source-class-Peridot.Console.Application.html#14-133" title="Go to source code">Console/Application.php</a><br>
+		<b>Located at</b> <a href="source-class-Peridot.Console.Application.html#15-206" title="Go to source code">Console/Application.php</a><br>
 	</div>
 
 
@@ -176,7 +176,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Peridot.Console.Application.html#26-38" title="Go to source code">__construct</a>( <span><code><a href="class-Peridot.Console.Environment.html">Peridot\Console\Environment</a></code> <var>$environment</var></span> )</code>
+		<code><a href="source-class-Peridot.Console.Application.html#37-49" title="Go to source code">__construct</a>( <span><code><a href="class-Peridot.Console.Environment.html">Peridot\Console\Environment</a></code> <var>$environment</var></span> )</code>
 
 		<div class="description short">
 			
@@ -216,7 +216,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_run">#</a>
-		<code><a href="source-class-Peridot.Console.Application.html#40-56" title="Go to source code">run</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Peridot.Console.Application.html#51-67" title="Go to source code">run</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Runs the current application.</p>
@@ -268,7 +268,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_doRun">#</a>
-		<code><a href="source-class-Peridot.Console.Application.html#58-81" title="Go to source code">doRun</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
+		<code><a href="source-class-Peridot.Console.Application.html#69-92" title="Go to source code">doRun</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
 
 		<div class="description short">
 			<p>Run the Peridot application</p>
@@ -315,7 +315,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getInput">#</a>
-		<code><a href="source-class-Peridot.Console.Application.html#83-99" title="Go to source code">getInput</a>( <span>array <var>$argv</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Peridot.Console.Application.html#94-110" title="Go to source code">getInput</a>( <span>array <var>$argv</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Fetch the ArgvInput used by Peridot. If any exceptions are thrown due to
@@ -361,7 +361,7 @@ exception will be rendered and Peridot will exit with an error code</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCommandName">#</a>
-		<code><a href="source-class-Peridot.Console.Application.html#101-110" title="Go to source code">getCommandName</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span> )</code>
+		<code><a href="source-class-Peridot.Console.Application.html#112-121" title="Go to source code">getCommandName</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span> )</code>
 
 		<div class="description short">
 			<p>Return's peridot as the sole command used by Peridot</p>
@@ -405,7 +405,7 @@ exception will be rendered and Peridot will exit with an error code</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_loadDsl">#</a>
-		<code><a href="source-class-Peridot.Console.Application.html#112-122" title="Go to source code">loadDsl</a>( <span>mixed <var>$dslPath</var></span> )</code>
+		<code><a href="source-class-Peridot.Console.Application.html#123-133" title="Go to source code">loadDsl</a>( <span>mixed <var>$dslPath</var></span> )</code>
 
 		<div class="description short">
 			<p>Load the configured DSL.</p>
@@ -431,6 +431,202 @@ exception will be rendered and Peridot will exit with an error code</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="setRunner" id="_setRunner">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRunner">#</a>
+		<code><a href="source-class-Peridot.Console.Application.html#135-145" title="Go to source code">setRunner</a>( <span><code><a href="class-Peridot.Runner.RunnerInterface.html">Peridot\Runner\RunnerInterface</a></code> <var>$runner</var></span> )</code>
+
+		<div class="description short">
+			<p>Set the runner used by the Peridot application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set the runner used by the Peridot application.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$runner</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this
+
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRunner" id="_getRunner">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Peridot.Runner.RunnerInterface.html">Peridot\Runner\RunnerInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRunner">#</a>
+		<code><a href="source-class-Peridot.Console.Application.html#147-163" title="Go to source code">getRunner</a>( )</code>
+
+		<div class="description short">
+			<p>Get the RunnerInterface being used by the Peridot application.
+If one is not set, a default Runner will be used.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get the RunnerInterface being used by the Peridot application.
+If one is not set, a default Runner will be used.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Peridot.Runner.RunnerInterface.html">Peridot\Runner\RunnerInterface</a></code></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEnvironment" id="_getEnvironment">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Peridot.Console.Environment.html">Peridot\Console\Environment</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEnvironment">#</a>
+		<code><a href="source-class-Peridot.Console.Application.html#165-173" title="Go to source code">getEnvironment</a>( )</code>
+
+		<div class="description short">
+			<p>Return the Environment used by the Peridot application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return the Environment used by the Peridot application.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Peridot.Console.Environment.html">Peridot\Console\Environment</a></code></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConfiguration" id="_getConfiguration">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConfiguration">#</a>
+		<code><a href="source-class-Peridot.Console.Application.html#175-183" title="Go to source code">getConfiguration</a>( )</code>
+
+		<div class="description short">
+			<p>Return the configuration used by the Peridot application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return the configuration used by the Peridot application.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setConfiguration" id="_setConfiguration">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setConfiguration">#</a>
+		<code><a href="source-class-Peridot.Console.Application.html#185-195" title="Go to source code">setConfiguration</a>( <span><code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code> <var>$configuration</var></span> )</code>
+
+		<div class="description short">
+			<p>Set the configuration object used by the Peridot application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set the configuration object used by the Peridot application.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$configuration</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this
+
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="getDefaultInputDefinition" id="_getDefaultInputDefinition">
 
 		<td class="attributes"><code>
@@ -443,7 +639,7 @@ exception will be rendered and Peridot will exit with an error code</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDefaultInputDefinition">#</a>
-		<code><a href="source-class-Peridot.Console.Application.html#124-132" title="Go to source code">getDefaultInputDefinition</a>( )</code>
+		<code><a href="source-class-Peridot.Console.Application.html#197-205" title="Go to source code">getDefaultInputDefinition</a>( )</code>
 
 		<div class="description short">
 			<p>Return the peridot input definition defined by Environment</p>
@@ -532,7 +728,7 @@ exception will be rendered and Peridot will exit with an error code</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peridot.Console.Application.html#21-24" title="Go to source code"><var>$environment</var></a>
+				<a href="source-class-Peridot.Console.Application.html#22-25" title="Go to source code"><var>$environment</var></a>
 
 			<div class="description short">
 				
@@ -552,6 +748,60 @@ exception will be rendered and Peridot will exit with an error code</p>
 			</div>
 		</td>
 	</tr>
+	<tr data-order="runner" id="$runner">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-Peridot.Runner.RunnerInterface.html">Peridot\Runner\RunnerInterface</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Console.Application.html#27-30" title="Go to source code"><var>$runner</var></a>
+
+			<div class="description short">
+				
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$runner" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="configuration" id="$configuration">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Console.Application.html#32-35" title="Go to source code"><var>$configuration</var></a>
+
+			<div class="description short">
+				
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$configuration" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
 	</table>
 
 
@@ -567,6 +817,6 @@ exception will be rendered and Peridot will exit with an error code</p>
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?2657723767"></script>
+<script src="elementlist.js?337797666"></script>
 </body>
 </html>

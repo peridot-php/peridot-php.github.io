@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex">
+
+	<title>File Runner/RunnerInterface.php | Peridot</title>
+
+	<link rel="stylesheet" href="resources/style.css?1648332946">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Evenement.html">Evenement</a>
+						</li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li class="active"><a href="namespace-Peridot.html">Peridot<span></span></a>
+						<ul>
+				<li><a href="namespace-Peridot.Console.html">Console</a>
+						</li>
+				<li><a href="namespace-Peridot.Core.html">Core</a>
+						</li>
+				<li><a href="namespace-Peridot.Reporter.html">Reporter</a>
+						</li>
+				<li class="active"><a href="namespace-Peridot.Runner.html">Runner</a>
+						</li>
+				<li><a href="namespace-Peridot.Scope.html">Scope</a>
+						</li>
+				<li><a href="namespace-Peridot.Test.html">Test</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li><a href="namespace-Symfony.html">Symfony<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.Console.html">Console<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.Console.Command.html">Command</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Descriptor.html">Descriptor</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Formatter.html">Formatter</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Input.html">Input</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Logger.html">Logger</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Output.html">Output</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Question.html">Question</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Peridot.Runner.Context.html">Context</a></li>
+				<li><a href="class-Peridot.Runner.Runner.html">Runner</a></li>
+				<li><a href="class-Peridot.Runner.SuiteLoader.html">SuiteLoader</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-Peridot.Runner.RunnerInterface.html">RunnerInterface</a></li>
+				<li><a href="class-Peridot.Runner.SuiteLoaderInterface.html">SuiteLoaderInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Peridot.Runner.html" title="Summary of Peridot\Runner"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="class-Peridot.Runner.RunnerInterface.html" title="Summary of Peridot\Runner\RunnerInterface"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="#1"> 1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2: </a><span class="php-keyword1">namespace</span> Peridot\Runner;
+</span><span id="3" class="l"><a class="l" href="#3"> 3: </a>
+</span><span id="4" class="l"><a class="l" href="#4"> 4: </a><span class="php-keyword1">use</span> Peridot\Core\TestResult;
+</span><span id="5" class="l"><a class="l" href="#5"> 5: </a>
+</span><span id="6" class="l"><a class="l" href="#6"> 6: </a><span class="php-comment">/**
+</span></span><span id="7" class="l"><a class="l" href="#7"> 7: </a><span class="php-comment"> * The RunnerInterface defines how a runner should run tests
+</span></span><span id="8" class="l"><a class="l" href="#8"> 8: </a><span class="php-comment"> * and populate results.
+</span></span><span id="9" class="l"><a class="l" href="#9"> 9: </a><span class="php-comment"> *
+</span></span><span id="10" class="l"><a class="l" href="#10">10: </a><span class="php-comment"> * @package Peridot\Runner
+</span></span><span id="11" class="l"><a class="l" href="#11">11: </a><span class="php-comment"> */</span>
+</span><span id="12" class="l"><a class="l" href="#12">12: </a><span class="php-keyword1">interface</span> <a id="RunnerInterface" href="#RunnerInterface">RunnerInterface</a>
+</span><span id="13" class="l"><a class="l" href="#13">13: </a>{
+</span><span id="14" class="l"><a class="l" href="#14">14: </a>    <span class="php-comment">/**
+</span></span><span id="15" class="l"><a class="l" href="#15">15: </a><span class="php-comment">     * Run the Suite
+</span></span><span id="16" class="l"><a class="l" href="#16">16: </a><span class="php-comment">     *
+</span></span><span id="17" class="l"><a class="l" href="#17">17: </a><span class="php-comment">     * @param TestResult $result
+</span></span><span id="18" class="l"><a class="l" href="#18">18: </a><span class="php-comment">     */</span>
+</span><span id="19" class="l"><a class="l" href="#19">19: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_run" href="#_run">run</a>(TestResult <span class="php-var">$result</span>);
+</span><span id="20" class="l"><a class="l" href="#20">20: </a>}
+</span><span id="21" class="l"><a class="l" href="#21">21: </a></span></code></pre>
+
+	<div id="footer">
+		Peridot API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?721046668"></script>
+<script src="elementlist.js?337797666"></script>
+</body>
+</html>

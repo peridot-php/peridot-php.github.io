@@ -162,7 +162,7 @@
 </span></span><span id="33" class="l"><a class="l" href="#33"> 33: </a><span class="php-comment">     *
 </span></span><span id="34" class="l"><a class="l" href="#34"> 34: </a><span class="php-comment">     * @param string|array $values The values to look for in the raw parameters (can be an array)
 </span></span><span id="35" class="l"><a class="l" href="#35"> 35: </a><span class="php-comment">     *
-</span></span><span id="36" class="l"><a class="l" href="#36"> 36: </a><span class="php-comment">     * @return bool    true if the value is contained in the raw parameters
+</span></span><span id="36" class="l"><a class="l" href="#36"> 36: </a><span class="php-comment">     * @return bool true if the value is contained in the raw parameters
 </span></span><span id="37" class="l"><a class="l" href="#37"> 37: </a><span class="php-comment">     */</span>
 </span><span id="38" class="l"><a class="l" href="#38"> 38: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_hasParameterOption" href="#_hasParameterOption">hasParameterOption</a>(<span class="php-var">$values</span>);
 </span><span id="39" class="l"><a class="l" href="#39"> 39: </a>
@@ -224,9 +224,9 @@
 </span><span id="95" class="l"><a class="l" href="#95"> 95: </a>    <span class="php-comment">/**
 </span></span><span id="96" class="l"><a class="l" href="#96"> 96: </a><span class="php-comment">     * Returns true if an InputArgument object exists by name or position.
 </span></span><span id="97" class="l"><a class="l" href="#97"> 97: </a><span class="php-comment">     *
-</span></span><span id="98" class="l"><a class="l" href="#98"> 98: </a><span class="php-comment">     * @param string|int     $name The InputArgument name or position
+</span></span><span id="98" class="l"><a class="l" href="#98"> 98: </a><span class="php-comment">     * @param string|int $name The InputArgument name or position
 </span></span><span id="99" class="l"><a class="l" href="#99"> 99: </a><span class="php-comment">     *
-</span></span><span id="100" class="l"><a class="l" href="#100">100: </a><span class="php-comment">     * @return bool    true if the InputArgument object exists, false otherwise
+</span></span><span id="100" class="l"><a class="l" href="#100">100: </a><span class="php-comment">     * @return bool true if the InputArgument object exists, false otherwise
 </span></span><span id="101" class="l"><a class="l" href="#101">101: </a><span class="php-comment">     */</span>
 </span><span id="102" class="l"><a class="l" href="#102">102: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_hasArgument" href="#_hasArgument">hasArgument</a>(<span class="php-var">$name</span>);
 </span><span id="103" class="l"><a class="l" href="#103">103: </a>
@@ -249,8 +249,8 @@
 </span><span id="120" class="l"><a class="l" href="#120">120: </a>    <span class="php-comment">/**
 </span></span><span id="121" class="l"><a class="l" href="#121">121: </a><span class="php-comment">     * Sets an option value by name.
 </span></span><span id="122" class="l"><a class="l" href="#122">122: </a><span class="php-comment">     *
-</span></span><span id="123" class="l"><a class="l" href="#123">123: </a><span class="php-comment">     * @param string         $name  The option name
-</span></span><span id="124" class="l"><a class="l" href="#124">124: </a><span class="php-comment">     * @param string|bool    $value The option value
+</span></span><span id="123" class="l"><a class="l" href="#123">123: </a><span class="php-comment">     * @param string      $name  The option name
+</span></span><span id="124" class="l"><a class="l" href="#124">124: </a><span class="php-comment">     * @param string|bool $value The option value
 </span></span><span id="125" class="l"><a class="l" href="#125">125: </a><span class="php-comment">     *
 </span></span><span id="126" class="l"><a class="l" href="#126">126: </a><span class="php-comment">     * @throws \InvalidArgumentException When option given doesn't exist
 </span></span><span id="127" class="l"><a class="l" href="#127">127: </a><span class="php-comment">     */</span>
@@ -261,7 +261,7 @@
 </span></span><span id="132" class="l"><a class="l" href="#132">132: </a><span class="php-comment">     *
 </span></span><span id="133" class="l"><a class="l" href="#133">133: </a><span class="php-comment">     * @param string $name The InputOption name
 </span></span><span id="134" class="l"><a class="l" href="#134">134: </a><span class="php-comment">     *
-</span></span><span id="135" class="l"><a class="l" href="#135">135: </a><span class="php-comment">     * @return bool    true if the InputOption object exists, false otherwise
+</span></span><span id="135" class="l"><a class="l" href="#135">135: </a><span class="php-comment">     * @return bool true if the InputOption object exists, false otherwise
 </span></span><span id="136" class="l"><a class="l" href="#136">136: </a><span class="php-comment">     */</span>
 </span><span id="137" class="l"><a class="l" href="#137">137: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_hasOption" href="#_hasOption">hasOption</a>(<span class="php-var">$name</span>);
 </span><span id="138" class="l"><a class="l" href="#138">138: </a>
@@ -275,7 +275,7 @@
 </span><span id="146" class="l"><a class="l" href="#146">146: </a>    <span class="php-comment">/**
 </span></span><span id="147" class="l"><a class="l" href="#147">147: </a><span class="php-comment">     * Sets the input interactivity.
 </span></span><span id="148" class="l"><a class="l" href="#148">148: </a><span class="php-comment">     *
-</span></span><span id="149" class="l"><a class="l" href="#149">149: </a><span class="php-comment">     * @param bool    $interactive If the input should be interactive
+</span></span><span id="149" class="l"><a class="l" href="#149">149: </a><span class="php-comment">     * @param bool $interactive If the input should be interactive
 </span></span><span id="150" class="l"><a class="l" href="#150">150: </a><span class="php-comment">     */</span>
 </span><span id="151" class="l"><a class="l" href="#151">151: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setInteractive" href="#_setInteractive">setInteractive</a>(<span class="php-var">$interactive</span>);
 </span><span id="152" class="l"><a class="l" href="#152">152: </a>}
@@ -287,6 +287,6 @@
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?2657723767"></script>
+<script src="elementlist.js?337797666"></script>
 </body>
 </html>

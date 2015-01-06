@@ -122,7 +122,7 @@
 
 
 	<div class="description">
-	<p>Allows to do things before the command is executed.</p>
+	<p>Allows to do things before the command is executed, like skipping the command or changing the input.</p>
 
 	</div>
 
@@ -163,11 +163,122 @@ Symfony\Component\EventDispatcher\Event
 				<b>Author:</b>
 				Fabien Potencier <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;">&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;</a>
 <br>
-		<b>Located at</b> <a href="source-class-Symfony.Component.Console.Event.ConsoleCommandEvent.html#14-21" title="Go to source code">Symfony/Component/Console/Event/ConsoleCommandEvent.php</a><br>
+		<b>Located at</b> <a href="source-class-Symfony.Component.Console.Event.ConsoleCommandEvent.html#14-62" title="Go to source code">Symfony/Component/Console/Event/ConsoleCommandEvent.php</a><br>
 	</div>
 
 
 
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="disableCommand" id="_disableCommand">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_disableCommand">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Event.ConsoleCommandEvent.html#33-41" title="Go to source code">disableCommand</a>( )</code>
+
+		<div class="description short">
+			<p>Disables the command, so it won't be run</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Disables the command, so it won't be run</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="enableCommand" id="_enableCommand">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_enableCommand">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Event.ConsoleCommandEvent.html#43-51" title="Go to source code">enableCommand</a>( )</code>
+
+		<div class="description short">
+			<p>Enables the command</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Enables the command</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="commandShouldRun" id="_commandShouldRun">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_commandShouldRun">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Event.ConsoleCommandEvent.html#53-61" title="Go to source code">commandShouldRun</a>( )</code>
+
+		<div class="description short">
+			<p>Returns true if the command is runnable, false otherwise</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns true if the command is runnable, false otherwise</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
 
 	<table class="summary inherited">
 	<caption>Methods inherited from <a href="class-Symfony.Component.Console.Event.ConsoleEvent.html#methods">Symfony\Component\Console\Event\ConsoleEvent</a></caption>
@@ -187,6 +298,35 @@ Symfony\Component\EventDispatcher\Event
 
 
 
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="RETURN_CODE_DISABLED" id="RETURN_CODE_DISABLED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-Symfony.Component.Console.Event.ConsoleCommandEvent.html#21-24" title="Go to source code"><b>RETURN_CODE_DISABLED</b></a>
+			</code>
+
+			<div class="description short">
+				<p>The return code for skipped commands, this will also be passed into the terminate event</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>The return code for skipped commands, this will also be passed into the terminate event</p>
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#RETURN_CODE_DISABLED" class="anchor">#</a>
+				<code><span class="php-num">113</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
 
 
 
@@ -213,6 +353,6 @@ Symfony\Component\EventDispatcher\Event
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?2657723767"></script>
+<script src="elementlist.js?337797666"></script>
 </body>
 </html>

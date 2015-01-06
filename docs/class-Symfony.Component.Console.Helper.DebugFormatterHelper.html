@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Symfony\Component\Console\Helper\DebugFormatterHelper | Peridot</title>
+
+	<link rel="stylesheet" href="resources/style.css?1648332946">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Evenement.html">Evenement</a>
+						</li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-Peridot.html">Peridot<span></span></a>
+						<ul>
+				<li><a href="namespace-Peridot.Console.html">Console</a>
+						</li>
+				<li><a href="namespace-Peridot.Core.html">Core</a>
+						</li>
+				<li><a href="namespace-Peridot.Reporter.html">Reporter</a>
+						</li>
+				<li><a href="namespace-Peridot.Runner.html">Runner</a>
+						</li>
+				<li><a href="namespace-Peridot.Scope.html">Scope</a>
+						</li>
+				<li><a href="namespace-Peridot.Test.html">Test</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-Symfony.html">Symfony<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-Symfony.Component.html">Component<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-Symfony.Component.Console.html">Console<span></span></a>
+						<ul>
+				<li><a href="namespace-Symfony.Component.Console.Command.html">Command</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Descriptor.html">Descriptor</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Formatter.html">Formatter</a>
+						</li>
+				<li class="active"><a href="namespace-Symfony.Component.Console.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Input.html">Input</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Logger.html">Logger</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Output.html">Output</a>
+						</li>
+				<li><a href="namespace-Symfony.Component.Console.Question.html">Question</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Symfony.Component.Console.Helper.DebugFormatterHelper.html">DebugFormatterHelper</a></li>
+				<li><a href="class-Symfony.Component.Console.Helper.DescriptorHelper.html">DescriptorHelper</a></li>
+				<li><a href="class-Symfony.Component.Console.Helper.FormatterHelper.html">FormatterHelper</a></li>
+				<li><a href="class-Symfony.Component.Console.Helper.Helper.html">Helper</a></li>
+				<li><a href="class-Symfony.Component.Console.Helper.HelperSet.html">HelperSet</a></li>
+				<li><a href="class-Symfony.Component.Console.Helper.InputAwareHelper.html">InputAwareHelper</a></li>
+				<li><a href="class-Symfony.Component.Console.Helper.ProcessHelper.html">ProcessHelper</a></li>
+				<li><a href="class-Symfony.Component.Console.Helper.ProgressBar.html">ProgressBar</a></li>
+				<li><a href="class-Symfony.Component.Console.Helper.QuestionHelper.html">QuestionHelper</a></li>
+				<li><a href="class-Symfony.Component.Console.Helper.Table.html">Table</a></li>
+				<li><a href="class-Symfony.Component.Console.Helper.TableSeparator.html">TableSeparator</a></li>
+				<li><a href="class-Symfony.Component.Console.Helper.TableStyle.html">TableStyle</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Symfony.Component.Console.Helper.HelperInterface.html">HelperInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Symfony.Component.Console.Helper.html" title="Summary of Symfony\Component\Console\Helper"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class DebugFormatterHelper</h1>
+
+
+	<div class="description">
+	<p>Helps outputting debug information when running an external program from a command.</p>
+
+<p>An external program can be a Process, an HTTP request, or anything else.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Symfony.Component.Console.Helper.Helper.html"><span>Symfony\Component\Console\Helper\Helper</span></a>
+			
+			 implements 
+				<a href="class-Symfony.Component.Console.Helper.HelperInterface.html"><span>Symfony\Component\Console\Helper\HelperInterface</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Symfony\Component\Console\Helper\DebugFormatterHelper</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> Symfony\Component\Console\Helper<br>
+		
+
+				<b>Author:</b>
+				Fabien Potencier <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;">&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;</a>
+<br>
+		<b>Located at</b> <a href="source-class-Symfony.Component.Console.Helper.DebugFormatterHelper.html#14-127" title="Go to source code">Symfony/Component/Console/Helper/DebugFormatterHelper.php</a><br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="start" id="_start">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_start">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Helper.DebugFormatterHelper.html#27-41" title="Go to source code">start</a>( <span>string <var>$id</var></span>, <span>string <var>$message</var></span>, <span>string <var>$prefix</var> = <span class="php-quote">'RUN'</span></span> )</code>
+
+		<div class="description short">
+			<p>Starts a debug formatting session</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Starts a debug formatting session</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>The id of the formatting session
+</dd>
+					<dt><var>$message</var></dt>
+					<dd>The message to display
+</dd>
+					<dt><var>$prefix</var></dt>
+					<dd>The prefix to use
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="progress" id="_progress">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_progress">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Helper.DebugFormatterHelper.html#43-83" title="Go to source code">progress</a>( <span>string <var>$id</var></span>, <span>string <var>$buffer</var></span>, <span>boolean <var>$error</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$prefix</var> = <span class="php-quote">'OUT'</span></span>, <span>string <var>$errorPrefix</var> = <span class="php-quote">'ERR'</span></span> )</code>
+
+		<div class="description short">
+			<p>Adds progress to a formatting session</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Adds progress to a formatting session</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>The id of the formatting session
+</dd>
+					<dt><var>$buffer</var></dt>
+					<dd>The message to display
+</dd>
+					<dt><var>$error</var></dt>
+					<dd>Whether to consider the buffer as error
+</dd>
+					<dt><var>$prefix</var></dt>
+					<dd>The prefix for output
+</dd>
+					<dt><var>$errorPrefix</var></dt>
+					<dd>The prefix for error output
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="stop" id="_stop">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_stop">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Helper.DebugFormatterHelper.html#85-108" title="Go to source code">stop</a>( <span>string <var>$id</var></span>, <span>string <var>$message</var></span>, <span>boolean <var>$successful</var></span>, <span>string <var>$prefix</var> = <span class="php-quote">'RES'</span></span> )</code>
+
+		<div class="description short">
+			<p>Stops a formatting session</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Stops a formatting session</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>The id of the formatting session
+</dd>
+					<dt><var>$message</var></dt>
+					<dd>The message to display
+</dd>
+					<dt><var>$successful</var></dt>
+					<dd>Whether to consider the result as success
+</dd>
+					<dt><var>$prefix</var></dt>
+					<dd>The prefix for the end output
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getName" id="_getName">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getName">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Helper.DebugFormatterHelper.html#120-126" title="Go to source code">getName</a>( )</code>
+
+		<div class="description short">
+			<p>Returns the canonical name of this helper.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the canonical name of this helper.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The canonical name
+
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Symfony.Component.Console.Helper.Helper.html#methods">Symfony\Component\Console\Helper\Helper</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Symfony.Component.Console.Helper.Helper.html#_formatMemory">formatMemory()</a>, 
+			<a href="class-Symfony.Component.Console.Helper.Helper.html#_formatTime">formatTime()</a>, 
+			<a href="class-Symfony.Component.Console.Helper.Helper.html#_getHelperSet">getHelperSet()</a>, 
+			<a href="class-Symfony.Component.Console.Helper.Helper.html#_setHelperSet">setHelperSet()</a>, 
+			<a href="class-Symfony.Component.Console.Helper.Helper.html#_strlen">strlen()</a>, 
+			<a href="class-Symfony.Component.Console.Helper.Helper.html#_strlenWithoutDecoration">strlenWithoutDecoration()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Symfony.Component.Console.Helper.Helper.html#properties">Symfony\Component\Console\Helper\Helper</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Symfony.Component.Console.Helper.Helper.html#$helperSet"><var>$helperSet</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Peridot API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?721046668"></script>
+<script src="elementlist.js?337797666"></script>
+</body>
+</html>
