@@ -300,9 +300,9 @@
 </span></span><span id="175" class="l"><a class="l" href="#175">175: </a><span class="php-comment">     *
 </span></span><span id="176" class="l"><a class="l" href="#176">176: </a><span class="php-comment">     * @param int $errorIndex
 </span></span><span id="177" class="l"><a class="l" href="#177">177: </a><span class="php-comment">     * @param Test $test
-</span></span><span id="178" class="l"><a class="l" href="#178">178: </a><span class="php-comment">     * @param \Exception $exception
+</span></span><span id="178" class="l"><a class="l" href="#178">178: </a><span class="php-comment">     * @param $exception - an exception like interface with -&gt;getMessage(), -&gt;getTraceAsString()
 </span></span><span id="179" class="l"><a class="l" href="#179">179: </a><span class="php-comment">     */</span>
-</span><span id="180" class="l"><a class="l" href="#180">180: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_outputError" href="#_outputError">outputError</a>(<span class="php-var">$errorNumber</span>, TestInterface <span class="php-var">$test</span>, \Exception <span class="php-var">$exception</span>)
+</span><span id="180" class="l"><a class="l" href="#180">180: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_outputError" href="#_outputError">outputError</a>(<span class="php-var">$errorNumber</span>, TestInterface <span class="php-var">$test</span>, <span class="php-var">$exception</span>)
 </span><span id="181" class="l"><a class="l" href="#181">181: </a>    {
 </span><span id="182" class="l"><a class="l" href="#182">182: </a>        <span class="php-var">$this</span>-&gt;output-&gt;writeln(<span class="php-keyword2">sprintf</span>(<span class="php-quote">&quot;  %d)%s:&quot;</span>, <span class="php-var">$errorNumber</span>, <span class="php-var">$test</span>-&gt;getTitle()));
 </span><span id="183" class="l"><a class="l" href="#183">183: </a>
@@ -365,7 +365,7 @@
 </span><span id="240" class="l"><a class="l" href="#240">240: </a>            <span class="php-var">$this</span>-&gt;<span class="php-keyword2">time</span> = \PHP_Timer::stop();
 </span><span id="241" class="l"><a class="l" href="#241">241: </a>        });
 </span><span id="242" class="l"><a class="l" href="#242">242: </a>
-</span><span id="243" class="l"><a class="l" href="#243">243: </a>        <span class="php-var">$this</span>-&gt;eventEmitter-&gt;on(<span class="php-quote">'test.failed'</span>, <span class="php-keyword1">function</span> (Test <span class="php-var">$test</span>, \Exception <span class="php-var">$e</span>) {
+</span><span id="243" class="l"><a class="l" href="#243">243: </a>        <span class="php-var">$this</span>-&gt;eventEmitter-&gt;on(<span class="php-quote">'test.failed'</span>, <span class="php-keyword1">function</span> (Test <span class="php-var">$test</span>, <span class="php-var">$e</span>) {
 </span><span id="244" class="l"><a class="l" href="#244">244: </a>            <span class="php-var">$this</span>-&gt;errors[] = [<span class="php-var">$test</span>, <span class="php-var">$e</span>];
 </span><span id="245" class="l"><a class="l" href="#245">245: </a>        });
 </span><span id="246" class="l"><a class="l" href="#246">246: </a>
