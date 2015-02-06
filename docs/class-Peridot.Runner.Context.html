@@ -145,7 +145,7 @@ Peridot's global state.</p>
 		<b>Namespace:</b> Peridot\Runner<br>
 		<b>Package:</b> Peridot\Runner<br>
 
-		<b>Located at</b> <a href="source-class-Peridot.Runner.Context.html#7-125" title="Go to source code">Runner/Context.php</a><br>
+		<b>Located at</b> <a href="source-class-Peridot.Runner.Context.html#7-153" title="Go to source code">Runner/Context.php</a><br>
 	</div>
 
 
@@ -164,7 +164,7 @@ Peridot's global state.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_clear">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#33-43" title="Go to source code">clear</a>( )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#38-48" title="Go to source code">clear</a>( )</code>
 
 		<div class="description short">
 			<p>Clear the internal suite structure.</p>
@@ -184,6 +184,84 @@ Peridot's global state.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="setFile" id="_setFile">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFile">#</a>
+		<code><a href="source-class-Peridot.Runner.Context.html#50-61" title="Go to source code">setFile</a>( <span>mixed <var>$path</var></span> )</code>
+
+		<div class="description short">
+			<p>Set the file for the context. This file
+generally represents the current file being used
+to load suites.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set the file for the context. This file
+generally represents the current file being used
+to load suites.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd>
+</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFile" id="_getFile">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFile">#</a>
+		<code><a href="source-class-Peridot.Runner.Context.html#63-69" title="Go to source code">getFile</a>( )</code>
+
+		<div class="description short">
+			
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="getCurrentSuite" id="_getCurrentSuite">
 
 		<td class="attributes"><code>
@@ -196,7 +274,7 @@ Peridot's global state.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCurrentSuite">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#45-51" title="Go to source code">getCurrentSuite</a>( )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#71-77" title="Go to source code">getCurrentSuite</a>( )</code>
 
 		<div class="description short">
 			
@@ -232,7 +310,7 @@ Peridot's global state.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addSuite">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#53-72" title="Go to source code">addSuite</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#79-99" title="Go to source code">addSuite</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Creates a suite and adds it to the current suite. The newly
@@ -278,7 +356,7 @@ created suite will become the new "current" suite</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addTest">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#74-89" title="Go to source code">addTest</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#101-117" title="Go to source code">addTest</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Create a test and add it to the current suite</p>
@@ -322,7 +400,7 @@ created suite will become the new "current" suite</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addSetupFunction">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#91-100" title="Go to source code">addSetupFunction</a>( <span>callable <var>$fn</var></span> )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#119-128" title="Go to source code">addSetupFunction</a>( <span>callable <var>$fn</var></span> )</code>
 
 		<div class="description short">
 			<p>Add a setup function for all tests in the
@@ -362,7 +440,7 @@ current suite</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addTearDownFunction">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#102-110" title="Go to source code">addTearDownFunction</a>( <span>callable <var>$fn</var></span> )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#130-138" title="Go to source code">addTearDownFunction</a>( <span>callable <var>$fn</var></span> )</code>
 
 		<div class="description short">
 			<p>Add a tear down function for all tests in the current suite</p>
@@ -400,7 +478,7 @@ current suite</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getInstance">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#112-124" title="Go to source code">getInstance</a>( )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#140-152" title="Go to source code">getInstance</a>( )</code>
 
 		<div class="description short">
 			<p>Singleton access to Context</p>
@@ -462,6 +540,33 @@ current suite</p>
 		<td class="value">
 			<div>
 				<a href="#$suites" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="file" id="$file">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peridot.Runner.Context.html#20-23" title="Go to source code"><var>$file</var></a>
+
+			<div class="description short">
+				
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$file" class="anchor">#</a>
 				<code></code>
 			</div>
 		</td>
