@@ -51,6 +51,13 @@ a:active {
  }
 
 /**************
+ * Button
+ **************/
+a.btn {
+	color: #fff;
+}
+
+/**************
  * Logo
  **************/
  .logo {
@@ -70,6 +77,7 @@ a:active {
  .tag {
  	color: #1A4C25;
  	font-size: 22px;
+ 	margin-bottom: 50px;
  	text-align: center;
  }
 
@@ -101,13 +109,118 @@ a:active {
  	line-height: 34px;
  }
 
+/******************
+ * Buckets
+ ******************/
+.bucket-col {
+	margin-bottom: 20px;
+}
+
+.bucket {
+	background-color: rgba(0,0,0, 0.7);
+	border-radius: 4px;
+	color: #fff;
+	padding:15px;
+	text-align: center;
+}
+
+.bucket code {
+	background-color: inherit;
+	color:#fff;
+}
+
+.bucket i {
+	font-size: 54px;
+}
+
+.bucket a {
+	color:#60D879;
+}
+
+.bucket .icon-natural {
+	color: #5cb85c;
+}
+
+.bucket .icon-extensible {
+	color: #5bc0de;
+}
+
+.bucket .icon-fast {
+	color: #f0ad4e;
+}
+
+/********************
+ * Code
+ ********************/
+.code {
+	background-color: inherit;
+	color: inherit;
+}
+
+/*********************
+ * Nav
+ *********************/
+.nav {
+	margin-bottom: 40px;
+}
+
+.nav > ul {
+	display:none;
+	text-align: left;
+}
+
+.nav > .dropdown {
+	width: 100%;
+}
+
+.nav > .dropdown > button {
+	width: 100%;
+}
+
+.nav li {
+	display: inline-block;
+	list-style: none;
+	margin-left: 15px;
+}
+
+.nav li a {
+	display: block;
+	font-size: 14px;
+	width: 100%;
+}
+
+.nav li a.active {
+	border-bottom: 5px solid #308C43;
+}
+
+.nav li a:hover {
+	background: #efefef;
+	border-bottom: 5px solid #308C43;
+	color: #444;
+	text-decoration: none;
+}
+
+.nav .dropdown a,
+.nav .dropdown a:hover {
+	border-bottom-width: 0;
+}
+
+.nav .dropdown li {
+	margin-left: 0;
+	width: 100%;
+}
+
+.nav .dropdown-menu {
+	border-radius: 0;
+}
+
 @media only screen and (min-width : 1224px) {
 
 	/**************
 	 * Base Styles
 	 **************/
 	 body {
-	 	padding: 60px;
+	 	padding: 20px;
 	 }
 
 	/**************
@@ -118,4 +231,17 @@ a:active {
 		height: 131.5px;
 		width:434px;
 	}
+}
+
+@media only screen and (min-width : 768px) {
+	/**************
+	 * Nav
+	 **************/
+	 .nav > ul {
+	 	display: block;
+	 }
+
+	 .nav > .dropdown {
+	 	display:none;
+	 }
 }

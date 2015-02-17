@@ -8,129 +8,83 @@ peridot_version: ~1.0
     highly extensible, highly enjoyable, BDD testing framework for PHP.
 </p>
 
-<div class="jumbotron">
-    <p>
-        Peridot is a modern testing tool for PHP 5.4+. It makes testing fun again. It can easily be extended via an awesome event system, allowing developers to create plugins and custom reporters with ease. Follow and contribute on <a href="https://github.com/peridot-php/peridot" target="_blank">GitHub.</a>
-    </p>
+<div class="row">
+    <div class="col-md-4 bucket-col">
+        <div class="bucket">
+            <p class="bucket-icon">
+                <i class="fa fa-leaf icon-natural"></i>
+            </p>
+            <h2>Natural</h2>
+            <p>
+                Testing with Peridot is natural. Write tests using the familiar <code>describe-it</code> syntax. Easily and clearly describe how your code should behave in a language that makes sense. See <a href="#getting-started">getting started</a>.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-4 bucket-col">
+        <div class="bucket">
+            <p class="bucket-icon">
+                <i class="fa fa-plug icon-extensible"></i>
+            </p>
+            <h2>Extensible</h2>
+            <p>
+                Peridot is event driven, so writing plugins or ad hoc extensions is <em>painless</em>. Peridot <a href="#event-reference">events</a> and <a href="#scopes">scopes</a> allow you to easily add test helpers, custom reporters, and plugins. WebDriver? Databases? Your framework of choice? No problem.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-4 bucket-col">
+        <div class="bucket">
+            <p class="bucket-icon">
+                <i class="fa fa-bolt icon-fast"></i>
+            </p>
+            <h2>Fast</h2>
+            <p>
+                Peridot is small and lightweight. Peridot suites load and run faster than similar PHPUnit, Behat, or phpspec suites. Have slow or bulky integration tests? No problem, Peridot can <a href="https://github.com/peridot-php/peridot-concurrency" target="__blank">run your tests concurrently</a>.
+            </p>
+        </div>
+    </div>
 </div>
 
 <div class="row">
     <div class="col-xs-12">
-        <h2 id="features">Features</h2>
-        <ul>
-            <li>Flexible BDD testing interface</li>
-            <li>Event driven plugin architecture</li>
-            <li>Easily add user defined cli options</li>
-            <li>Easily create custom test reporters</li>
-            <li>Pass/fail based on exceptions</li>
-            <li>Mix in functionality via child scopes</li>
-            <li>Create your own testing DSLs</li>
-        </ul>
-
-        <h2 id="why-peridot">Why Peridot?</h2>
-        <p>
-            There are several mature testing frameworks for PHP, and even a few BDD style tools out there. So why Peridot?
-        </p>
-
-        <ol>
-            <li>
-                <strong>style:</strong>
-                <p>
-                    Peridot defaults to the <em>describe-it</em> syntax that is popular in most BDD frameworks. We think this allows us to spend less time defining classes and hierarchies for our tests, and start focusing on the <em>how</em> - that is how our code should behave.
-                </p>
-
-                <p>
-                    However, this syntax is available in a couple of other PHP testing tools like <a target="_blank" href="https://github.com/danielstjules/pho">pho</a>, <a target="_blank" href="https://github.com/v2e4lisp/preview">preview</a>, and <a target="_blank" href="https://github.com/davedevelopment/dspec">dspec</a>. It is not syntax alone that makes Peridot stand out :)
-                </p>
-            </li>
-            <li>
-                <strong>event driven:</strong>
-                <p>
-                    We believe event driven architectures make life easier. One of the things that sets Peridot apart from the rest is this strong focus on events. It makes it <em>VERY</em> easy to extend Peridot. Just look at our <a target="_blank" href="https://github.com/peridot-php/peridot-yo-plugin">Yo</a> and <a href="https://github.com/peridot-php/peridot-httpkernel-plugin" target="_blank">HttpKernel</a> plugins.
-                </p>
-
-                <p>
-                    In addition to plugins, the event system makes it easy to add ad hoc improvements to your test environment via the peridot.php file. Take a look at Peridot's own <a href="https://github.com/peridot-php/peridot/blob/master/peridot.php#L25" target="_blank">peridot.php</a> file. We leverage events to make adding code coverage to our own suite a snap.
-                </p>
-
-                <p>
-                    For more information on what events are available, see the <a href="#event-reference">event reference</a>.
-                </p>
-            </li>
-            <li>
-                <strong>reporters: </strong>
-                <p>
-                    Thanks to Peridot's event driven nature, it is easy to add your own reporters. We think you will be pleased with the default <a href="https://travis-ci.org/peridot-php/peridot/jobs/38823340" target="_blank">spec reporter</a>, but the possibilities are limitless.
-                </p>
-                <p>
-                    Just look <a href="https://github.com/peridot-php/peridot/blob/master/peridot.php#L66" target="_blank">how easy it is to add a new reporter</a>.
-                </p>
-            </li>
-            <li>
-                <strong>scopes: </strong>
-                <p>
-                    Scopes are one of Peridot's most powerful features. Every test in Peridot has a scope, which at it's simplest use is for safely setting and getting properties via <code>$this</code> in your tests. However - scopes are so much more.
-                </p>
-                <p>
-                    When a scope is asked for a property or method that does not exist, it will search its child scopes to see if that property or method exists. This allows us to mix behavior into our tests! All without creating complex object hierarchies via the <code>extends</code> keyword.
-                </p>
-
-                <p>
-                    Checkout the peridot <a href="https://github.com/peridot-php/peridot-httpkernel-plugin#using-on-a-test-by-test-basis" target="_blank">HttpKernelScope</a> for an example of mixing Symfony's <a href="http://symfony.com/components/BrowserKit" target="_blank">BrowserKit</a> into tests. More information can be found <a href="#scopes">here</a>.
-                </p>
-            </li>
-        </ol>
-
-        <h2 id="installation">Installation</h2>
+        <h2 id="installation">Installing Peridot</h2>
         <p>
             Peridot can be installed several ways.
         </p>
-        <h3>Globally (Composer)</h3>
-        <div class="terminal-section">
-            {% highlight bash %}
-            $ composer global require peridot-php/peridot:{{ page.peridot_version }}
-            {% endhighlight %}
-            <p>
-                And make sure the <code>.composer/vendor/bin</code> is on your <code>PATH</code>
-            </p>
-        </div>
-        {% highlight bash %}
-        export PATH="$PATH:$HOME/.composer/vendor/bin"
-        {% endhighlight %}
+        <h3>Composer</h3>
+{% highlight bash %}
+# global composer install
+$ composer global require peridot-php/peridot:{{ page.peridot_version }}
 
+# ensure .composer/vendor/bin is on your PATH
+$ export PATH="$PATH:$HOME/.composer/vendor/bin"
 
-        <h3>Locally (per project)</h3>
-        {% highlight bash %}
-        $ composer require peridot-php/peridot:{{ page.peridot_version }}
-        {% endhighlight %}
+# local per project install (recommended)
+$ composer require peridot-php/peridot:~1.0
+{% endhighlight %}
+
+        <h3>Manual install</h3>
+
+{% highlight bash %}
+# download the latest phar
+$ sudo wget http://peridot-php.github.io/downloads/peridot.phar -O /usr/local/bin/peridot
+
+# or if you prefer curl
+$ sudo curl http://peridot-php.github.io/downloads/peridot.phar -o /usr/local/bin/peridot
+
+# make it executable
+$ sudo chmod a+x /usr/local/bin/peridot
+{% endhighlight %}
 
         <h3>Manual (local)</h3>
         <p>
-            The latest stable phar can be downloaded <a id="downloadLink" href="http://peridot-php.github.io/downloads/peridot.phar">here</a>. You can place it anywhere you like.
+            <a class="btn btn-success" id="downloadLink" href="http://peridot-php.github.io/downloads/peridot.phar">Download Latest Stable Phar</a>
         </p>
-        <h3>Manual (global)</h3>
-        <p>
-            Use the following commands to install the <code>peridot</code> command for use anywhere:
-        </p>
-        <div class="terminal-section">
-            {% highlight bash %}
-            $ sudo wget http://peridot-php.github.io/downloads/peridot.phar -O /usr/local/bin/peridot
-            {% endhighlight %}
-            <p>
-                with curl:
-            </p>
-            {% highlight bash %}
-            $ sudo curl http://peridot-php.github.io/downloads/peridot.phar -o /usr/local/bin/peridot
-            {% endhighlight %}
-            <p>
-                then:
-            </p>
-        </div>
-        {% highlight bash %}
-        $ sudo chmod a+x /usr/local/bin/peridot
-        {% endhighlight %}
 
         <h2 id="getting-started">Getting Started</h2>
+
+        <p>
+            Peridot uses the familiar <code>describe-it</code> syntax to create a clear and readable testing language.
+        </p>
 
 {% highlight php %}
 <?php //arrayobject.spec.php
@@ -159,132 +113,7 @@ $ peridot arrayobject.spec.php
 
 {% endhighlight %}
 
-        <h3>Peridot DSLs</h3>
-
-        <p>
-            By default, Peridot uses a BDD style DSL for describing your code's behavior via specs. Here's the breakdown:
-        </p>
-
-        <ul class="reference-list">
-            <li>
-                <div><code>describe($description, $func)</code></div>
-                <p>
-                    This function creates a suite, and is used to organize behaviors. It's fair game to nest these.
-                </p>
-            </li>
-            <li>
-                <div><code>context($description, $func)</code></div>
-                <p>
-                    This function is identical to <code>describe</code>. It is provided to offer additional organization for your specs.
-                </p>
-            </li>
-            <li>
-                <div><code>beforeEach($setupFunc)</code></div>
-                <p>
-                    You can add setup functions that execute for all specs using this function. If you set variables on <code>$this</code> inside of the function body, it will create instance variables that are inherited by specs and suites.
-                </p>
-            </li>
-            <li>
-                <div><code>afterEach($tearDownFunc)</code></div>
-                <p>
-                    You can add teardown functions that execute for all specs using this function.
-                </p>
-            </li>
-            <li>
-                <div><code>it($description, $func)</code></div>
-                <p>
-                    This function creates a single spec and adds it to the suite it is nested in. 
-                </p>
-            </li>
-        </ul>
-
-        <h3 id="pending-specs">Pending Specs</h2>
-
-        <p>
-            You can make any spec our suite pending by prefixing the function with an <strong>x</strong>.
-        </p>
-
-{% highlight php %}
-<?php
-xdescribe("A pending suite", function() {
-    xcontext("when using a pending context", function() {
-        xit("should have a pending spec", function() {
-
-        });
-    });
-});
-?>
-{% endhighlight %}
-
-        <p>
-            Or you can simply omit the test function.
-        </p>
-
-{% highlight php %}
-<?php
-describe("A pending suite", function() {
-    it("should have a pending spec");    
-});
-?>
-{% endhighlight %}
-
-        <h3 id="custom-dsls">Custom DSLs</h3>
-
-        <p>
-            You can also create your own testing DSLs! Check out <a href="https://github.com/peridot-php/peridot-dsl-example" target="_blank">Example: Creating An Acceptance Testing DSL.</a>
-        </p>
-
-        <h2 id="assertions">Assertions</h2>
-        <p>
-            A Peridot test fails when an exception is thrown. Peridot's default DSL configures the default behavior of PHP's native <a target="_blank" href="http://us3.php.net/manual/en/function.assert.php">assert</a> function to throw exceptions, but you could just as easily use an existing matcher library or roll your own.
-        </p>
-
-	<p>
-	    We recommend the <a href="http://peridot-php.github.io/leo/" target="_blank">Leo</a> assertion and matcher library. It was developed by the Peridot team to create an expressive assertion language to complement Peridot's BDD style.
-        </p>
-
-        <h2 id="plugins">Plugins</h2>
-        <p>
-            Peridot plugins are easy to write. Peridot exposes a handful of <a href="#event-reference">events</a> that can be hooked into via a configuration file.
-        </p>
-
-        <p>
-            Peridot will look for a file called <code>peridot.php</code> in the current working directory, or one can be specified using the <code>--configuration</code> option via the console. The configuration file will be included once, and it should return a function that accepts a single <a target="_blank" href="/docs/class-Evenement.EventEmitterInterface.html">EventEmitter</a> containing <code>->on()</code> and <code>->emit()</code> methods.
-        </p>
-
-{% highlight php %}
-<?php //peridot.php
-return function(EventEmitterInterface $emitter) {
-    $emitter->on('test.failed', function($test) {
-        //do something with the failed test
-    });
-}
-?>
-{% endhighlight %}
-
-        <p>
-            For more information see <a href="https://github.com/peridot-php/peridot-dsl-example" target="_blank">Example: Creating An Acceptance Testing DSL.</a>
-        </p>
-
-        <p>
-            Coming soon: "Creating The Peridot Code Coverage Plugin."
-        </p>
-
-        <h2 id="reporters">Reporters</h2>
-
-        <p>
-            Peridot ships with a spec reporter for printing test results in a hierarchal manner. However, you can easily create your own reporters.
-        </p>
-
-        <p>
-            Reporters can be registered via the configuration file like any other plugin through the <code>peridot.reporters</code> event.
-        </p>
-
-        <p>
-            Check out Peridot's own <a href="https://github.com/peridot-php/peridot/blob/master/peridot.php" target="_blank">peridot.php</a> file for an example of creating a custom reporter.
-        </p>
-
-        <h2 id="peridot-cli">peridot</h2>
+        <h2 id="peridot-cli"><code class="code">peridot</code></h2>
 
 <pre>
 Usage:
@@ -331,262 +160,6 @@ Options:
             List available test reporters.
         </p>
 
-        <h2 id="scopes">Scopes</h2>
-        <p>
-            Peridot is able to safely use <code>$this</code> inside of test closures because of scopes. Scopes allow us to place state on a test without conflicts.
-        </p>
-
-        <p>
-            Scopes also allow mixing in behavior to tests via a powerful concept called child scopes. Consider the following:
-        </p>
-
-{% highlight php %}
-<?php //peridot.php
-class WebDriverScope extends Scope
-{
-    protected $driver;
-    protected $emitter;
-
-    public function __construct(RemoteWebDriver $driver, EventEmitterInterface $emitter)
-    {
-        $this->driver = $driver;
-        $this->emitter = $emitter;
-        $this->emitter->on('runner.end', function() {
-            $this->driver->quit();
-        });
-    }
-    public function getPage($url)
-    {
-        $this->driver->get($url);
-    }
-
-    public function findElementById($id)
-    {
-        return $this->driver->findElement(\WebDriverBy::id($id));
-    }
-}
-
-return function(EventEmitterInterface $emitter) {
-    $driver = RemoteWebDriver::create($host, DesiredCapabilities::chrome());
-    $driverScope = new WebDriverScope($driver);
-
-    $emitter->on('suite.start', function($test) use ($driverScope) {
-        $test->getScope()->peridotAddChildScope($driverScope);
-    });
-}
-?>
-{% endhighlight %}
-
-        <p>
-            By mixing the <code>WebDriverScope</code> in to our test's scopes, we have made the following possible in our tests:
-        </p>
-
-{% highlight php %}
-<?php
-describe('The home page', function() {
-    it('should have a greeting', function() {
-        $this->getPage('http://localhost:4000');
-        $greeting = $this->findElementById('greeting');
-        assert($greeting->getText() === "Hello", "should be Hello");
-    });
-});
-?>
-{% endhighlight %}
-
-        <p>
-            For a fully functional example of the above, checkout the <a target="_blank" href="https://github.com/peridot-php/peridot-scope-example">Peridot scope example</a> on Github.
-        </p>
-
-        <p>
-            Between scopes, events, and DSLs - Peridot gives you plenty of opportunities for extension.
-        </p>
-
-        <h2 id="event-reference">Event Reference</h2>
-
-        <p>The following events are exposed by Peridot's event emitter:</p>
-
-        <ul class="reference-list">
-            <li>
-                <div><code>peridot.start</code></div>
-                <p>
-                    Fires when the Peridot application is constructed. Useful for defining additional CLI arguments and options.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br> 
-                    <a target="_blank" href="/docs/class-Peridot.Console.Environment.html">Environment</a> <code>$environment</code><br>
-                    <a target="_blank" href="/docs/class-Peridot.Console.Application.html">Application</a> <code>$application</code>
-                </p>
-            </li>
-            <li>
-                <div><code>peridot.configure</code></div>
-                <p>
-                    Fires when the Peridot application is configured. Useful for overriding configuration values and configuring the Peridot test runner.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br> 
-		    <a target="_blank" href="/docs/class-Peridot.Configuration.html">Configuration</a> <code>$configuration</code><br>
-                    <a target="_blank" href="/docs/class-Peridot.Console.Application.html">Application</a> <code>$application</code>
-                </p>
-            </li>
-            <li>
-                <div><code>peridot.execute</code></div>
-                <p>
-                    Fires right before Peridot starts execution. Happens after CLI options are parsed and before specs are loaded.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br>
-                    <a target="_blank" href="/docs/class-Symfony.Component.Console.Input.InputInterface.html">InputInterface</a> <code>$input</code><br>
-                    <a target="_blank" href="/docs/class-Symfony.Component.Console.Output.OutputInterface.html">OutputInterface</a> <code>$output</code>
-                </p>
-            </li>
-            <li>
-                <div><code>peridot.reporters</code></div>
-                <p>
-                    Fires when Peridot reporters are registered. Useful for registering additional reporters.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br>
-                    <a target="_blank" href="/docs/class-Symfony.Component.Console.Input.InputInterface.html">InputInterface</a> <code>$input</code><br>
-                    <a target="_blank" href="/docs/class-Peridot.Reporter.ReporterFactory.html">ReporterFactory</a> <code>$reporters</code><br>
-                </p>
-            </li>
-            <li>
-                <div><code>peridot.load</code></div>
-                <p>
-                    Fires right before Peridot starts loading tests. Useful for changing loading behavior.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br>
-                    <a target="_blank" href="/docs/class-Peridot.Console.Command.html">Command</a> <code>$command</code><br>
-                    <a target="_blank" href="/docs/class-Peridot.Configuration.html">Configuration</a> <code>$configuration</code><br>
-                </p>
-            </li>
-            <li>
-                <div><code>peridot.end</code></div>
-                <p>
-                    Fires when the Peridot application exits.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br>
-                    integer <code>$exitCode</code><br>
-                    <a target="_blank" href="/docs/class-Symfony.Component.Console.Input.InputInterface.html">InputInterface</a> <code>$input</code><br>
-                    <a target="_blank" href="/docs/class-Symfony.Component.Console.Output.OutputInterface.html">OutputInterface</a> <code>$output</code>
-                </p>
-            </li>
-            <li>
-                <div><code>runner.start</code></div>
-                <p>
-                    Fires right before the suite runner starts.
-                </p>
-                <p>
-                    <strong>Arguments:</strong> No arguments
-                </p>
-            </li>
-            <li>
-                <div><code>runner.end</code></div>
-                <p>
-                    Fires right after the suite runner ends.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br>
-                    float <code>$runTime</code>
-                </p>
-            </li>
-            <li>
-                <div><code>suite.start</code></div>
-                <p>
-                    Fires right before a suite runs.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br>
-                    <a target="_blank" href="/docs/class-Peridot.Core.Suite.html">Suite</a> <code>$suite</code>
-                </p>
-            </li>
-            <li>
-                <div><code>suite.end</code></div>
-                <p>
-                    Fires right after a suite runs.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br>
-                    <a target="_blank" href="/docs/class-Peridot.Core.Suite.html">Suite</a> <code>$suite</code>
-                </p>
-            </li>
-            <li>
-                <div><code>suite.halt</code></div>
-                <p>
-                    When fired, this event signals a suite to stop running.
-                </p>
-                <p>
-                    <strong>Arguments:</strong> No arguments
-                </p>
-            </li>
-            <li>
-                <div><code>test.passed</code></div>
-                <p>
-                    Fires when a test passes.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br>
-                    <a target="_blank" href="/docs/class-Peridot.Core.Test.html">Test</a> <code>$test</code>
-                </p>
-            </li>
-            <li>
-                <div><code>test.pending</code></div>
-                <p>
-                    Fires when a test pends.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br>
-                    <a target="_blank" href="/docs/class-Peridot.Core.Test.html">Test</a> <code>$test</code>
-                </p>
-            </li>
-            <li>
-                <div><code>test.failed</code></div>
-                <p>
-                    Fires when a test fails.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br>
-                    <a target="_blank" href="/docs/class-Peridot.Core.Test.html">Test</a> <code>$test</code><br>
-                    <a target="_blank" href="/docs/class-Exception.html">Exception</a> <code>$exception</code>
-                </p>
-            </li>
-            <li>
-                <div><code>test.start</code></div>
-                <p>
-                    Fires right before a test runs.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br>
-                    <a target="_blank" href="/docs/class-Peridot.Core.Test.html">Test</a> <code>$test</code>
-                </p>
-            </li>
-            <li>
-                <div><code>test.end</code></div>
-                <p>
-                    Fires right after a test runs.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br>
-                    <a target="_blank" href="/docs/class-Peridot.Core.Test.html">Test</a> <code>$test</code>
-                </p>
-            </li>
-            <li>
-                <div><code>error</code></div>
-                <p>
-                    Fires when a PHP error occurs. The standard error arguments passed to a function registered via PHP's native <code>set_error_handler</code> will be passed to this event.
-                </p>
-                <p>
-                    <strong>Arguments:</strong><br>
-                    integer <code>$errno</code><br>
-                    string <code>$errstr</code><br>
-                    string <code>$errfile</code><br>
-                    string <code>$errline</code>
-                </p>
-            </li>
-        </ul>
-
         <h2 id="examples">Example Test Suites</h2>
 
         <p>
@@ -608,7 +181,7 @@ describe('The home page', function() {
         If you have a project that uses Peridot, we would love to know. Feel free to <a href="mailto:bscaturro@gmail.com?Subject=We%20use%20Peridot">message us</a> and let us know, and we will
         gladly list your project on the site.
 
-        <h2 id="peridot-tests">Running peridot's tests</h2>
+        <h2 id="peridot-tests">Running Peridot's tests</h2>
 
         <p>
             Peridot's tests were written using Peridot. After cloning peridot, you can run tests using:

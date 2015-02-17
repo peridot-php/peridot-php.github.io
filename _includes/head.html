@@ -13,14 +13,35 @@
     
     <link href='http://fonts.googleapis.com/css?family=Nunito|Open+Sans:700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/pygments-monokai.css">
     <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     
     {% include tracking.html %}
 </head>
 <body>
     <div class="container">
+        <nav class="nav">
+          <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="http://peridot-php.github.io/docs/" target="__blank">API Documentation</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Guides <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Scopes</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">DSLs</a></li>
+                    <li><a href="#">Plugins</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Blog</a></li>
+          </ul>
+        </nav>
+
         <header class="row">
             <h1 class="logo">
                 Peridot
