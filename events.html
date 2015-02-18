@@ -1,0 +1,210 @@
+---
+layout: default
+title: Events
+type: leaf
+---
+
+<h1 class="text-center">Peridot Events</h1>
+
+<p>
+	Peridot features an event driven architecture. This has not only greatly simplified Peridot's own source code, it also allows testers to easily customize Peridot via plugins and reporters. The Peridot event emitter can be accessed via the peridot.php file:
+</p>
+
+{% highlight php %}
+<?php //peridot.php
+use Evenement\EventEmitterInterface;
+use Peridot\Core\Test;
+
+return function(EventEmitterInterface $emitter) {
+    $emitter->on('test.failed', function (Test $test) {
+        //log the failure?
+        //abort abort abort?
+        //let your loved ones know about your shortcomings?
+    });
+}
+?>
+{% endhighlight %}
+
+<p>The following events are available for your testing pleasure:</p>
+
+<ul class="reference-list">
+    <li>
+        <div><code>peridot.start</code></div>
+        <p>
+            Fires when the Peridot application is constructed. Useful for defining additional CLI arguments and options.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br> 
+            <a target="_blank" href="/docs/class-Peridot.Console.Environment.html">Environment</a> <code>$environment</code><br>
+            <a target="_blank" href="/docs/class-Peridot.Console.Application.html">Application</a> <code>$application</code>
+        </p>
+    </li>
+    <li>
+        <div><code>peridot.configure</code></div>
+        <p>
+            Fires when the Peridot application is configured. Useful for overriding configuration values and configuring the Peridot test runner.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br> 
+    <a target="_blank" href="/docs/class-Peridot.Configuration.html">Configuration</a> <code>$configuration</code><br>
+            <a target="_blank" href="/docs/class-Peridot.Console.Application.html">Application</a> <code>$application</code>
+        </p>
+    </li>
+    <li>
+        <div><code>peridot.execute</code></div>
+        <p>
+            Fires right before Peridot starts execution. Happens after CLI options are parsed and before specs are loaded.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br>
+            <a target="_blank" href="/docs/class-Symfony.Component.Console.Input.InputInterface.html">InputInterface</a> <code>$input</code><br>
+            <a target="_blank" href="/docs/class-Symfony.Component.Console.Output.OutputInterface.html">OutputInterface</a> <code>$output</code>
+        </p>
+    </li>
+    <li>
+        <div><code>peridot.reporters</code></div>
+        <p>
+            Fires when Peridot reporters are registered. Useful for registering additional reporters.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br>
+            <a target="_blank" href="/docs/class-Symfony.Component.Console.Input.InputInterface.html">InputInterface</a> <code>$input</code><br>
+            <a target="_blank" href="/docs/class-Peridot.Reporter.ReporterFactory.html">ReporterFactory</a> <code>$reporters</code><br>
+        </p>
+    </li>
+    <li>
+        <div><code>peridot.load</code></div>
+        <p>
+            Fires right before Peridot starts loading tests. Useful for changing loading behavior.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br>
+            <a target="_blank" href="/docs/class-Peridot.Console.Command.html">Command</a> <code>$command</code><br>
+            <a target="_blank" href="/docs/class-Peridot.Configuration.html">Configuration</a> <code>$configuration</code><br>
+        </p>
+    </li>
+    <li>
+        <div><code>peridot.end</code></div>
+        <p>
+            Fires when the Peridot application exits.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br>
+            integer <code>$exitCode</code><br>
+            <a target="_blank" href="/docs/class-Symfony.Component.Console.Input.InputInterface.html">InputInterface</a> <code>$input</code><br>
+            <a target="_blank" href="/docs/class-Symfony.Component.Console.Output.OutputInterface.html">OutputInterface</a> <code>$output</code>
+        </p>
+    </li>
+    <li>
+        <div><code>runner.start</code></div>
+        <p>
+            Fires right before the suite runner starts.
+        </p>
+        <p>
+            <strong>Arguments:</strong> No arguments
+        </p>
+    </li>
+    <li>
+        <div><code>runner.end</code></div>
+        <p>
+            Fires right after the suite runner ends.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br>
+            float <code>$runTime</code>
+        </p>
+    </li>
+    <li>
+        <div><code>suite.start</code></div>
+        <p>
+            Fires right before a suite runs.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br>
+            <a target="_blank" href="/docs/class-Peridot.Core.Suite.html">Suite</a> <code>$suite</code>
+        </p>
+    </li>
+    <li>
+        <div><code>suite.end</code></div>
+        <p>
+            Fires right after a suite runs.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br>
+            <a target="_blank" href="/docs/class-Peridot.Core.Suite.html">Suite</a> <code>$suite</code>
+        </p>
+    </li>
+    <li>
+        <div><code>suite.halt</code></div>
+        <p>
+            When fired, this event signals a suite to stop running.
+        </p>
+        <p>
+            <strong>Arguments:</strong> No arguments
+        </p>
+    </li>
+    <li>
+        <div><code>test.passed</code></div>
+        <p>
+            Fires when a test passes.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br>
+            <a target="_blank" href="/docs/class-Peridot.Core.Test.html">Test</a> <code>$test</code>
+        </p>
+    </li>
+    <li>
+        <div><code>test.pending</code></div>
+        <p>
+            Fires when a test pends.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br>
+            <a target="_blank" href="/docs/class-Peridot.Core.Test.html">Test</a> <code>$test</code>
+        </p>
+    </li>
+    <li>
+        <div><code>test.failed</code></div>
+        <p>
+            Fires when a test fails.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br>
+            <a target="_blank" href="/docs/class-Peridot.Core.Test.html">Test</a> <code>$test</code><br>
+            <a target="_blank" href="/docs/class-Exception.html">Exception</a> <code>$exception</code>
+        </p>
+    </li>
+    <li>
+        <div><code>test.start</code></div>
+        <p>
+            Fires right before a test runs.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br>
+            <a target="_blank" href="/docs/class-Peridot.Core.Test.html">Test</a> <code>$test</code>
+        </p>
+    </li>
+    <li>
+        <div><code>test.end</code></div>
+        <p>
+            Fires right after a test runs.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br>
+            <a target="_blank" href="/docs/class-Peridot.Core.Test.html">Test</a> <code>$test</code>
+        </p>
+    </li>
+    <li>
+        <div><code>error</code></div>
+        <p>
+            Fires when a PHP error occurs. The standard error arguments passed to a function registered via PHP's native <code>set_error_handler</code> will be passed to this event.
+        </p>
+        <p>
+            <strong>Arguments:</strong><br>
+            integer <code>$errno</code><br>
+            string <code>$errstr</code><br>
+            string <code>$errfile</code><br>
+            string <code>$errline</code>
+        </p>
+    </li>
+</ul>

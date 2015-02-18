@@ -1,0 +1,151 @@
+---
+layout: default
+title: Testing Languages
+type: leaf
+---
+
+<h1 class="text-center">Testing Languages</h1>
+
+<p>
+    By default, Peridot uses a BDD style DSL for describing your code's behavior via specs. Here's the breakdown:
+</p>
+
+<ul class="reference-list">
+    <li>
+        <div><code>describe($description, $func)</code></div>
+        <p>
+            This function creates a suite, and is used to organize behaviors. It's fair game to nest these.
+        </p>
+    </li>
+    <li>
+        <div><code>context($description, $func)</code></div>
+        <p>
+            This function is identical to <code>describe</code>. It is provided to offer additional organization for your specs.
+        </p>
+    </li>
+    <li>
+        <div><code>beforeEach($setupFunc)</code></div>
+        <p>
+            You can add setup functions that execute for all specs using this function. If you set variables on <code>$this</code> inside of the function body, it will create instance variables that are inherited by specs and suites.
+        </p>
+    </li>
+    <li>
+        <div><code>afterEach($tearDownFunc)</code></div>
+        <p>
+            You can add teardown functions that execute for all specs using this function.
+        </p>
+    </li>
+    <li>
+        <div><code>it($description, $func)</code></div>
+        <p>
+            This function creates a single spec and adds it to the suite it is nested in. 
+        </p>
+    </li>
+</ul>
+
+<p>
+    An example might look like this:
+</p>
+
+{% highlight php %}
+<?php
+describe('TodoRepository', function () {
+    beforeEach(function () {
+        $interface = 'Doctrine\Common\Persistence\ObjectManager';
+        // lets assume we are using the peridot-prophecy-plugin
+        $this->em = $this->getProphet()->prophesize($interface);
+        $this->repository = new TodoRepository($this->em->reveal());
+    });
+
+    afterEach(function () {
+        $this->getProphet()->checkPredictions();
+    });
+
+    context('when calling ->get()', function () {
+        it('should find the todo', function () {
+            $this->repository->get(1);
+            $this->em->find('Todos\Todo', 1)->shouldBeCalled();
+        });
+    });
+});
+?>
+{% endhighlight %}
+
+<h2 id="pending-specs">Pending Specs</h2>
+
+<p>
+    You can make any spec our suite pending by prefixing the function with an <strong>x</strong>.
+</p>
+
+{% highlight php %}
+<?php
+xdescribe("A pending suite", function() {
+    xcontext("when using a pending context", function() {
+        xit("should have a pending spec", function() {
+
+        });
+    });
+});
+?>
+{% endhighlight %}
+
+<p>
+    Or you can simply omit the test function.
+</p>
+
+{% highlight php %}
+<?php
+describe("A pending suite", function() {
+    it("should have a pending spec");    
+    });
+?>
+{% endhighlight %}
+
+<h2 id="custom-dsls">Custom DSLs</h2>
+
+<p>
+    You can also create your own testing DSLs! Check out <a href="https://github.com/peridot-php/peridot-dsl-example" target="_blank">Example: Creating An Acceptance Testing DSL.</a>
+</p>
+
+<p>
+    The linked example above demonstrates creating a custom DSL to support the following testing language:
+</p>
+
+{% highlight php %}
+<?php // features/chdir.feature.php
+Feature("chdir","
+    As a PHP user
+    I need to be able to change the current working directory",
+    function () {
+
+        Scenario(function () {
+
+            Given('I am in this directory', function () {
+                chdir(__DIR__);
+            });
+
+            When('I run getcwd()', function () {
+                $this->cwd = getcwd();
+            });
+
+            Then('I should get this directory', function () {
+                if ($this->cwd != __DIR__) {
+                    throw new \Exception("Should be current directory");
+                }
+            });
+
+        });
+
+    });
+?>
+{% endhighlight %}
+
+<h2 id="assertions">Assertions</h2>
+
+<p>
+    A Peridot test fails when an exception is thrown. Peridot's default DSL configures the default behavior of PHP's native <a target="_blank" href="http://us3.php.net/manual/en/function.assert.php">assert</a> function to throw exceptions, but you could just as easily use an existing matcher library or roll your own.
+</p>
+
+<p>
+We recommend the <a href="http://peridot-php.github.io/leo/" target="_blank">Leo</a> assertion and matcher library. It was developed by the Peridot team to create an expressive assertion language to complement Peridot's BDD style. However, Peridot was built to be unopinionated about such things, and you can find a list of matchers <a href="https://github.com/peridot-php/peridot/wiki/Matchers" target="__blank">here</a>.
+</p>

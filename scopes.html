@@ -1,0 +1,73 @@
+---
+layout: default
+title: Scopes
+type: leaf
+---
+
+<h1 class="text-center">Scopes</h1>
+
+<p>
+    Peridot is able to safely use <code>$this</code> inside of test closures because of scopes. Scopes allow us to place state on a test without conflicts.
+</p>
+
+<p>
+    Scopes also allow mixing in behavior to tests via a powerful concept called child scopes. Consider the following:
+</p>
+
+{% highlight php %}
+<?php //peridot.php
+class WebDriverScope extends Scope
+{
+    protected $driver;
+    protected $emitter;
+
+    public function __construct(RemoteWebDriver $driver, EventEmitterInterface $emitter)
+    {
+        $this->driver = $driver;
+        $this->emitter = $emitter;
+        $this->emitter->on('runner.end', function() {
+            $this->driver->quit();
+        });
+    }
+
+    public function getPage($url)
+    {
+        $this->driver->get($url);
+    }
+
+    public function findElementById($id)
+    {
+        return $this->driver->findElement(\WebDriverBy::id($id));
+    }
+}
+
+return function(EventEmitterInterface $emitter) {
+    $driver = RemoteWebDriver::create($host, DesiredCapabilities::chrome());
+    $driverScope = new WebDriverScope($driver, $emitter);
+
+    $emitter->on('suite.start', function($test) use ($driverScope) {
+        $test->getScope()->peridotAddChildScope($driverScope);
+    });
+}
+?>
+{% endhighlight %}
+
+        <p>
+            By mixing the <code>WebDriverScope</code> in to our test's scopes, we have made the following possible in our tests:
+        </p>
+
+{% highlight php %}
+<?php
+describe('The home page', function() {
+    it('should have a greeting', function() {
+        $this->getPage('http://localhost:4000');
+        $greeting = $this->findElementById('greeting');
+        assert($greeting->getText() === "Hello", "should be Hello");
+    });
+});
+?>
+{% endhighlight %}
+
+<p>
+    Scopes are a powerful concept, and one that should be used liberally to simplify your tests. You can use them to easily include helpers and behavior for your tests, whether that is across the <a href="https://github.com/peridot-php/peridot-prophecy-plugin/blob/master/src/ProphecyPlugin.php#L31" target="__blank">entire suite</a>, or for a <a href="https://github.com/peridot-php/peridot-concurrency/blob/master/specs/runner/stream-select/application/TestMessageReader.php" target="__blank">few select tests</a>. 
+</p>

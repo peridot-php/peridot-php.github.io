@@ -1,0 +1,129 @@
+---
+layout: default
+title: Plugins
+type: leaf
+---
+
+<h1 class="text-center">Plugins</h1>
+
+<p>
+    Peridot exposes a handful of events that can be hooked into via a configuration file. This mechanism is the easiest, and preferred way by which Peridot is extended. A core design goal of Peridot is to keep the core framework as lean as possible - while opening up a ton of possibilities via <a href="/events.html" target="__blank">events</a>, <a href="/scopes.html" target="__blank">scopes</a>, and <a href="/syntax.html#custom-dsls" target="__blank">dsls</a>.
+</p>
+
+<p>
+    Peridot will look for a file called <code>peridot.php</code> in the current working directory, or one can be specified using the <code>--configuration</code> option via the console. The configuration file will be included once, and it should return a function that accepts a single <a target="_blank" href="/docs/class-Evenement.EventEmitterInterface.html">EventEmitter</a> containing <code>->on()</code> and <code>->emit()</code> methods.
+</p>
+
+{% highlight php %}
+<?php //peridot.php
+return function(EventEmitterInterface $emitter) {
+    $emitter->on('test.failed', function($test) {
+        //do something with the failed test
+    });
+}
+?>
+{% endhighlight %}
+
+<p>
+    The Peridot team has leveraged this mechanism already to create some really cool plugins:
+</p>
+
+<ul class="reference-list">
+    <li>
+        <div>
+            <a href="https://github.com/peridot-php/peridot-jumpstart" target="__blank">
+                Peridot Concurrency Plugin
+            </a>
+        </div>
+        <p>
+            This plugin adds command line options for running your suites concurrently. A great plugin for large and slow integration or functional tests.
+        </p>
+    </li>
+    <li>
+        <div>
+            <a href="https://github.com/peridot-php/peridot-httpkernel-plugin" target="__blank">
+                Peridot HttpKernel Plugin
+            </a>
+        </div>
+        <p>
+            The HttpKernel plugin simplifies testing with frameworks like Symfony, Silex, or Laravel. The plugin exposes a <code>Symfony\Component\HttpKernel\Client</code> to your suites.
+        </p>
+    </li>
+    <li>
+        <div>
+            <a href="https://github.com/peridot-php/peridot-prophecy-plugin" target="__blank">
+                Peridot Prophecy Plugin
+            </a>
+        </div>
+        <p>
+            The prophecy plugin integrates the amazing mocking library <a href="https://github.com/phpspec/prophecy" target="__blank">prophecy</a>. The plugin makes a prophet objet avaiable to tests, and also supports auto mocking of class names in <code>describe</code> blocks.
+        </p>
+    </li>
+    <li>
+        <div>
+            <a href="https://github.com/peridot-php/peridot-watcher-plugin" target="__blank">
+                Peridot Watcher Plugin
+            </a>
+        </div>
+        <p>
+            The watcher plugin will watch changes to tests and source files. When a change is detected, the watcher plugin will re-run your tests.
+        </p>
+    </li>
+</ul>
+
+<h2 id="reporters">Reporters</h2>
+
+<p>
+    Peridot ships with a spec reporter for printing test results in a hierarchal manner. However, you can easily create your own reporters.
+</p>
+
+<p>
+    Reporters can be registered via the configuration file like any other plugin through the <code>peridot.reporters</code> event. Plugin authors can create reporters to support their added functionality, or reporters can be created as standalone plugins themselves. Check out some of the additional reporters created by the Peridot team:
+</p>
+
+<ul class="reference-list">
+    <li>
+        <div>
+            <a href="https://github.com/peridot-php/peridot-dot-reporter" target="__blank">
+                Peridot Dot Reporter
+            </a>
+        </div>
+        <p>
+            The dot reporter provides a simple dot matrix that would be familar to most PHPUnit users.
+        </p>
+    </li>
+    <li>
+        <div>
+            <a href="https://github.com/peridot-php/peridot-list-reporter" target="__blank">
+                Peridot List Reporter
+            </a>
+        </div>
+        <p>
+            The list reporter lists test titles from top to bottom using colors to convey pass/fail status.
+        </p>
+    </li>
+    <li>
+        <div>
+            <a href="https://github.com/peridot-php/peridot-code-coverage-reporters" target="__blank">
+                Peridot Code Coverage Reporters
+            </a>
+        </div>
+        <p>
+            This plugin provides a set of reporters for generating code coverage for test suites.
+        </p>
+    </li>
+    <li>
+        <div>
+            <a href="https://github.com/peridot-php/peridot-concurrency/blob/master/src/Reporter/ConcurrentReporter.php" target="__blank">
+                Concurrency Reporter
+            </a>
+        </div>
+        <p>
+            The <a href="https://github.com/peridot-php/peridot-concurrency" target="__blank">peridot-concurrency</a> plugin comes with it's own reporter for displaying results for concurrently run suites.
+        </p>
+    </li>
+</ul>
+
+<p>
+    Check out Peridot's own <a href="https://github.com/peridot-php/peridot/blob/master/peridot.php" target="_blank">peridot.php</a> file for an example of creating a custom reporter.
+</p>

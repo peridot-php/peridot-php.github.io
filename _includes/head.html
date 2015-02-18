@@ -34,20 +34,28 @@
                     Guides <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Scopes</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">DSLs</a></li>
-                    <li><a href="#">Plugins</a></li>
+                    <li><a href="/events.html">Events</a></li>
+                    <li><a href="/scopes.html">Scopes</a></li>
+                    <li><a href="/syntax.html">DSLs</a></li>
+                    <li><a href="/plugins.html">Plugins</a></li>
                 </ul>
               </li>
-              <li><a href="#">Blog</a></li>
           </ul>
         </nav>
 
         <header class="row">
+            {% if page.type == 'index' %}
             <h1 class="logo">
                 Peridot
             </h1>
+            {% else %}
+            <h2 class="logo">
+                Peridot
+            </h2>
+            {% endif %}
         </header>
 
         <main role="main">
+            <p class="tag">
+                highly extensible, highly enjoyable, BDD testing framework for PHP.
+            </p>
