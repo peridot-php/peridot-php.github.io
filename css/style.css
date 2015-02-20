@@ -161,6 +161,7 @@ a.btn {
  * Nav
  *********************/
 .nav {
+	height: 30px;
 	margin-bottom: 40px;
 }
 
@@ -230,6 +231,13 @@ a.btn {
 		background-size: 434px 131.5px;
 		height: 131.5px;
 		width:434px;
+	}
+
+	/***********
+	 * Nav
+	 ***********/
+	.dropdown-toggle[aria-expanded='true'] {
+		border-bottom: 5px solid #308C43 !important;
 	}
 }
 

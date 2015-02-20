@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Event driven BDD test framework for PHP!
-peridot_version: ~1.0
+peridot_version: ~1.14
 type: index
 ---
 
@@ -24,7 +24,7 @@ type: index
             </p>
             <h2>Extensible</h2>
             <p>
-                Peridot is event driven, so writing plugins or ad hoc extensions is <em>painless</em>. Peridot <a href="#event-reference">events</a> and <a href="#scopes">scopes</a> allow you to easily add test helpers, custom reporters, and plugins. WebDriver? Databases? Your framework of choice? No problem.
+                Peridot is event driven, so writing plugins or ad hoc extensions is <em>painless</em>. Peridot <a href="/events.html">events</a> and <a href="/scopes.html">scopes</a> allow you to easily add test helpers, custom reporters, and plugins. WebDriver? Databases? Your framework of choice? No problem. We believe in a small core with endless possibilities.
             </p>
         </div>
     </div>
@@ -35,7 +35,7 @@ type: index
             </p>
             <h2>Fast</h2>
             <p>
-                Peridot is small and lightweight. Peridot suites load and run faster than similar PHPUnit, Behat, or phpspec suites. Have slow or bulky integration tests? No problem, Peridot can <a href="https://github.com/peridot-php/peridot-concurrency" target="__blank">run your tests concurrently</a>.
+                Peridot is lightweight. Peridot suites load and run <a href="https://github.com/peridot-php/bowling-kata" target="__blank">faster</a> than similar PHPUnit or phpspec suites. Have slow or bulky integration tests? No problem, Peridot can <a href="https://github.com/peridot-php/peridot-concurrency" target="__blank">run your tests concurrently</a>.
             </p>
         </div>
     </div>
@@ -56,7 +56,7 @@ $ composer global require peridot-php/peridot:{{ page.peridot_version }}
 $ export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 # local per project install (recommended)
-$ composer require peridot-php/peridot:~1.0
+$ composer require peridot-php/peridot:{{ page.peridot_version }}
 {% endhighlight %}
 
         <h3>Manual install</h3>
@@ -72,7 +72,7 @@ $ sudo curl http://peridot-php.github.io/downloads/peridot.phar -o /usr/local/bi
 $ sudo chmod a+x /usr/local/bin/peridot
 {% endhighlight %}
 
-        <h3>Manual (local)</h3>
+        <h3>Manual install (local)</h3>
         <p>
             <a class="btn btn-success" id="downloadLink" href="http://peridot-php.github.io/downloads/peridot.phar">Download Latest Stable Phar</a>
         </p>
@@ -160,23 +160,13 @@ Options:
         <h2 id="examples">Example Test Suites</h2>
 
         <p>
-            Below are examples of real projects in the wild using Peridot.
+            You can head over to the <a href="https://github.com/peridot-php" target="__blank">Peridot</a> GitHub organization for plenty of examples using Peridot.
         </p>
 
-        <ul style="margin-bottom:15px;">
-            <li>
-                <a href="https://github.com/peridot-php/peridot" target="_blank">Peridot</a>
-	       </li>
-	      <li>
-	        <a href="https://github.com/peridot-php/leo" target="_blank">Leo</a>
-	      </li>
-          <li>
-            <a href="https://github.com/peridot-php/peridot-concurrency" target="_blank">Peridot Concurrency Plugin</a>
-          </li>
-        </ul>
-
-        If you have a project that uses Peridot, we would love to know. Feel free to <a href="mailto:bscaturro@gmail.com?Subject=We%20use%20Peridot">message us</a> and let us know, and we will
-        gladly list your project on the site.
+        <p>
+            We would love to see other projects using Peridot, so
+            ff you have a project that uses it, we would love to know. Feel free to <a href="mailto:bscaturro@gmail.com?Subject=We%20use%20Peridot">message us</a> and let us know. We will gladly list your project on the site.
+        </p>
 
         <h2 id="peridot-tests">Running Peridot's tests</h2>
 

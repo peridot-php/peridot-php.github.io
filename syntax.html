@@ -38,7 +38,7 @@ type: leaf
     <li>
         <div><code>it($description, $func)</code></div>
         <p>
-            This function creates a single spec and adds it to the suite it is nested in. 
+            This function creates a single test and adds it to the suite it is nested in. 
         </p>
     </li>
 </ul>
@@ -97,7 +97,7 @@ xdescribe("A pending suite", function() {
 <?php
 describe("A pending suite", function() {
     it("should have a pending spec");    
-    });
+});
 ?>
 {% endhighlight %}
 
@@ -147,5 +147,5 @@ Feature("chdir","
 </p>
 
 <p>
-We recommend the <a href="http://peridot-php.github.io/leo/" target="_blank">Leo</a> assertion and matcher library. It was developed by the Peridot team to create an expressive assertion language to complement Peridot's BDD style. However, Peridot was built to be unopinionated about such things, and you can find a list of matchers <a href="https://github.com/peridot-php/peridot/wiki/Matchers" target="__blank">here</a>.
+We recommend the <a href="http://peridot-php.github.io/leo/" target="_blank">Leo</a> assertion and matcher library. It was developed by the Peridot team to create an expressive assertion language to complement Peridot's BDD style. However, Peridot was built to be unopinionated about such things, and you can find a list of other matchers <a href="https://github.com/peridot-php/peridot/wiki/Matchers" target="__blank">here</a>.
 </p>
