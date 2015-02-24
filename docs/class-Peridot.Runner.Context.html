@@ -131,6 +131,15 @@ Peridot's global state.</p>
 
 	</div>
 
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>Peridot\Runner\Context</span></b>			
+			
+			 uses 
+					<a href="class-Peridot.Core.HasEventEmitterTrait.html"><span>Peridot\Core\HasEventEmitterTrait</span></a>
+			
+		</dd>
+	</dl>
 
 
 
@@ -140,12 +149,12 @@ Peridot's global state.</p>
 
 
 	<div class="info">
-		
+		<b>Final</b><br>
 		
 		<b>Namespace:</b> Peridot\Runner<br>
 		<b>Package:</b> Peridot\Runner<br>
 
-		<b>Located at</b> <a href="source-class-Peridot.Runner.Context.html#7-153" title="Go to source code">Runner/Context.php</a><br>
+		<b>Located at</b> <a href="source-class-Peridot.Runner.Context.html#9-173" title="Go to source code">Runner/Context.php</a><br>
 	</div>
 
 
@@ -164,7 +173,7 @@ Peridot's global state.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_clear">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#38-48" title="Go to source code">clear</a>( )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#42-52" title="Go to source code">clear</a>( )</code>
 
 		<div class="description short">
 			<p>Clear the internal suite structure.</p>
@@ -196,7 +205,7 @@ Peridot's global state.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setFile">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#50-61" title="Go to source code">setFile</a>( <span>mixed <var>$path</var></span> )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#54-65" title="Go to source code">setFile</a>( <span>mixed <var>$path</var></span> )</code>
 
 		<div class="description short">
 			<p>Set the file for the context. This file
@@ -238,7 +247,7 @@ to load suites.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getFile">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#63-69" title="Go to source code">getFile</a>( )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#67-73" title="Go to source code">getFile</a>( )</code>
 
 		<div class="description short">
 			
@@ -274,7 +283,7 @@ to load suites.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCurrentSuite">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#71-77" title="Go to source code">getCurrentSuite</a>( )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#75-81" title="Go to source code">getCurrentSuite</a>( )</code>
 
 		<div class="description short">
 			
@@ -310,7 +319,7 @@ to load suites.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addSuite">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#79-99" title="Go to source code">addSuite</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#83-100" title="Go to source code">addSuite</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Creates a suite and adds it to the current suite. The newly
@@ -356,7 +365,7 @@ created suite will become the new "current" suite</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addTest">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#101-117" title="Go to source code">addTest</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#102-118" title="Go to source code">addTest</a>( <span>mixed <var>$description</var></span>, <span>callable <var>$fn</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Create a test and add it to the current suite</p>
@@ -400,7 +409,7 @@ created suite will become the new "current" suite</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addSetupFunction">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#119-128" title="Go to source code">addSetupFunction</a>( <span>callable <var>$fn</var></span> )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#120-129" title="Go to source code">addSetupFunction</a>( <span>callable <var>$fn</var></span> )</code>
 
 		<div class="description short">
 			<p>Add a setup function for all tests in the
@@ -440,7 +449,7 @@ current suite</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addTearDownFunction">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#130-138" title="Go to source code">addTearDownFunction</a>( <span>callable <var>$fn</var></span> )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#131-139" title="Go to source code">addTearDownFunction</a>( <span>callable <var>$fn</var></span> )</code>
 
 		<div class="description short">
 			<p>Add a tear down function for all tests in the current suite</p>
@@ -478,7 +487,7 @@ current suite</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getInstance">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#140-152" title="Go to source code">getInstance</a>( )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#141-153" title="Go to source code">getInstance</a>( )</code>
 
 		<div class="description short">
 			<p>Singleton access to Context</p>
@@ -505,6 +514,15 @@ current suite</p>
 	</table>
 
 
+	<table class="summary used">
+	<caption>Methods used from <a href="class-Peridot.Core.HasEventEmitterTrait.html#methods">Peridot\Core\HasEventEmitterTrait</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Peridot.Core.HasEventEmitterTrait.html#_getEventEmitter">getEventEmitter()</a>, 
+			<a href="class-Peridot.Core.HasEventEmitterTrait.html#_setEventEmitter">setEventEmitter()</a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -524,7 +542,7 @@ current suite</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peridot.Runner.Context.html#15-18" title="Go to source code"><var>$suites</var></a>
+				<a href="source-class-Peridot.Runner.Context.html#19-22" title="Go to source code"><var>$suites</var></a>
 
 			<div class="description short">
 				
@@ -551,7 +569,7 @@ current suite</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peridot.Runner.Context.html#20-23" title="Go to source code"><var>$file</var></a>
+				<a href="source-class-Peridot.Runner.Context.html#24-27" title="Go to source code"><var>$file</var></a>
 
 			<div class="description short">
 				
@@ -574,6 +592,14 @@ current suite</p>
 	</table>
 
 
+	<table class="summary used">
+	<caption>Properties used from <a href="class-Peridot.Core.HasEventEmitterTrait.html#properties">Peridot\Core\HasEventEmitterTrait</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Peridot.Core.HasEventEmitterTrait.html#$eventEmitter"><var>$eventEmitter</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
