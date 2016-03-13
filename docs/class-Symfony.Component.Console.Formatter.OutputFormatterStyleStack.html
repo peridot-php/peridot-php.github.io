@@ -98,6 +98,11 @@
 						Event					</a>
 
 						</li>
+				<li>
+					<a href="namespace-Symfony.Component.Console.Exception.html">
+						Exception					</a>
+
+						</li>
 				<li class="active">
 					<a href="namespace-Symfony.Component.Console.Formatter.html">
 						Formatter					</a>
@@ -185,6 +190,11 @@
 
 						</li>
 				<li>
+					<a href="namespace-Symfony.Component.Console.Tests.Style.html">
+						Style					</a>
+
+						</li>
+				<li>
 					<a href="namespace-Symfony.Component.Console.Tests.Tester.html">
 						Tester					</a>
 
@@ -265,7 +275,7 @@
 
 				<b>Author:</b>
 				Jean-François Simon <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x63;&#x6f;&#x6e;&#x74;&#x61;&#x63;&#x74;&#x40;&#x6a;&#x66;&#x73;&#x69;&#x6d;&#x6f;&#x6e;&#x2e;&#x66;&#x72;">&#x63;&#x6f;&#x6e;&#x74;&#x61;&#x63;&#x74;&#x40;&#x6a;&#x66;&#x73;&#x69;&#x6d;&#x6f;&#x6e;&#x2e;&#x66;&#x72;</a><br>
-			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#14-121" title="Go to source code">Formatter/OutputFormatterStyleStack.php</a>
+			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#16-123" title="Go to source code">Formatter/OutputFormatterStyleStack.php</a>
 		<br>
 	</div>
 
@@ -285,7 +295,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#29-38" title="Go to source code">__construct</a>( <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterStyleInterface.html">Symfony\Component\Console\Formatter\OutputFormatterStyleInterface</a></code> <var>$emptyStyle</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#31-40" title="Go to source code">__construct</a>( <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterStyleInterface.html">Symfony\Component\Console\Formatter\OutputFormatterStyleInterface</a></code> <var>$emptyStyle</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Constructor.</p>
@@ -320,7 +330,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_reset">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#40-46" title="Go to source code">reset</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#42-48" title="Go to source code">reset</a>( )</code>
 
 		<div class="description short">
 			<p>Resets stack (ie. empty internal arrays).</p>
@@ -350,7 +360,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_push">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#48-56" title="Go to source code">push</a>( <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterStyleInterface.html">Symfony\Component\Console\Formatter\OutputFormatterStyleInterface</a></code> <var>$style</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#50-58" title="Go to source code">push</a>( <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterStyleInterface.html">Symfony\Component\Console\Formatter\OutputFormatterStyleInterface</a></code> <var>$style</var></span> )</code>
 
 		<div class="description short">
 			<p>Pushes a style in the stack.</p>
@@ -385,7 +395,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_pop">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#58-86" title="Go to source code">pop</a>( <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterStyleInterface.html">Symfony\Component\Console\Formatter\OutputFormatterStyleInterface</a></code> <var>$style</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#60-88" title="Go to source code">pop</a>( <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterStyleInterface.html">Symfony\Component\Console\Formatter\OutputFormatterStyleInterface</a></code> <var>$style</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Pops a style from the stack.</p>
@@ -408,7 +418,7 @@
 
 				<h4>Throws</h4>
 				<div class="list">
-					InvalidArgumentException<br>When style tags incorrectly nested
+					<code><a href="class-Symfony.Component.Console.Exception.InvalidArgumentException.html">Symfony\Component\Console\Exception\InvalidArgumentException</a></code><br>When style tags incorrectly nested
 				</div>
 
 
@@ -428,7 +438,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCurrent">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#88-100" title="Go to source code">getCurrent</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#90-102" title="Go to source code">getCurrent</a>( )</code>
 
 		<div class="description short">
 			<p>Computes current style with stacks top codes.</p>
@@ -462,7 +472,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setEmptyStyle">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#102-112" title="Go to source code">setEmptyStyle</a>( <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterStyleInterface.html">Symfony\Component\Console\Formatter\OutputFormatterStyleInterface</a></code> <var>$emptyStyle</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#104-114" title="Go to source code">setEmptyStyle</a>( <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterStyleInterface.html">Symfony\Component\Console\Formatter\OutputFormatterStyleInterface</a></code> <var>$emptyStyle</var></span> )</code>
 
 		<div class="description short">
 			
@@ -501,7 +511,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getEmptyStyle">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#114-120" title="Go to source code">getEmptyStyle</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Formatter.OutputFormatterStyleStack.html#116-122" title="Go to source code">getEmptyStyle</a>( )</code>
 
 		<div class="description short">
 			

@@ -99,6 +99,11 @@
 
 						</li>
 				<li>
+					<a href="namespace-Symfony.Component.Console.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
 					<a href="namespace-Symfony.Component.Console.Formatter.html">
 						Formatter					</a>
 
@@ -185,6 +190,11 @@
 
 						</li>
 				<li>
+					<a href="namespace-Symfony.Component.Console.Tests.Style.html">
+						Style					</a>
+
+						</li>
+				<li>
 					<a href="namespace-Symfony.Component.Console.Tests.Tester.html">
 						Tester					</a>
 
@@ -247,7 +257,7 @@
 
 
 	<div class="description">
-	<p>Decorates output to add console style guide helpers</p>
+	<p>Decorates output to add console style guide helpers.</p>
 	</div>
 
 	<dl class="tree">
@@ -268,6 +278,10 @@
 			<a href="class-Symfony.Component.Console.Style.SymfonyStyle.html">Symfony\Component\Console\Style\SymfonyStyle</a>
 	</div>
 
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-Symfony.Component.Console.Tests.Style.SymfonyStyleWithForcedLineLength.html">Symfony\Component\Console\Tests\Style\SymfonyStyleWithForcedLineLength</a>
+	</div>
 
 
 
@@ -429,14 +443,10 @@
 					<dt><var>$newline</var></dt>
 					<dd>Whether to add a newline</dd>
 					<dt><var>$type</var></dt>
-					<dd>The type of output (one of the OUTPUT constants)</dd>
+					<dd>$options  A bitmask of options (one of the OUTPUT or VERBOSITY constants), 0 is considered the same as self::OUTPUT_NORMAL | self::VERBOSITY_NORMAL</dd>
 				</dl></div>
 
 
-				<h4>Throws</h4>
-				<div class="list">
-					InvalidArgumentException<br>When unknown output type is given
-				</div>
 
 
 
@@ -472,14 +482,10 @@
 					<dt><var>$messages</var></dt>
 					<dd>The message as an array of lines of a single string</dd>
 					<dt><var>$type</var></dt>
-					<dd>The type of output (one of the OUTPUT constants)</dd>
+					<dd>$options  A bitmask of options (one of the OUTPUT or VERBOSITY constants), 0 is considered the same as self::OUTPUT_NORMAL | self::VERBOSITY_NORMAL</dd>
 				</dl></div>
 
 
-				<h4>Throws</h4>
-				<div class="list">
-					InvalidArgumentException<br>When unknown output type is given
-				</div>
 
 
 

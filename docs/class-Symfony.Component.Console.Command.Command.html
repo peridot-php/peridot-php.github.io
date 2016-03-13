@@ -99,6 +99,11 @@
 
 						</li>
 				<li>
+					<a href="namespace-Symfony.Component.Console.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
 					<a href="namespace-Symfony.Component.Console.Formatter.html">
 						Formatter					</a>
 
@@ -185,6 +190,11 @@
 
 						</li>
 				<li>
+					<a href="namespace-Symfony.Component.Console.Tests.Style.html">
+						Style					</a>
+
+						</li>
+				<li>
 					<a href="namespace-Symfony.Component.Console.Tests.Tester.html">
 						Tester					</a>
 
@@ -253,6 +263,7 @@
 		<h4>Direct known subclasses</h4>
 			<a href="class-BarBucCommand.html">BarBucCommand</a>, 
 			<a href="class-Foo1Command.html">Foo1Command</a>, 
+			<a href="class-FooSubnamespaced2Command.html">FooSubnamespaced2Command</a>, 
 			<a href="class-Peridot.Console.Command.html">Peridot\Console\Command</a>, 
 			<a href="class-Symfony.Component.Console.Command.HelpCommand.html">Symfony\Component\Console\Command\HelpCommand</a>, 
 			<a href="class-Symfony.Component.Console.Command.ListCommand.html">Symfony\Component\Console\Command\ListCommand</a>, 
@@ -263,10 +274,10 @@
 			<a href="class-Foo3Command.html">Foo3Command</a>, 
 			<a href="class-Foo4Command.html">Foo4Command</a>, 
 			<a href="class-Foo5Command.html">Foo5Command</a>, 
+			<a href="class-Foo6Command.html">Foo6Command</a>, 
 			<a href="class-FoobarCommand.html">FoobarCommand</a>, 
 			<a href="class-FooCommand.html">FooCommand</a>, 
-			<a href="class-FooSubnamespaced1Command.html">FooSubnamespaced1Command</a>, 
-			<a href="class-FooSubnamespaced2Command.html">FooSubnamespaced2Command</a>
+			<a href="class-FooSubnamespaced1Command.html">FooSubnamespaced1Command</a>
 	</div>
 
 
@@ -282,9 +293,7 @@
 
 				<b>Author:</b>
 				Fabien Potencier <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;">&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;</a><br>
-				<b>Api</b>
-				<br>
-			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Command.Command.html#25-697" title="Go to source code">Command/Command.php</a>
+			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Command.Command.html#28-676" title="Go to source code">Command/Command.php</a>
 		<br>
 	</div>
 
@@ -304,7 +313,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#49-71" title="Go to source code">__construct</a>( <span>string|null <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#50-70" title="Go to source code">__construct</a>( <span>string|null <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Constructor.</p>
@@ -323,12 +332,9 @@
 
 				<h4>Throws</h4>
 				<div class="list">
-					LogicException<br>When the command name is empty
+					<code><a href="class-Symfony.Component.Console.Exception.LogicException.html">Symfony\Component\Console\Exception\LogicException</a></code><br>When the command name is empty
 				</div>
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -346,7 +352,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_ignoreValidationErrors">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#73-81" title="Go to source code">ignoreValidationErrors</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#72-80" title="Go to source code">ignoreValidationErrors</a>( )</code>
 
 		<div class="description short">
 			<p>Ignores validation errors.</p>
@@ -378,7 +384,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setApplication">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#83-98" title="Go to source code">setApplication</a>( <span><code><a href="class-Symfony.Component.Console.Application.html">Symfony\Component\Console\Application</a></code> <var>$application</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#82-95" title="Go to source code">setApplication</a>( <span><code><a href="class-Symfony.Component.Console.Application.html">Symfony\Component\Console\Application</a></code> <var>$application</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Sets the application instance for this command.</p>
@@ -396,9 +402,6 @@
 
 
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -416,7 +419,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setHelperSet">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#100-108" title="Go to source code">setHelperSet</a>( <span><code><a href="class-Symfony.Component.Console.Helper.HelperSet.html">Symfony\Component\Console\Helper\HelperSet</a></code> <var>$helperSet</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#97-105" title="Go to source code">setHelperSet</a>( <span><code><a href="class-Symfony.Component.Console.Helper.HelperSet.html">Symfony\Component\Console\Helper\HelperSet</a></code> <var>$helperSet</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the helper set.</p>
@@ -451,7 +454,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getHelperSet">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#110-118" title="Go to source code">getHelperSet</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#107-115" title="Go to source code">getHelperSet</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the helper set.</p>
@@ -485,7 +488,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getApplication">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#120-130" title="Go to source code">getApplication</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#117-125" title="Go to source code">getApplication</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the application instance for this command.</p>
@@ -502,9 +505,6 @@
 				</div>
 
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -522,7 +522,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isEnabled">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#132-143" title="Go to source code">isEnabled</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#127-138" title="Go to source code">isEnabled</a>( )</code>
 
 		<div class="description short">
 			<p>Checks whether the command is enabled or not in the current environment.</p>
@@ -559,7 +559,7 @@ run properly under the current conditions.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_configure">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#145-150" title="Go to source code">configure</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#140-145" title="Go to source code">configure</a>( )</code>
 
 		<div class="description short">
 			<p>Configures the current command.</p>
@@ -589,7 +589,7 @@ run properly under the current conditions.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_execute">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#152-172" title="Go to source code">execute</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#147-167" title="Go to source code">execute</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
 
 		<div class="description short">
 			<p>Executes the current command.</p>
@@ -619,7 +619,7 @@ a Closure to the setCode() method.</p>
 
 				<h4>Throws</h4>
 				<div class="list">
-					LogicException<br>When this abstract method is not implemented
+					<code><a href="class-Symfony.Component.Console.Exception.LogicException.html">Symfony\Component\Console\Exception\LogicException</a></code><br>When this abstract method is not implemented
 				</div>
 
 				<h4>See</h4>
@@ -643,7 +643,7 @@ a Closure to the setCode() method.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_interact">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#174-186" title="Go to source code">interact</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#169-181" title="Go to source code">interact</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
 
 		<div class="description short">
 			<p>Interacts with the user.</p>
@@ -684,7 +684,7 @@ interactively ask for values of missing required arguments.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_initialize">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#188-199" title="Go to source code">initialize</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#183-194" title="Go to source code">initialize</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
 
 		<div class="description short">
 			<p>Initializes the command just after the input has been validated.</p>
@@ -724,7 +724,7 @@ where some things need to be initialized based on the input arguments and option
 
 		<td class="name"><div>
 		<a class="anchor" href="#_run">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#201-263" title="Go to source code">run</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#196-263" title="Go to source code">run</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputInterface.html">Symfony\Component\Console\Input\InputInterface</a></code> <var>$input</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span> )</code>
 
 		<div class="description short">
 			<p>Runs the command.</p>
@@ -761,9 +761,6 @@ in a sub-class.</p>
 						<code><a href="class-Symfony.Component.Console.Command.Command.html#_setCode">Symfony\Component\Console\Command\Command::setCode()</a></code><br>
 						<code><a href="class-Symfony.Component.Console.Command.Command.html#_execute">Symfony\Component\Console\Command\Command::execute()</a></code><br>
 				</div>
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -781,7 +778,7 @@ in a sub-class.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setCode">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#265-290" title="Go to source code">setCode</a>( <span>callable <var>$code</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#265-295" title="Go to source code">setCode</a>( <span>callable <var>$code</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the code to execute when running this command.</p>
@@ -807,15 +804,12 @@ in the execute() method.</p>
 
 				<h4>Throws</h4>
 				<div class="list">
-					InvalidArgumentException
+					<code><a href="class-Symfony.Component.Console.Exception.InvalidArgumentException.html">Symfony\Component\Console\Exception\InvalidArgumentException</a></code>
 				</div>
 
 				<h4>See</h4>
 				<div class="list">
 						<code><a href="class-Symfony.Component.Console.Command.Command.html#_execute">Symfony\Component\Console\Command\Command::execute()</a></code><br>
-				</div>
-				<h4>Api</h4>
-				<div class="list">
 				</div>
 
 
@@ -834,7 +828,7 @@ in the execute() method.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_mergeApplicationDefinition">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#292-317" title="Go to source code">mergeApplicationDefinition</a>( <span>boolean <var>$mergeArgs</var> = <span class="php-keyword1">true</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#297-322" title="Go to source code">mergeApplicationDefinition</a>( <span>boolean <var>$mergeArgs</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			<p>Merges the application definition with the command definition.</p>
@@ -871,7 +865,7 @@ in the execute() method.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setDefinition">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#319-339" title="Go to source code">setDefinition</a>( <span>array|<code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code> <var>$definition</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#324-342" title="Go to source code">setDefinition</a>( <span>array|<code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code> <var>$definition</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets an array of argument and option instances.</p>
@@ -893,9 +887,6 @@ in the execute() method.</p>
 				</div>
 
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -913,7 +904,7 @@ in the execute() method.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDefinition">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#341-351" title="Go to source code">getDefinition</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#344-352" title="Go to source code">getDefinition</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the InputDefinition attached to this Command.</p>
@@ -930,9 +921,6 @@ in the execute() method.</p>
 				</div>
 
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -950,7 +938,7 @@ in the execute() method.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getNativeDefinition">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#353-366" title="Go to source code">getNativeDefinition</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#354-367" title="Go to source code">getNativeDefinition</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the InputDefinition to be used to create XML and Text representations of this Command.</p>
@@ -989,7 +977,7 @@ be changed by merging with the application InputDefinition.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addArgument">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#368-385" title="Go to source code">addArgument</a>( <span>string <var>$name</var></span>, <span>integer <var>$mode</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$description</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#369-384" title="Go to source code">addArgument</a>( <span>string <var>$name</var></span>, <span>integer <var>$mode</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$description</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Adds an argument.</p>
@@ -1017,9 +1005,6 @@ be changed by merging with the application InputDefinition.</p>
 				</div>
 
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -1037,7 +1022,7 @@ be changed by merging with the application InputDefinition.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addOption">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#387-405" title="Go to source code">addOption</a>( <span>string <var>$name</var></span>, <span>string <var>$shortcut</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$mode</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$description</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#386-402" title="Go to source code">addOption</a>( <span>string <var>$name</var></span>, <span>string <var>$shortcut</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$mode</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$description</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Adds an option.</p>
@@ -1058,7 +1043,7 @@ be changed by merging with the application InputDefinition.</p>
 					<dt><var>$description</var></dt>
 					<dd>A description text</dd>
 					<dt><var>$default</var></dt>
-					<dd>The default value (must be null for InputOption::VALUE_REQUIRED or InputOption::VALUE_NONE)</dd>
+					<dd>The default value (must be null for InputOption::VALUE_NONE)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -1067,9 +1052,6 @@ be changed by merging with the application InputDefinition.</p>
 				</div>
 
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -1087,7 +1069,7 @@ be changed by merging with the application InputDefinition.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setName">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#407-430" title="Go to source code">setName</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#404-425" title="Go to source code">setName</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the name of the command.</p>
@@ -1114,12 +1096,9 @@ you separate them by a colon (:)
 
 				<h4>Throws</h4>
 				<div class="list">
-					InvalidArgumentException<br>When the name is invalid
+					<code><a href="class-Symfony.Component.Console.Exception.InvalidArgumentException.html">Symfony\Component\Console\Exception\InvalidArgumentException</a></code><br>When the name is invalid
 				</div>
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -1137,7 +1116,7 @@ you separate them by a colon (:)
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setProcessTitle">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#432-449" title="Go to source code">setProcessTitle</a>( <span>string <var>$title</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#427-444" title="Go to source code">setProcessTitle</a>( <span>string <var>$title</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the process title of the command.</p>
@@ -1181,7 +1160,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getName">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#451-461" title="Go to source code">getName</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#446-454" title="Go to source code">getName</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the command name.</p>
@@ -1198,9 +1177,6 @@ like a daemon.</p>
 				</div>
 
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -1218,7 +1194,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setDescription">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#463-477" title="Go to source code">setDescription</a>( <span>string <var>$description</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#456-468" title="Go to source code">setDescription</a>( <span>string <var>$description</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the description for the command.</p>
@@ -1240,9 +1216,6 @@ like a daemon.</p>
 				</div>
 
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -1260,7 +1233,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDescription">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#479-489" title="Go to source code">getDescription</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#470-478" title="Go to source code">getDescription</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the description for the command.</p>
@@ -1277,9 +1250,6 @@ like a daemon.</p>
 				</div>
 
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -1297,7 +1267,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setHelp">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#491-505" title="Go to source code">setHelp</a>( <span>string <var>$help</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#480-492" title="Go to source code">setHelp</a>( <span>string <var>$help</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the help for the command.</p>
@@ -1319,9 +1289,6 @@ like a daemon.</p>
 				</div>
 
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -1339,7 +1306,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getHelp">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#507-517" title="Go to source code">getHelp</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#494-502" title="Go to source code">getHelp</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the help for the command.</p>
@@ -1356,9 +1323,6 @@ like a daemon.</p>
 				</div>
 
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -1376,7 +1340,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getProcessedHelp">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#519-539" title="Go to source code">getProcessedHelp</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#504-524" title="Go to source code">getProcessedHelp</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the processed help for the command replacing the %command.name% and
@@ -1412,7 +1376,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setAliases">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#541-565" title="Go to source code">setAliases</a>( <span>string[] <var>$aliases</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#526-548" title="Go to source code">setAliases</a>( <span>string[] <var>$aliases</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the aliases for the command.</p>
@@ -1435,12 +1399,9 @@ like a daemon.</p>
 
 				<h4>Throws</h4>
 				<div class="list">
-					InvalidArgumentException<br>When an alias is invalid
+					<code><a href="class-Symfony.Component.Console.Exception.InvalidArgumentException.html">Symfony\Component\Console\Exception\InvalidArgumentException</a></code><br>When an alias is invalid
 				</div>
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -1458,7 +1419,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getAliases">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#567-577" title="Go to source code">getAliases</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#550-558" title="Go to source code">getAliases</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the aliases for the command.</p>
@@ -1475,9 +1436,6 @@ like a daemon.</p>
 				</div>
 
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -1495,7 +1453,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getSynopsis">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#579-595" title="Go to source code">getSynopsis</a>( <span>boolean <var>$short</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#560-576" title="Go to source code">getSynopsis</a>( <span>boolean <var>$short</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Returns the synopsis for the command.</p>
@@ -1534,7 +1492,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addUsage">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#597-611" title="Go to source code">addUsage</a>( <span>string <var>$usage</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#578-592" title="Go to source code">addUsage</a>( <span>string <var>$usage</var></span> )</code>
 
 		<div class="description short">
 			<p>Add a command usage example.</p>
@@ -1569,7 +1527,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getUsages">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#613-621" title="Go to source code">getUsages</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#594-602" title="Go to source code">getUsages</a>( )</code>
 
 		<div class="description short">
 			<p>Returns alternative usages of the command.</p>
@@ -1603,7 +1561,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getHelper">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#623-637" title="Go to source code">getHelper</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#604-616" title="Go to source code">getHelper</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			<p>Gets a helper instance by name.</p>
@@ -1626,12 +1584,9 @@ like a daemon.</p>
 
 				<h4>Throws</h4>
 				<div class="list">
-					InvalidArgumentException<br>if the helper is not defined
+					<code><a href="class-Symfony.Component.Console.Exception.InvalidArgumentException.html">Symfony\Component\Console\Exception\InvalidArgumentException</a></code><br>if the helper is not defined
 				</div>
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -1649,7 +1604,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_asText">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#639-655" title="Go to source code">asText</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#618-634" title="Go to source code">asText</a>( )</code>
 
 		<div class="description short">
 			<p>Returns a text representation of the command.</p>
@@ -1687,7 +1642,7 @@ like a daemon.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_asXml">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#657-680" title="Go to source code">asXml</a>( <span>boolean <var>$asDom</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Command.Command.html#636-659" title="Go to source code">asXml</a>( <span>boolean <var>$asDom</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Returns an XML representation of the command.</p>

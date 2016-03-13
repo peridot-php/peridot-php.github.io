@@ -99,6 +99,11 @@
 
 						</li>
 				<li>
+					<a href="namespace-Symfony.Component.Console.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
 					<a href="namespace-Symfony.Component.Console.Formatter.html">
 						Formatter					</a>
 
@@ -182,6 +187,11 @@
 				<li>
 					<a href="namespace-Symfony.Component.Console.Tests.Output.html">
 						Output					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Symfony.Component.Console.Tests.Style.html">
+						Style					</a>
 
 						</li>
 				<li>
@@ -298,9 +308,7 @@
 
 				<b>Author:</b>
 				Fabien Potencier <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;">&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;</a><br>
-				<b>Api</b>
-				<br>
-			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Output.StreamOutput.html#16-103" title="Go to source code">Output/StreamOutput.php</a>
+			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Output.StreamOutput.html#18-101" title="Go to source code">Output/StreamOutput.php</a>
 		<br>
 	</div>
 
@@ -320,7 +328,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.StreamOutput.html#35-60" title="Go to source code">__construct</a>( <span>mixed <var>$stream</var></span>, <span>integer <var>$verbosity</var> = <code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#VERBOSITY_NORMAL">Symfony\Component\Console\Output\OutputInterface::<b>VERBOSITY_NORMAL</b></a></code></span>, <span>boolean|null <var>$decorated</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code> <var>$formatter</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.StreamOutput.html#35-58" title="Go to source code">__construct</a>( <span>resource <var>$stream</var></span>, <span>integer <var>$verbosity</var> = <code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#VERBOSITY_NORMAL">Symfony\Component\Console\Output\OutputInterface::<b>VERBOSITY_NORMAL</b></a></code></span>, <span>boolean|null <var>$decorated</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code> <var>$formatter</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Constructor.</p>
@@ -345,12 +353,9 @@
 
 				<h4>Throws</h4>
 				<div class="list">
-					InvalidArgumentException<br>When first argument is not a real stream
+					<code><a href="class-Symfony.Component.Console.Exception.InvalidArgumentException.html">Symfony\Component\Console\Exception\InvalidArgumentException</a></code><br>When first argument is not a real stream
 				</div>
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 				<h4>Overrides</h4>
 				<div class="list"><code><a href="class-Symfony.Component.Console.Output.Output.html#___construct">Symfony\Component\Console\Output\Output::__construct()</a></code></div>
@@ -370,7 +375,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getStream">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.StreamOutput.html#62-70" title="Go to source code">getStream</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.StreamOutput.html#60-68" title="Go to source code">getStream</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the stream attached to this StreamOutput instance.</p>
@@ -404,7 +409,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_doWrite">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.StreamOutput.html#72-83" title="Go to source code">doWrite</a>( <span>string <var>$message</var></span>, <span>boolean <var>$newline</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.StreamOutput.html#70-81" title="Go to source code">doWrite</a>( <span>string <var>$message</var></span>, <span>boolean <var>$newline</var></span> )</code>
 
 		<div class="description short">
 			<p>Writes a message to the output.</p>
@@ -441,7 +446,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasColorSupport">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.StreamOutput.html#85-102" title="Go to source code">hasColorSupport</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.StreamOutput.html#83-100" title="Go to source code">hasColorSupport</a>( )</code>
 
 		<div class="description short">
 			<p>Returns true if the stream supports colorization.</p>
@@ -451,7 +456,7 @@
 			<p>Returns true if the stream supports colorization.</p>
 
 <p>Colorization is disabled if not supported by the stream:
- -  Windows without Ansicon and ConEmu -  non tty consoles</p>
+ -  Windows without Ansicon, ConEmu or Mintty -  non tty consoles</p>
 
 
 

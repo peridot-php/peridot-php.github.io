@@ -99,6 +99,11 @@
 
 						</li>
 				<li>
+					<a href="namespace-Symfony.Component.Console.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
 					<a href="namespace-Symfony.Component.Console.Formatter.html">
 						Formatter					</a>
 
@@ -185,6 +190,11 @@
 
 						</li>
 				<li>
+					<a href="namespace-Symfony.Component.Console.Tests.Style.html">
+						Style					</a>
+
+						</li>
+				<li>
 					<a href="namespace-Symfony.Component.Console.Tests.Tester.html">
 						Tester					</a>
 
@@ -209,6 +219,7 @@
 				<li class="active"><a href="class-Symfony.Component.Console.Helper.ProcessHelper.html">ProcessHelper</a></li>
 				<li><a href="class-Symfony.Component.Console.Helper.ProgressBar.html">ProgressBar</a></li>
 				<li><a href="class-Symfony.Component.Console.Helper.ProgressHelper.html" class="deprecated">ProgressHelper</a></li>
+				<li><a href="class-Symfony.Component.Console.Helper.ProgressIndicator.html">ProgressIndicator</a></li>
 				<li><a href="class-Symfony.Component.Console.Helper.QuestionHelper.html">QuestionHelper</a></li>
 				<li><a href="class-Symfony.Component.Console.Helper.SymfonyQuestionHelper.html">SymfonyQuestionHelper</a></li>
 				<li><a href="class-Symfony.Component.Console.Helper.Table.html">Table</a></li>
@@ -297,7 +308,7 @@
 
 				<b>Author:</b>
 				Fabien Potencier <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;">&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;</a><br>
-			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Helper.ProcessHelper.html#19-142" title="Go to source code">Helper/ProcessHelper.php</a>
+			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Helper.ProcessHelper.html#20-151" title="Go to source code">Helper/ProcessHelper.php</a>
 		<br>
 	</div>
 
@@ -317,7 +328,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_run">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProcessHelper.html#26-70" title="Go to source code">run</a>( <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span>, <span>string|array|Symfony\Component\Process\Process <var>$cmd</var></span>, <span>string|null <var>$error</var> = <span class="php-keyword1">null</span></span>, <span>callable|null <var>$callback</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$verbosity</var> = Symfony\Component\Console\Helper\OutputInterface::VERBOSITY_VERY_VERBOSE</span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProcessHelper.html#27-75" title="Go to source code">run</a>( <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span>, <span>string|array|Symfony\Component\Process\Process <var>$cmd</var></span>, <span>string|null <var>$error</var> = <span class="php-keyword1">null</span></span>, <span>callable|null <var>$callback</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$verbosity</var> = Symfony\Component\Console\Helper\OutputInterface::VERBOSITY_VERY_VERBOSE</span> )</code>
 
 		<div class="description short">
 			<p>Runs an external process.</p>
@@ -365,7 +376,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_mustRun">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProcessHelper.html#72-99" title="Go to source code">mustRun</a>( <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span>, <span>string|Symfony\Component\Process\Process <var>$cmd</var></span>, <span>string|null <var>$error</var> = <span class="php-keyword1">null</span></span>, <span>callable|null <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProcessHelper.html#77-104" title="Go to source code">mustRun</a>( <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span>, <span>string|Symfony\Component\Process\Process <var>$cmd</var></span>, <span>string|null <var>$error</var> = <span class="php-keyword1">null</span></span>, <span>callable|null <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Runs the process.</p>
@@ -422,7 +433,7 @@ exits with a non-zero exit code.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_wrapCallback">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProcessHelper.html#101-123" title="Go to source code">wrapCallback</a>( <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span>, <span>Symfony\Component\Process\Process <var>$process</var></span>, <span>callable|null <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProcessHelper.html#106-132" title="Go to source code">wrapCallback</a>( <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span>, <span>Symfony\Component\Process\Process <var>$process</var></span>, <span>callable|null <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Wraps a Process callback to add debugging output.</p>
@@ -465,7 +476,7 @@ exits with a non-zero exit code.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getName">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Helper.ProcessHelper.html#135-141" title="Go to source code">getName</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Helper.ProcessHelper.html#144-150" title="Go to source code">getName</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the canonical name of this helper.</p>

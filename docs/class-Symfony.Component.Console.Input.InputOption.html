@@ -99,6 +99,11 @@
 
 						</li>
 				<li>
+					<a href="namespace-Symfony.Component.Console.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
 					<a href="namespace-Symfony.Component.Console.Formatter.html">
 						Formatter					</a>
 
@@ -182,6 +187,11 @@
 				<li>
 					<a href="namespace-Symfony.Component.Console.Tests.Output.html">
 						Output					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Symfony.Component.Console.Tests.Style.html">
+						Style					</a>
 
 						</li>
 				<li>
@@ -272,9 +282,7 @@
 
 				<b>Author:</b>
 				Fabien Potencier <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;">&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;</a><br>
-				<b>Api</b>
-				<br>
-			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Input.InputOption.html#14-213" title="Go to source code">Input/InputOption.php</a>
+			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Input.InputOption.html#17-212" title="Go to source code">Input/InputOption.php</a>
 		<br>
 	</div>
 
@@ -294,7 +302,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#34-90" title="Go to source code">__construct</a>( <span>string <var>$name</var></span>, <span>string|array <var>$shortcut</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$mode</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$description</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#35-89" title="Go to source code">__construct</a>( <span>string <var>$name</var></span>, <span>string|array <var>$shortcut</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$mode</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$description</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Constructor.</p>
@@ -315,18 +323,15 @@
 					<dt><var>$description</var></dt>
 					<dd>A description text</dd>
 					<dt><var>$default</var></dt>
-					<dd>The default value (must be null for self::VALUE_REQUIRED or self::VALUE_NONE)</dd>
+					<dd>The default value (must be null for self::VALUE_NONE)</dd>
 				</dl></div>
 
 
 				<h4>Throws</h4>
 				<div class="list">
-					InvalidArgumentException<br>If option mode is invalid or incompatible
+					<code><a href="class-Symfony.Component.Console.Exception.InvalidArgumentException.html">Symfony\Component\Console\Exception\InvalidArgumentException</a></code><br>If option mode is invalid or incompatible
 				</div>
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 
 		</div>
@@ -344,7 +349,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getShortcut">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#92-100" title="Go to source code">getShortcut</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#91-99" title="Go to source code">getShortcut</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the option shortcut.</p>
@@ -378,7 +383,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getName">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#102-110" title="Go to source code">getName</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#101-109" title="Go to source code">getName</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the option name.</p>
@@ -412,7 +417,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_acceptValue">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#112-120" title="Go to source code">acceptValue</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#111-119" title="Go to source code">acceptValue</a>( )</code>
 
 		<div class="description short">
 			<p>Returns true if the option accepts a value.</p>
@@ -446,7 +451,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isValueRequired">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#122-130" title="Go to source code">isValueRequired</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#121-129" title="Go to source code">isValueRequired</a>( )</code>
 
 		<div class="description short">
 			<p>Returns true if the option requires a value.</p>
@@ -480,7 +485,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isValueOptional">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#132-140" title="Go to source code">isValueOptional</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#131-139" title="Go to source code">isValueOptional</a>( )</code>
 
 		<div class="description short">
 			<p>Returns true if the option takes an optional value.</p>
@@ -514,7 +519,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isArray">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#142-150" title="Go to source code">isArray</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#141-149" title="Go to source code">isArray</a>( )</code>
 
 		<div class="description short">
 			<p>Returns true if the option can take multiple values.</p>
@@ -548,7 +553,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setDefault">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#152-174" title="Go to source code">setDefault</a>( <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#151-173" title="Go to source code">setDefault</a>( <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Sets the default value.</p>
@@ -567,7 +572,7 @@
 
 				<h4>Throws</h4>
 				<div class="list">
-					LogicException<br>When incorrect default value is given
+					<code><a href="class-Symfony.Component.Console.Exception.LogicException.html">Symfony\Component\Console\Exception\LogicException</a></code><br>When incorrect default value is given
 				</div>
 
 
@@ -587,7 +592,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDefault">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#176-184" title="Go to source code">getDefault</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#175-183" title="Go to source code">getDefault</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the default value.</p>
@@ -621,7 +626,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDescription">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#186-194" title="Go to source code">getDescription</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#185-193" title="Go to source code">getDescription</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the description text.</p>
@@ -655,7 +660,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_equals">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#196-212" title="Go to source code">equals</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputOption.html">Symfony\Component\Console\Input\InputOption</a></code> <var>$option</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputOption.html#195-211" title="Go to source code">equals</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputOption.html">Symfony\Component\Console\Input\InputOption</a></code> <var>$option</var></span> )</code>
 
 		<div class="description short">
 			<p>Checks whether the given option equals this one.</p>
@@ -698,7 +703,7 @@
 		<td class="attributes"><code>integer</code></td>
 		<td class="name">
 			<code>
-				<a href="source-class-Symfony.Component.Console.Input.InputOption.html#23" title="Go to source code"><b>VALUE_NONE</b></a>
+				<a href="source-class-Symfony.Component.Console.Input.InputOption.html#24" title="Go to source code"><b>VALUE_NONE</b></a>
 			</code>
 
 			<div class="description short">
@@ -722,7 +727,7 @@
 		<td class="attributes"><code>integer</code></td>
 		<td class="name">
 			<code>
-				<a href="source-class-Symfony.Component.Console.Input.InputOption.html#24" title="Go to source code"><b>VALUE_REQUIRED</b></a>
+				<a href="source-class-Symfony.Component.Console.Input.InputOption.html#25" title="Go to source code"><b>VALUE_REQUIRED</b></a>
 			</code>
 
 			<div class="description short">
@@ -746,7 +751,7 @@
 		<td class="attributes"><code>integer</code></td>
 		<td class="name">
 			<code>
-				<a href="source-class-Symfony.Component.Console.Input.InputOption.html#25" title="Go to source code"><b>VALUE_OPTIONAL</b></a>
+				<a href="source-class-Symfony.Component.Console.Input.InputOption.html#26" title="Go to source code"><b>VALUE_OPTIONAL</b></a>
 			</code>
 
 			<div class="description short">
@@ -770,7 +775,7 @@
 		<td class="attributes"><code>integer</code></td>
 		<td class="name">
 			<code>
-				<a href="source-class-Symfony.Component.Console.Input.InputOption.html#26" title="Go to source code"><b>VALUE_IS_ARRAY</b></a>
+				<a href="source-class-Symfony.Component.Console.Input.InputOption.html#27" title="Go to source code"><b>VALUE_IS_ARRAY</b></a>
 			</code>
 
 			<div class="description short">

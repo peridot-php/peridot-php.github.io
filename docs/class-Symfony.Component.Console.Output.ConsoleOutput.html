@@ -99,6 +99,11 @@
 
 						</li>
 				<li>
+					<a href="namespace-Symfony.Component.Console.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
 					<a href="namespace-Symfony.Component.Console.Formatter.html">
 						Formatter					</a>
 
@@ -182,6 +187,11 @@
 				<li>
 					<a href="namespace-Symfony.Component.Console.Tests.Output.html">
 						Output					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Symfony.Component.Console.Tests.Style.html">
+						Style					</a>
 
 						</li>
 				<li>
@@ -301,9 +311,7 @@
 
 				<b>Author:</b>
 				Fabien Potencier <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;">&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;</a><br>
-				<b>Api</b>
-				<br>
-			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#16-113" title="Go to source code">Output/ConsoleOutput.php</a>
+			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#16-156" title="Go to source code">Output/ConsoleOutput.php</a>
 		<br>
 	</div>
 
@@ -323,7 +331,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#35-54" title="Go to source code">__construct</a>( <span>integer <var>$verbosity</var> = <code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#VERBOSITY_NORMAL">Symfony\Component\Console\Output\OutputInterface::<b>VERBOSITY_NORMAL</b></a></code></span>, <span>boolean|null <var>$decorated</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code> <var>$formatter</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#36-53" title="Go to source code">__construct</a>( <span>integer <var>$verbosity</var> = <code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#VERBOSITY_NORMAL">Symfony\Component\Console\Output\OutputInterface::<b>VERBOSITY_NORMAL</b></a></code></span>, <span>boolean|null <var>$decorated</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code> <var>$formatter</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Constructor.</p>
@@ -349,9 +357,6 @@
 					InvalidArgumentException<br>When first argument is not a real stream
 				</div>
 
-				<h4>Api</h4>
-				<div class="list">
-				</div>
 
 				<h4>Overrides</h4>
 				<div class="list"><code><a href="class-Symfony.Component.Console.Output.StreamOutput.html#___construct">Symfony\Component\Console\Output\StreamOutput::__construct()</a></code></div>
@@ -371,7 +376,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setDecorated">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#56-63" title="Go to source code">setDecorated</a>( <span>boolean <var>$decorated</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#55-62" title="Go to source code">setDecorated</a>( <span>boolean <var>$decorated</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the decorated flag.</p>
@@ -410,7 +415,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setFormatter">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#65-72" title="Go to source code">setFormatter</a>( <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code> <var>$formatter</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#64-71" title="Go to source code">setFormatter</a>( <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code> <var>$formatter</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets output formatter.</p>
@@ -449,7 +454,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setVerbosity">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#74-81" title="Go to source code">setVerbosity</a>( <span>integer <var>$level</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#73-80" title="Go to source code">setVerbosity</a>( <span>integer <var>$level</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the verbosity of the output.</p>
@@ -488,7 +493,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getErrorOutput">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#83-89" title="Go to source code">getErrorOutput</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#82-88" title="Go to source code">getErrorOutput</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the OutputInterface for errors.</p>
@@ -524,7 +529,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setErrorOutput">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#91-97" title="Go to source code">setErrorOutput</a>( <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$error</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#90-96" title="Go to source code">setErrorOutput</a>( <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$error</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the OutputInterface used for errors.</p>
@@ -561,7 +566,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasStdoutSupport">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#99-112" title="Go to source code">hasStdoutSupport</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#98-107" title="Go to source code">hasStdoutSupport</a>( )</code>
 
 		<div class="description short">
 			<p>Returns true if current environment supports writing console output to
@@ -572,9 +577,41 @@ STDOUT.</p>
 			<p>Returns true if current environment supports writing console output to
 STDOUT.</p>
 
-<p>IBM iSeries (OS400) exhibits character-encoding issues when writing to
-STDOUT and doesn't properly convert ASCII to EBCDIC, resulting in garbage
-output.</p>
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasStderrSupport" id="_hasStderrSupport">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasStderrSupport">#</a>
+		<code><a href="source-class-Symfony.Component.Console.Output.ConsoleOutput.html#109-118" title="Go to source code">hasStderrSupport</a>( )</code>
+
+		<div class="description short">
+			<p>Returns true if current environment supports writing console output to
+STDERR.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns true if current environment supports writing console output to
+STDERR.</p>
 
 
 

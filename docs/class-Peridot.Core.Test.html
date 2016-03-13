@@ -99,6 +99,11 @@
 
 						</li>
 				<li>
+					<a href="namespace-Symfony.Component.Console.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
 					<a href="namespace-Symfony.Component.Console.Formatter.html">
 						Formatter					</a>
 
@@ -182,6 +187,11 @@
 				<li>
 					<a href="namespace-Symfony.Component.Console.Tests.Output.html">
 						Output					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Symfony.Component.Console.Tests.Style.html">
+						Style					</a>
 
 						</li>
 				<li>
@@ -293,7 +303,7 @@
 		<b>Namespace:</b> <a href="namespace-Peridot.html">Peridot</a>\<a href="namespace-Peridot.Core.html">Core</a><br>
 		<b>Package:</b> Peridot\Core<br>
 
-			<b>Located at</b> <a href="source-class-Peridot.Core.Test.html#7-98" title="Go to source code">Core/Test.php</a>
+			<b>Located at</b> <a href="source-class-Peridot.Core.Test.html#10-166" title="Go to source code">Core/Test.php</a>
 		<br>
 	</div>
 
@@ -313,7 +323,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#14-27" title="Go to source code">__construct</a>( <span>string <var>$description</var></span>, <span>callable <var>$definition</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#17-30" title="Go to source code">__construct</a>( <span>string <var>$description</var></span>, <span>callable <var>$definition</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -352,7 +362,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_run">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#29-45" title="Go to source code">run</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#32-48" title="Go to source code">run</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
 
 		<div class="description short">
 			<p>Execute the test along with any setup and tear down functions.</p>
@@ -387,7 +397,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_executeTest">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#47-62" title="Go to source code">executeTest</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#50-69" title="Go to source code">executeTest</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
 
 		<div class="description short">
 			<p>Attempt to execute setup functions and run the test definition</p>
@@ -422,7 +432,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_runSetup">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#64-75" title="Go to source code">runSetup</a>( )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#71-82" title="Go to source code">runSetup</a>( )</code>
 
 		<div class="description short">
 			<p>Excecute the test's setup functions</p>
@@ -452,7 +462,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_runTearDown">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#77-97" title="Go to source code">runTearDown</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span>, <span>array <var>$action</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#84-106" title="Go to source code">runTearDown</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span>, <span>array <var>$action</var></span> )</code>
 
 		<div class="description short">
 			<p>Run the tests tear down methods and have the result
@@ -469,6 +479,119 @@ perform the method indicated by $action</p>
 					<dt><var>$result</var></dt>
 					<dd></dd>
 					<dt><var>$action</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="handleErrors" id="_handleErrors">
+
+		<td class="attributes"><code>
+			 protected 
+
+			callable|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_handleErrors">#</a>
+		<code><a href="source-class-Peridot.Core.Test.html#108-137" title="Go to source code">handleErrors</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span>, <span>array <var>&amp; $action</var></span> )</code>
+
+		<div class="description short">
+			<p>Set an error handler to handle errors within the test</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set an error handler to handle errors within the test</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$result</var></dt>
+					<dd></dd>
+					<dt><var>$action</var></dt>
+					<dd>$action</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					callable|null
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="restoreErrorHandler" id="_restoreErrorHandler">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_restoreErrorHandler">#</a>
+		<code><a href="source-class-Peridot.Core.Test.html#139-152" title="Go to source code">restoreErrorHandler</a>( <span>callable|null <var>$handler</var></span> )</code>
+
+		<div class="description short">
+			<p>Restore the previous error handler</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Restore the previous error handler</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$handler</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="failIfPassing" id="_failIfPassing">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_failIfPassing">#</a>
+		<code><a href="source-class-Peridot.Core.Test.html#154-165" title="Go to source code">failIfPassing</a>( <span>array <var>&amp; $action</var></span>, <span>mixed <var>$error</var></span> )</code>
+
+		<div class="description short">
+			<p>Fail the test, but do not overwrite existing failures</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Fail the test, but do not overwrite existing failures</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$action</var></dt>
+					<dd>$action</dd>
+					<dt><var>$error</var></dt>
 					<dd></dd>
 				</dl></div>
 
