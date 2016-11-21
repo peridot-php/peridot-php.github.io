@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Event driven BDD test framework for PHP!
-peridot_version: ~1.15
 type: index
 ---
 
@@ -50,13 +49,13 @@ type: index
         <h3>Composer</h3>
 {% highlight bash %}
 # global composer install
-$ composer global require peridot-php/peridot:{{ page.peridot_version }}
+$ composer global require peridot-php/peridot
 
 # ensure .composer/vendor/bin is on your PATH
 $ export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 # local per project install (recommended)
-$ composer require peridot-php/peridot:{{ page.peridot_version }}
+$ composer require peridot-php/peridot
 {% endhighlight %}
 
         <h3>Manual install</h3>
@@ -83,22 +82,23 @@ $ sudo chmod a+x /usr/local/bin/peridot
             Peridot uses the familiar <code>describe-it</code> syntax to create a clear and readable testing language.
         </p>
 
-{% highlight php %}
-<?php //arrayobject.spec.php
+{% highlight php startinline %}
+// arrayobject.spec.php
 describe('ArrayObject', function() {
     beforeEach(function() {
         $this->arrayObject = new ArrayObject(['one', 'two', 'three']);
     });
 
     describe('->count()', function() {
-        it("should return the number of items", function() {
+        it('should return the number of items', function() {
             $count = $this->arrayObject->count();
-            assert($count === 3, "expected 3");
+            assert($count === 3, 'expected 3');
         });
     });
 });
-?>
+{% endhighlight %}
 
+{% highlight console %}
 $ peridot arrayobject.spec.php
 
   ArrayObject
@@ -107,39 +107,42 @@ $ peridot arrayobject.spec.php
 
 
   1 passing (19 ms)
-
 {% endhighlight %}
 
         <h2 id="peridot-cli"><code class="code">peridot</code></h2>
 
-<pre>
+{% highlight console %}
+$ peridot --help
 Usage:
- peridot [options] [files]
+  peridot [options] [files]
 
 Options:
- --grep (-g)          Run tests matching &lt;pattern&gt; (default: *.spec.php)
- --no-colors (-C)     Disable output colors
- --reporter (-r)      Select which reporter to use (default: spec)
- --bail (-b)          Stop on failure
- --configuration (-c) A php file containing peridot configuration
- --reporters          List all available reporters
- --version (-V)       Display the Peridot version number
- --help (-h)          Display this help message.
-</pre>
+  -f, --focus=FOCUS                  Run tests matching <pattern>
+  -s, --skip=SKIP                    Skip tests matching <pattern>
+  -g, --grep=GREP                    Run tests with filenames matching <pattern> (default: *.spec.php)
+  -b, --bail                         Stop on failure
+  -r, --reporter=REPORTER            Select which reporter to use (default: spec)
+      --reporters                    List all available reporters
+  -C, --no-colors                    Disable output colors
+      --force-colors                 Force output colors
+  -c, --configuration=CONFIGURATION  A php file containing peridot configuration
+  -V, --version                      Display the Peridot version number
+  -h, --help                         Display this help message.
+{% endhighlight %}
+
+        <h3>-f, --focus</h3>
+        <p>
+            Only run tests whose title matches the provided pattern. See <a href="#focusing-and-skipping">Focusing and Skipping</a>.
+        </p>
+
+        <h3>-s, --skip</h3>
+        <p>
+            Only run tests whose title does not match the provided pattern. See <a href="#focusing-and-skipping">Focusing and Skipping</a>.
+        </p>
 
         <h3>-g, --grep</h3>
         <p>
-            Only run test files whose name matches the provided pattern. The default grep pattern is <code>*.spec.php</code>
-        </p>
-
-        <h3>-C, --no-colors</h3>
-        <p>
-            Disable colors in output.
-        </p>
-
-        <h3>-r, --reporter</h3>
-        <p>
-            Select which reporter to use. This is the reporter name registered via <a target="_blank" href="http://peridot-php.github.io/docs/class-Peridot.Reporter.ReporterFactory.html">ReporterFactory::register</a>.
+            Only run test files whose filename matches the provided pattern. The default grep pattern is <code>*.spec.php</code>
         </p>
 
         <h3>-b, --bail</h3>
@@ -147,14 +150,44 @@ Options:
             Tell peridot to stop running tests as soon as there is a failure.
         </p>
 
-        <h3>-c, --configuration</h3>
+        <h3>-r, --reporter</h3>
         <p>
-            A path to a peridot configuration file. Defaults to <code>getcwd() . '/peridot.php'</code>
+            Select which reporter to use. This is the reporter name registered via <a target="_blank" href="http://peridot-php.github.io/docs/class-Peridot.Reporter.ReporterFactory.html">ReporterFactory::register</a>.
         </p>
 
         <h3>--reporters</h3>
         <p>
             List available test reporters.
+        </p>
+
+        <h3>-C, --no-colors</h3>
+        <p>
+            Disable colors in output.
+        </p>
+
+        <h3>-c, --configuration</h3>
+        <p>
+            A path to a peridot configuration file. Defaults to <code>getcwd() . '/peridot.php'</code>
+        </p>
+
+        <h2 id="focusing-and-skipping">Focusing and Skipping</h3>
+
+        <p>See also <a href="syntax.html#focused-specs">Focused Specs</a>, which allow you to focus tests without using command line options.</p>
+        <p>
+            The <code>--focus</code> and <code>--skip</code> options can be used independently, or combined for complex test isolation.
+            If both are used, <code>--skip</code> will take precedence.
+        </p>
+        <p>
+            The patterns accepted by both of these options are PCRE regular expressions that are evaluated against the "title" of the test.
+            The test title includes the description of the suite it is contained within, including any ancestors of that suite.
+            For example, the test shown in <a href="#getting-started">Getting Started</a> has a title of: <code>ArrayObject ->count() should return the number of items</code>.
+        </p>
+        <p>
+            If the provided pattern is not a complete PCRE regular expression, it will be surrounded in delimiters.
+            For example, <code>--focus 'foo.*'</code> is equivalent to <code>--focus '~\bfoo.*\b~'</code>.
+            If the provided pattern is not a valid PCRE regular expression, it will be treated as plain text.
+            For example, <code>--focus 'foo('</code> is equivalent to <code>--focus '~\bfoo\(\b~'</code>.
+            The addition of <code>\b</code> simply prevents accidental matching of substrings.
         </p>
 
         <h2 id="examples">Example Test Suites</h2>
@@ -173,8 +206,8 @@ Options:
             Peridot's tests were written using Peridot. After cloning Peridot, you can run tests using:
         </p>
 
-{% highlight bash %}
-$ bin/peridot specs/
+{% highlight console %}
+$ bin/peridot
 {% endhighlight %}
     </div>
 </div>

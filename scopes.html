@@ -49,15 +49,13 @@ return function(EventEmitterInterface $emitter) {
         $test->getScope()->peridotAddChildScope($driverScope);
     });
 }
-?>
 {% endhighlight %}
 
         <p>
             By mixing the <code>WebDriverScope</code> in to our test's scopes, we have made the following possible in our tests:
         </p>
 
-{% highlight php %}
-<?php
+{% highlight php startinline %}
 describe('The home page', function() {
     it('should have a greeting', function() {
         $this->getPage('http://localhost:4000');
@@ -65,9 +63,8 @@ describe('The home page', function() {
         assert($greeting->getText() === "Hello", "should be Hello");
     });
 });
-?>
 {% endhighlight %}
 
 <p>
-    Scopes are a powerful concept, and one that should be used liberally to simplify your tests. You can use them to easily include helpers and behavior for your tests, whether that is across the <a href="https://github.com/peridot-php/peridot-prophecy-plugin/blob/master/src/ProphecyPlugin.php#L31" target="__blank">entire suite</a>, or for a <a href="https://github.com/peridot-php/peridot-concurrency/blob/master/specs/runner/stream-select/application/TestMessageReader.php" target="__blank">few select tests</a>. 
+    Scopes are a powerful concept, and one that should be used liberally to simplify your tests. You can use them to easily include helpers and behavior for your tests, whether that is across the <a href="https://github.com/peridot-php/peridot-prophecy-plugin/blob/master/src/ProphecyPlugin.php#L31" target="__blank">entire suite</a>, or for a <a href="https://github.com/peridot-php/peridot-concurrency/blob/master/specs/runner/stream-select/application/TestMessageReader.php" target="__blank">few select tests</a>.
 </p>

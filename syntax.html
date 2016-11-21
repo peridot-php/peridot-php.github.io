@@ -38,7 +38,7 @@ type: leaf
     <li>
         <div><code>it($description, $func)</code></div>
         <p>
-            This function creates a single test and adds it to the suite it is nested in. 
+            This function creates a single test and adds it to the suite it is nested in.
         </p>
     </li>
 </ul>
@@ -47,8 +47,7 @@ type: leaf
     An example might look like this:
 </p>
 
-{% highlight php %}
-<?php
+{% highlight php startinline %}
 describe('TodoRepository', function () {
     beforeEach(function () {
         $interface = 'Doctrine\Common\Persistence\ObjectManager';
@@ -68,37 +67,111 @@ describe('TodoRepository', function () {
         });
     });
 });
-?>
 {% endhighlight %}
 
 <h2 id="pending-specs">Pending Specs</h2>
 
 <p>
-    You can make any spec our suite pending by prefixing the function with an <strong>x</strong>.
+    "Pending" specs are not executed, but still appear in Peridot's output.
+    This is typically used to temporarily skip a broken spec or suite.
+</p>
+<p>
+    You can make any spec or suite pending, by prefixing the function with an <strong>x</strong>.
 </p>
 
-{% highlight php %}
-<?php
-xdescribe("A pending suite", function() {
-    xcontext("when using a pending context", function() {
-        xit("should have a pending spec", function() {
-
+{% highlight php startinline %}
+xdescribe('A pending suite', function() {
+    xcontext('when using a pending context', function() {
+        xit('should have a pending spec', function() {
+            // ...
         });
     });
 });
-?>
 {% endhighlight %}
 
 <p>
     Or you can simply omit the test function.
 </p>
 
-{% highlight php %}
-<?php
-describe("A pending suite", function() {
-    it("should have a pending spec");    
+{% highlight php startinline %}
+describe('A pending suite', function() {
+    it('should have a pending spec');
 });
-?>
+{% endhighlight %}
+
+<h2 id="focused-specs">Focused Specs</h2>
+
+<p>
+    "Focusing" lets you isolate indivdual specs or suites.
+    If there are focused specs in a suite, then any unfocused specs in the same suite will be skipped entirely.
+</p>
+<p>
+    You can make any spec or suite "focused", by prefixing the function with an <strong>f</strong>.
+</p>
+
+{% highlight php startinline %}
+describe('A suite with nested suites', function() {
+    fcontext('A focused suite', function() {
+        it('should execute this spec', function() {
+            // ...
+        });
+
+        it('should also execute this spec', function() {
+            // ...
+        });
+    });
+
+    describe('An unfocused suite', function() {
+        it('should not execute this spec', function() {
+            // ...
+        });
+    });
+});
+{% endhighlight %}
+
+<p>
+    A suite is also considered "focused" if any of its nested specs or suites are focused.
+    This allows focusing of a deeply nested spec without the pain of also marking all of its ancestors as focused.
+</p>
+
+{% highlight php startinline %}
+describe('A suite with nested suites', function() {
+    context('A suite with nested focused specs', function() {
+        fit('should execute this spec', function() {
+            // ...
+        });
+
+        it('should not execute this spec', function() {
+            // ...
+        });
+    });
+
+    describe('An unfocused suite', function() {
+        it('should not execute this spec', function() {
+            // ...
+        });
+    });
+});
+{% endhighlight %}
+
+<p>
+    If multiple specs or suites within a suite are focused, then all the focused specs will be executed:
+</p>
+
+{% highlight php startinline %}
+describe('A suite with nested suites', function() {
+    fit('should execute this spec', function() {
+        // ...
+    });
+
+    fit('should also execute this spec', function() {
+        // ...
+    });
+
+    it('should not execute this spec', function() {
+        // ...
+    });
+});
 {% endhighlight %}
 
 <h2 id="custom-dsls">Custom DSLs</h2>
@@ -111,8 +184,7 @@ describe("A pending suite", function() {
     The linked example above demonstrates creating a custom DSL to support the following testing language:
 </p>
 
-{% highlight php %}
-<?php // features/chdir.feature.php
+{% highlight php startinline %}
 Feature("chdir","
     As a PHP user
     I need to be able to change the current working directory",
@@ -137,7 +209,6 @@ Feature("chdir","
         });
 
     });
-?>
 {% endhighlight %}
 
 <h2 id="assertions">Assertions</h2>

@@ -24,7 +24,6 @@ a:active {
 
  ul {
  	list-style:circle;
- 	list-style-position: inside;
  	margin: 0;
  	padding: 0;
  }
@@ -84,9 +83,12 @@ a.btn {
 /*****************
  * Reference List
  *****************/
+.reference-list li {
+	margin-left: 20px;
+	padding-bottom: 10px;
+}
 .reference-list p {
-	margin:0 0 20px 0;
-	padding-left:18px;
+	margin:10px 0;
 	width:300px;
 }
 
