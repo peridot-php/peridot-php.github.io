@@ -5,7 +5,7 @@
 
 	<title>Interface Symfony\Component\Console\Input\InputInterface | Peridot</title>
 
-	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
 
 </head>
 
@@ -292,7 +292,7 @@
 
 				<b>Author:</b>
 				Fabien Potencier <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;">&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;</a><br>
-			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Input.InputInterface.html#14-152" title="Go to source code">Input/InputInterface.php</a>
+			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Input.InputInterface.html#17-157" title="Go to source code">Input/InputInterface.php</a>
 		<br>
 	</div>
 
@@ -312,7 +312,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getFirstArgument">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#21-26" title="Go to source code">getFirstArgument</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#24-29" title="Go to source code">getFirstArgument</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the first argument from the raw parameters (not parsed).</p>
@@ -346,7 +346,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasParameterOption">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#28-38" title="Go to source code">hasParameterOption</a>( <span>string|array <var>$values</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#31-41" title="Go to source code">hasParameterOption</a>( <span>string|array <var>$values</var></span> )</code>
 
 		<div class="description short">
 			<p>Returns true if the raw parameters (not parsed) contain a value.</p>
@@ -388,7 +388,7 @@ before they have been validated. It must be used carefully.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getParameterOption">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#40-51" title="Go to source code">getParameterOption</a>( <span>string|array <var>$values</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#43-54" title="Go to source code">getParameterOption</a>( <span>string|array <var>$values</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Returns the value of a raw option (not parsed).</p>
@@ -432,7 +432,7 @@ before they have been validated. It must be used carefully.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_bind">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#53-58" title="Go to source code">bind</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code> <var>$definition</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#56-61" title="Go to source code">bind</a>( <span><code><a href="class-Symfony.Component.Console.Input.InputDefinition.html">Symfony\Component\Console\Input\InputDefinition</a></code> <var>$definition</var></span> )</code>
 
 		<div class="description short">
 			<p>Binds the current Input instance with the given arguments and options.</p>
@@ -467,23 +467,21 @@ before they have been validated. It must be used carefully.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_validate">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#60-67" title="Go to source code">validate</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#63-68" title="Go to source code">validate</a>( )</code>
 
 		<div class="description short">
-			<p>Validates if arguments given are correct.</p>
+			<p>Validates the input.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Validates if arguments given are correct.</p>
-
-<p>Throws an exception when not enough arguments are given.</p>
+			<p>Validates the input.</p>
 
 
 
 
 				<h4>Throws</h4>
 				<div class="list">
-					RuntimeException
+					<code><a href="class-Symfony.Component.Console.Exception.RuntimeException.html">Symfony\Component\Console\Exception\RuntimeException</a></code><br>When not enough arguments are given
 				</div>
 
 
@@ -503,7 +501,7 @@ before they have been validated. It must be used carefully.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getArguments">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#69-74" title="Go to source code">getArguments</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#70-75" title="Go to source code">getArguments</a>( )</code>
 
 		<div class="description short">
 			<p>Returns all the given arguments merged with the default values.</p>
@@ -537,27 +535,31 @@ before they have been validated. It must be used carefully.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getArgument">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#76-83" title="Go to source code">getArgument</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#77-86" title="Go to source code">getArgument</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
-			<p>Gets argument by name.</p>
+			<p>Returns the argument value for a given argument name.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Gets argument by name.</p>
+			<p>Returns the argument value for a given argument name.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$name</var></dt>
-					<dd>The name of the argument</dd>
+					<dd>The argument name</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					mixed
+					mixed<br>The argument value
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Symfony.Component.Console.Exception.InvalidArgumentException.html">Symfony\Component\Console\Exception\InvalidArgumentException</a></code><br>When argument given doesn't exist
+				</div>
 
 
 
@@ -576,7 +578,7 @@ before they have been validated. It must be used carefully.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setArgument">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#85-93" title="Go to source code">setArgument</a>( <span>string <var>$name</var></span>, <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#88-96" title="Go to source code">setArgument</a>( <span>string <var>$name</var></span>, <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets an argument value by name.</p>
@@ -597,7 +599,7 @@ before they have been validated. It must be used carefully.</p>
 
 				<h4>Throws</h4>
 				<div class="list">
-					InvalidArgumentException<br>When argument given doesn't exist
+					<code><a href="class-Symfony.Component.Console.Exception.InvalidArgumentException.html">Symfony\Component\Console\Exception\InvalidArgumentException</a></code><br>When argument given doesn't exist
 				</div>
 
 
@@ -617,7 +619,7 @@ before they have been validated. It must be used carefully.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasArgument">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#95-102" title="Go to source code">hasArgument</a>( <span>string|integer <var>$name</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#98-105" title="Go to source code">hasArgument</a>( <span>string|integer <var>$name</var></span> )</code>
 
 		<div class="description short">
 			<p>Returns true if an InputArgument object exists by name or position.</p>
@@ -656,7 +658,7 @@ before they have been validated. It must be used carefully.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getOptions">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#104-109" title="Go to source code">getOptions</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#107-112" title="Go to source code">getOptions</a>( )</code>
 
 		<div class="description short">
 			<p>Returns all the given options merged with the default values.</p>
@@ -690,27 +692,31 @@ before they have been validated. It must be used carefully.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getOption">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#111-118" title="Go to source code">getOption</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#114-123" title="Go to source code">getOption</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
-			<p>Gets an option by name.</p>
+			<p>Returns the option value for a given option name.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Gets an option by name.</p>
+			<p>Returns the option value for a given option name.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$name</var></dt>
-					<dd>The name of the option</dd>
+					<dd>The option name</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					mixed
+					mixed<br>The option value
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Symfony.Component.Console.Exception.InvalidArgumentException.html">Symfony\Component\Console\Exception\InvalidArgumentException</a></code><br>When option given doesn't exist
+				</div>
 
 
 
@@ -729,7 +735,7 @@ before they have been validated. It must be used carefully.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setOption">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#120-128" title="Go to source code">setOption</a>( <span>string <var>$name</var></span>, <span>string|boolean <var>$value</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#125-133" title="Go to source code">setOption</a>( <span>string <var>$name</var></span>, <span>string|boolean <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets an option value by name.</p>
@@ -750,7 +756,7 @@ before they have been validated. It must be used carefully.</p>
 
 				<h4>Throws</h4>
 				<div class="list">
-					InvalidArgumentException<br>When option given doesn't exist
+					<code><a href="class-Symfony.Component.Console.Exception.InvalidArgumentException.html">Symfony\Component\Console\Exception\InvalidArgumentException</a></code><br>When option given doesn't exist
 				</div>
 
 
@@ -770,7 +776,7 @@ before they have been validated. It must be used carefully.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasOption">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#130-137" title="Go to source code">hasOption</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#135-142" title="Go to source code">hasOption</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			<p>Returns true if an InputOption object exists by name.</p>
@@ -809,7 +815,7 @@ before they have been validated. It must be used carefully.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isInteractive">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#139-144" title="Go to source code">isInteractive</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#144-149" title="Go to source code">isInteractive</a>( )</code>
 
 		<div class="description short">
 			<p>Is this input means interactive?</p>
@@ -843,7 +849,7 @@ before they have been validated. It must be used carefully.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setInteractive">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#146-151" title="Go to source code">setInteractive</a>( <span>boolean <var>$interactive</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Input.InputInterface.html#151-156" title="Go to source code">setInteractive</a>( <span>boolean <var>$interactive</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the input interactivity.</p>

@@ -5,7 +5,7 @@
 
 	<title>Class Peridot\Core\Test | Peridot</title>
 
-	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
 
 </head>
 
@@ -303,7 +303,7 @@
 		<b>Namespace:</b> <a href="namespace-Peridot.html">Peridot</a>\<a href="namespace-Peridot.Core.html">Core</a><br>
 		<b>Package:</b> Peridot\Core<br>
 
-			<b>Located at</b> <a href="source-class-Peridot.Core.Test.html#10-166" title="Go to source code">Core/Test.php</a>
+			<b>Located at</b> <a href="source-class-Peridot.Core.Test.html#10-178" title="Go to source code">Core/Test.php</a>
 		<br>
 	</div>
 
@@ -323,7 +323,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#17-30" title="Go to source code">__construct</a>( <span>string <var>$description</var></span>, <span>callable <var>$definition</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#17-30" title="Go to source code">__construct</a>( <span>string <var>$description</var></span>, <span>callable <var>$definition</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$focused</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
@@ -339,6 +339,8 @@
 					<dd></dd>
 					<dt><var>$definition</var></dt>
 					<dd></dd>
+					<dt><var>$focused</var></dt>
+					<dd></dd>
 				</dl></div>
 
 
@@ -346,6 +348,40 @@
 
 				<h4>Overrides</h4>
 				<div class="list"><code><a href="class-Peridot.Core.AbstractTest.html#___construct">Peridot\Core\AbstractTest::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isFocused" id="_isFocused">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isFocused">#</a>
+		<code><a href="source-class-Peridot.Core.Test.html#32-40" title="Go to source code">isFocused</a>( )</code>
+
+		<div class="description short">
+			<p>Return whether or not the test is focused</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return whether or not the test is focused</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
 
 		</div>
 		</div></td>
@@ -362,7 +398,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_run">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#32-48" title="Go to source code">run</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#42-58" title="Go to source code">run</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
 
 		<div class="description short">
 			<p>Execute the test along with any setup and tear down functions.</p>
@@ -397,7 +433,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_executeTest">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#50-69" title="Go to source code">executeTest</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#60-79" title="Go to source code">executeTest</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span> )</code>
 
 		<div class="description short">
 			<p>Attempt to execute setup functions and run the test definition</p>
@@ -432,7 +468,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_runSetup">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#71-82" title="Go to source code">runSetup</a>( )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#81-92" title="Go to source code">runSetup</a>( )</code>
 
 		<div class="description short">
 			<p>Excecute the test's setup functions</p>
@@ -462,7 +498,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_runTearDown">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#84-106" title="Go to source code">runTearDown</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span>, <span>array <var>$action</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#94-116" title="Go to source code">runTearDown</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span>, <span>array <var>$action</var></span> )</code>
 
 		<div class="description short">
 			<p>Run the tests tear down methods and have the result
@@ -501,7 +537,7 @@ perform the method indicated by $action</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_handleErrors">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#108-137" title="Go to source code">handleErrors</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span>, <span>array <var>&amp; $action</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#118-149" title="Go to source code">handleErrors</a>( <span><code><a href="class-Peridot.Core.TestResult.html">Peridot\Core\TestResult</a></code> <var>$result</var></span>, <span>array <var>&amp; $action</var></span> )</code>
 
 		<div class="description short">
 			<p>Set an error handler to handle errors within the test</p>
@@ -542,7 +578,7 @@ perform the method indicated by $action</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_restoreErrorHandler">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#139-152" title="Go to source code">restoreErrorHandler</a>( <span>callable|null <var>$handler</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#151-164" title="Go to source code">restoreErrorHandler</a>( <span>callable|null <var>$handler</var></span> )</code>
 
 		<div class="description short">
 			<p>Restore the previous error handler</p>
@@ -577,7 +613,7 @@ perform the method indicated by $action</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_failIfPassing">#</a>
-		<code><a href="source-class-Peridot.Core.Test.html#154-165" title="Go to source code">failIfPassing</a>( <span>array <var>&amp; $action</var></span>, <span>mixed <var>$error</var></span> )</code>
+		<code><a href="source-class-Peridot.Core.Test.html#166-177" title="Go to source code">failIfPassing</a>( <span>array <var>&amp; $action</var></span>, <span>mixed <var>$error</var></span> )</code>
 
 		<div class="description short">
 			<p>Fail the test, but do not overwrite existing failures</p>
@@ -610,6 +646,7 @@ perform the method indicated by $action</p>
 		<td><code>
 			<a href="class-Peridot.Core.AbstractTest.html#_addSetupFunction">addSetupFunction()</a>, 
 			<a href="class-Peridot.Core.AbstractTest.html#_addTearDownFunction">addTearDownFunction()</a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#_applyFocusPatterns">applyFocusPatterns()</a>, 
 			<a href="class-Peridot.Core.AbstractTest.html#_forEachNodeBottomUp">forEachNodeBottomUp()</a>, 
 			<a href="class-Peridot.Core.AbstractTest.html#_forEachNodeTopDown">forEachNodeTopDown()</a>, 
 			<a href="class-Peridot.Core.AbstractTest.html#_getDefinition">getDefinition()</a>, 
@@ -668,6 +705,7 @@ perform the method indicated by $action</p>
 			<a href="class-Peridot.Core.AbstractTest.html#$definitionArguments"><var>$definitionArguments</var></a>, 
 			<a href="class-Peridot.Core.AbstractTest.html#$description"><var>$description</var></a>, 
 			<a href="class-Peridot.Core.AbstractTest.html#$file"><var>$file</var></a>, 
+			<a href="class-Peridot.Core.AbstractTest.html#$focused"><var>$focused</var></a>, 
 			<a href="class-Peridot.Core.AbstractTest.html#$parent"><var>$parent</var></a>, 
 			<a href="class-Peridot.Core.AbstractTest.html#$pending"><var>$pending</var></a>, 
 			<a href="class-Peridot.Core.AbstractTest.html#$scope"><var>$scope</var></a>, 

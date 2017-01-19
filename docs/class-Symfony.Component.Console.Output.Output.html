@@ -5,7 +5,7 @@
 
 	<title>Class Symfony\Component\Console\Output\Output | Peridot</title>
 
-	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
 
 </head>
 
@@ -303,7 +303,7 @@
 
 				<b>Author:</b>
 				Fabien Potencier <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;">&#102;&#x61;&#98;&#105;&#x65;&#110;&#64;&#x73;&#121;m&#x66;&#111;&#x6e;&#x79;&#46;&#x63;&#x6f;&#109;</a><br>
-			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Output.Output.html#17-165" title="Go to source code">Output/Output.php</a>
+			<b>Located at</b> <a href="source-class-Symfony.Component.Console.Output.Output.html#17-177" title="Go to source code">Output/Output.php</a>
 		<br>
 	</div>
 
@@ -323,7 +323,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#35-47" title="Go to source code">__construct</a>( <span>integer <var>$verbosity</var> = <code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#VERBOSITY_NORMAL">Symfony\Component\Console\Output\OutputInterface::<b>VERBOSITY_NORMAL</b></a></code></span>, <span>boolean <var>$decorated</var> = <span class="php-keyword1">false</span></span>, <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code> <var>$formatter</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#35-47" title="Go to source code">__construct</a>( <span>integer <var>$verbosity</var> = self::VERBOSITY_NORMAL</span>, <span>boolean <var>$decorated</var> = <span class="php-keyword1">false</span></span>, <span><code><a href="class-Symfony.Component.Console.Formatter.OutputFormatterInterface.html">Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code> <var>$formatter</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Constructor.</p>
@@ -581,7 +581,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isQuiet">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#97-100" title="Go to source code">isQuiet</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#97-103" title="Go to source code">isQuiet</a>( )</code>
 
 		<div class="description short">
 			
@@ -611,7 +611,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isVerbose">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#102-105" title="Go to source code">isVerbose</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#105-111" title="Go to source code">isVerbose</a>( )</code>
 
 		<div class="description short">
 			
@@ -641,7 +641,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isVeryVerbose">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#107-110" title="Go to source code">isVeryVerbose</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#113-119" title="Go to source code">isVeryVerbose</a>( )</code>
 
 		<div class="description short">
 			
@@ -671,7 +671,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isDebug">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#112-115" title="Go to source code">isDebug</a>( )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#121-127" title="Go to source code">isDebug</a>( )</code>
 
 		<div class="description short">
 			
@@ -701,7 +701,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_writeln">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#117-123" title="Go to source code">writeln</a>( <span>string|array <var>$messages</var></span>, <span>integer <var>$options</var> = <code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#OUTPUT_NORMAL">Symfony\Component\Console\Output\OutputInterface::<b>OUTPUT_NORMAL</b></a></code></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#129-135" title="Go to source code">writeln</a>( <span>string|array <var>$messages</var></span>, <span>integer <var>$options</var> = self::OUTPUT_NORMAL</span> )</code>
 
 		<div class="description short">
 			<p>Writes a message to the output and adds a newline at the end.</p>
@@ -740,7 +740,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_write">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#125-156" title="Go to source code">write</a>( <span>string|array <var>$messages</var></span>, <span>boolean <var>$newline</var> = <span class="php-keyword1">false</span></span>, <span>integer <var>$options</var> = <code><a href="class-Symfony.Component.Console.Output.OutputInterface.html#OUTPUT_NORMAL">Symfony\Component\Console\Output\OutputInterface::<b>OUTPUT_NORMAL</b></a></code></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#137-168" title="Go to source code">write</a>( <span>string|array <var>$messages</var></span>, <span>boolean <var>$newline</var> = <span class="php-keyword1">false</span></span>, <span>integer <var>$options</var> = self::OUTPUT_NORMAL</span> )</code>
 
 		<div class="description short">
 			<p>Writes a message to the output.</p>
@@ -781,7 +781,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_doWrite">#</a>
-		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#158-164" title="Go to source code">doWrite</a>( <span>string <var>$message</var></span>, <span>boolean <var>$newline</var></span> )</code>
+		<code><a href="source-class-Symfony.Component.Console.Output.Output.html#170-176" title="Go to source code">doWrite</a>( <span>string <var>$message</var></span>, <span>boolean <var>$newline</var></span> )</code>
 
 		<div class="description short">
 			<p>Writes a message to the output.</p>

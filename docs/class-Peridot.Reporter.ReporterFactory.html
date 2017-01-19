@@ -5,7 +5,7 @@
 
 	<title>Class Peridot\Reporter\ReporterFactory | Peridot</title>
 
-	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
 
 </head>
 
@@ -211,6 +211,7 @@
 			<ul>
 				<li><a href="class-Peridot.Reporter.AbstractBaseReporter.html">AbstractBaseReporter</a></li>
 				<li><a href="class-Peridot.Reporter.AnonymousReporter.html">AnonymousReporter</a></li>
+				<li><a href="class-Peridot.Reporter.CompositeReporter.html">CompositeReporter</a></li>
 				<li class="active"><a href="class-Peridot.Reporter.ReporterFactory.html">ReporterFactory</a></li>
 				<li><a href="class-Peridot.Reporter.SpecReporter.html">SpecReporter</a></li>
 			</ul>
@@ -285,7 +286,7 @@
 		<b>Namespace:</b> <a href="namespace-Peridot.html">Peridot</a>\<a href="namespace-Peridot.Reporter.html">Reporter</a><br>
 		<b>Package:</b> Peridot\Reporter<br>
 
-			<b>Located at</b> <a href="source-class-Peridot.Reporter.ReporterFactory.html#9-129" title="Go to source code">Reporter/ReporterFactory.php</a>
+			<b>Located at</b> <a href="source-class-Peridot.Reporter.ReporterFactory.html#10-159" title="Go to source code">Reporter/ReporterFactory.php</a>
 		<br>
 	</div>
 
@@ -305,7 +306,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Peridot.Reporter.ReporterFactory.html#42-55" title="Go to source code">__construct</a>( <span><code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code> <var>$configuration</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span>, <span><code><a href="class-Evenement.EventEmitterInterface.html">Evenement\EventEmitterInterface</a></code> <var>$eventEmitter</var></span> )</code>
+		<code><a href="source-class-Peridot.Reporter.ReporterFactory.html#43-56" title="Go to source code">__construct</a>( <span><code><a href="class-Peridot.Configuration.html">Peridot\Configuration</a></code> <var>$configuration</var></span>, <span><code><a href="class-Symfony.Component.Console.Output.OutputInterface.html">Symfony\Component\Console\Output\OutputInterface</a></code> <var>$output</var></span>, <span><code><a href="class-Evenement.EventEmitterInterface.html">Evenement\EventEmitterInterface</a></code> <var>$eventEmitter</var></span> )</code>
 
 		<div class="description short">
 			
@@ -344,7 +345,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_create">#</a>
-		<code><a href="source-class-Peridot.Reporter.ReporterFactory.html#57-78" title="Go to source code">create</a>( <span> <var>$name</var></span> )</code>
+		<code><a href="source-class-Peridot.Reporter.ReporterFactory.html#58-67" title="Go to source code">create</a>( <span> <var>$name</var></span> )</code>
 
 		<div class="description short">
 			<p>Return an instance of the named reporter</p>
@@ -371,6 +372,45 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="createComposite" id="_createComposite">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Peridot.Reporter.AbstractBaseReporter.html">Peridot\Reporter\AbstractBaseReporter</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createComposite">#</a>
+		<code><a href="source-class-Peridot.Reporter.ReporterFactory.html#69-92" title="Go to source code">createComposite</a>( <span>array <var>$names</var></span> )</code>
+
+		<div class="description short">
+			<p>Return an instance of the named reporter</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return an instance of the named reporter</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$names</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Peridot.Reporter.AbstractBaseReporter.html">Peridot\Reporter\AbstractBaseReporter</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="getReporterFactory" id="_getReporterFactory">
 
 		<td class="attributes"><code>
@@ -383,7 +423,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getReporterFactory">#</a>
-		<code><a href="source-class-Peridot.Reporter.ReporterFactory.html#80-93" title="Go to source code">getReporterFactory</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Peridot.Reporter.ReporterFactory.html#94-107" title="Go to source code">getReporterFactory</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			<p>Return the factory defined for the named reporter</p>
@@ -422,7 +462,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getReporterDefinition">#</a>
-		<code><a href="source-class-Peridot.Reporter.ReporterFactory.html#95-108" title="Go to source code">getReporterDefinition</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Peridot.Reporter.ReporterFactory.html#109-122" title="Go to source code">getReporterDefinition</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			<p>Return the definition of the named reporter</p>
@@ -461,7 +501,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_register">#</a>
-		<code><a href="source-class-Peridot.Reporter.ReporterFactory.html#110-120" title="Go to source code">register</a>( <span>string <var>$name</var></span>, <span>string <var>$description</var></span>, <span>string <var>$factory</var></span> )</code>
+		<code><a href="source-class-Peridot.Reporter.ReporterFactory.html#124-134" title="Go to source code">register</a>( <span>string <var>$name</var></span>, <span>string <var>$description</var></span>, <span>string <var>$factory</var></span> )</code>
 
 		<div class="description short">
 			<p>Register a named reporter with the factory.</p>
@@ -500,7 +540,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getReporters">#</a>
-		<code><a href="source-class-Peridot.Reporter.ReporterFactory.html#122-128" title="Go to source code">getReporters</a>( )</code>
+		<code><a href="source-class-Peridot.Reporter.ReporterFactory.html#136-142" title="Go to source code">getReporters</a>( )</code>
 
 		<div class="description short">
 			
@@ -553,7 +593,7 @@
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peridot.Reporter.ReporterFactory.html#18-21" title="Go to source code"><var>$configuration</var></a>
+				<a href="source-class-Peridot.Reporter.ReporterFactory.html#19-22" title="Go to source code"><var>$configuration</var></a>
 
 			<div class="description short">
 				
@@ -578,7 +618,7 @@
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peridot.Reporter.ReporterFactory.html#23-26" title="Go to source code"><var>$runner</var></a>
+				<a href="source-class-Peridot.Reporter.ReporterFactory.html#24-27" title="Go to source code"><var>$runner</var></a>
 
 			<div class="description short">
 				
@@ -603,7 +643,7 @@
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peridot.Reporter.ReporterFactory.html#28-31" title="Go to source code"><var>$output</var></a>
+				<a href="source-class-Peridot.Reporter.ReporterFactory.html#29-32" title="Go to source code"><var>$output</var></a>
 
 			<div class="description short">
 				
@@ -628,7 +668,7 @@
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peridot.Reporter.ReporterFactory.html#33-40" title="Go to source code"><var>$reporters</var></a>
+				<a href="source-class-Peridot.Reporter.ReporterFactory.html#34-41" title="Go to source code"><var>$reporters</var></a>
 
 			<div class="description short">
 				<p>Registered reporters</p>

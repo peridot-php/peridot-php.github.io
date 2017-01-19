@@ -5,7 +5,7 @@
 
 	<title>Class Peridot\Runner\Context | Peridot</title>
 
-	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
 
 </head>
 
@@ -286,7 +286,7 @@ Peridot's global state.</p>
 		<b>Namespace:</b> <a href="namespace-Peridot.html">Peridot</a>\<a href="namespace-Peridot.Runner.html">Runner</a><br>
 		<b>Package:</b> Peridot\Runner<br>
 
-			<b>Located at</b> <a href="source-class-Peridot.Runner.Context.html#9-173" title="Go to source code">Runner/Context.php</a>
+			<b>Located at</b> <a href="source-class-Peridot.Runner.Context.html#9-178" title="Go to source code">Runner/Context.php</a>
 		<br>
 	</div>
 
@@ -443,7 +443,7 @@ to load suites.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addSuite">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#83-100" title="Go to source code">addSuite</a>( <span> <var>$description</var></span>, <span>callable <var>$fn</var></span>, <span> <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#83-102" title="Go to source code">addSuite</a>( <span>string <var>$description</var></span>, <span>callable <var>$fn</var></span>, <span>boolean|null <var>$pending</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$focused</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Creates a suite and adds it to the current suite. The newly
@@ -462,6 +462,8 @@ created suite will become the new "current" suite</p>
 					<dt><var>$fn</var></dt>
 					<dd></dd>
 					<dt><var>$pending</var></dt>
+					<dd></dd>
+					<dt><var>$focused</var></dt>
 					<dd></dd>
 				</dl></div>
 
@@ -484,7 +486,7 @@ created suite will become the new "current" suite</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addTest">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#102-118" title="Go to source code">addTest</a>( <span> <var>$description</var></span>, <span>callable <var>$fn</var> = <span class="php-keyword1">null</span></span>, <span> <var>$pending</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#104-122" title="Go to source code">addTest</a>( <span>string <var>$description</var></span>, <span>callable <var>$fn</var> = <span class="php-keyword1">null</span></span>, <span>boolean|null <var>$pending</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$focused</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Create a test and add it to the current suite</p>
@@ -501,6 +503,8 @@ created suite will become the new "current" suite</p>
 					<dt><var>$fn</var></dt>
 					<dd></dd>
 					<dt><var>$pending</var></dt>
+					<dd></dd>
+					<dt><var>$focused</var></dt>
 					<dd></dd>
 				</dl></div>
 
@@ -523,7 +527,7 @@ created suite will become the new "current" suite</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addSetupFunction">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#120-129" title="Go to source code">addSetupFunction</a>( <span>callable <var>$fn</var></span> )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#124-133" title="Go to source code">addSetupFunction</a>( <span>callable <var>$fn</var></span> )</code>
 
 		<div class="description short">
 			<p>Add a setup function for all tests in the
@@ -560,7 +564,7 @@ current suite</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addTearDownFunction">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#131-139" title="Go to source code">addTearDownFunction</a>( <span>callable <var>$fn</var></span> )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#135-143" title="Go to source code">addTearDownFunction</a>( <span>callable <var>$fn</var></span> )</code>
 
 		<div class="description short">
 			<p>Add a tear down function for all tests in the current suite</p>
@@ -595,7 +599,7 @@ current suite</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getInstance">#</a>
-		<code><a href="source-class-Peridot.Runner.Context.html#141-153" title="Go to source code">getInstance</a>( )</code>
+		<code><a href="source-class-Peridot.Runner.Context.html#145-157" title="Go to source code">getInstance</a>( )</code>
 
 		<div class="description short">
 			<p>Singleton access to Context</p>
