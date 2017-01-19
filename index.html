@@ -47,7 +47,7 @@ type: index
             Peridot can be installed several ways:
         </p>
         <h3>Composer</h3>
-{% highlight console %}
+{% highlight shell %}
 # global composer install
 $ composer global require peridot-php/peridot
 
@@ -60,7 +60,7 @@ $ composer require peridot-php/peridot
 
         <h3>Manual install</h3>
 
-{% highlight console %}
+{% highlight shell %}
 # download the latest phar
 $ sudo wget http://peridot-php.github.io/downloads/peridot.phar -O /usr/local/bin/peridot
 
@@ -82,8 +82,8 @@ $ sudo chmod a+x /usr/local/bin/peridot
             Peridot uses the familiar <code>describe-it</code> syntax to create a clear and readable testing language.
         </p>
 
-{% highlight php startinline %}
-// arrayobject.spec.php
+{% highlight php %}
+<?php // arrayobject.spec.php
 describe('ArrayObject', function() {
     beforeEach(function() {
         $this->arrayObject = new ArrayObject(['one', 'two', 'three']);
@@ -98,7 +98,7 @@ describe('ArrayObject', function() {
 });
 {% endhighlight %}
 
-{% highlight console %}
+{% highlight text %}
 $ peridot arrayobject.spec.php
 
   ArrayObject
@@ -111,7 +111,7 @@ $ peridot arrayobject.spec.php
 
         <h2 id="peridot-cli"><code class="code">peridot</code></h2>
 
-{% highlight console %}
+{% highlight text %}
 $ peridot --help
 Usage:
   peridot [options] [files]
@@ -218,7 +218,7 @@ Options:
             Peridot's tests were written using Peridot. After cloning Peridot, you can run tests using:
         </p>
 
-{% highlight console %}
+{% highlight shell %}
 $ bin/peridot
 {% endhighlight %}
     </div>

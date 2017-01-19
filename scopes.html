@@ -55,7 +55,8 @@ return function(EventEmitterInterface $emitter) {
             By mixing the <code>WebDriverScope</code> in to our test's scopes, we have made the following possible in our tests:
         </p>
 
-{% highlight php startinline %}
+{% highlight php %}
+<?php
 describe('The home page', function() {
     it('should have a greeting', function() {
         $this->getPage('http://localhost:4000');

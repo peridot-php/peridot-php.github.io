@@ -47,7 +47,8 @@ type: leaf
     An example might look like this:
 </p>
 
-{% highlight php startinline %}
+{% highlight php %}
+<?php
 describe('TodoRepository', function () {
     beforeEach(function () {
         $interface = 'Doctrine\Common\Persistence\ObjectManager';
@@ -79,7 +80,8 @@ describe('TodoRepository', function () {
     You can make any spec or suite pending, by prefixing the function with an <strong>x</strong>.
 </p>
 
-{% highlight php startinline %}
+{% highlight php %}
+<?php
 xdescribe('A pending suite', function() {
     xcontext('when using a pending context', function() {
         xit('should have a pending spec', function() {
@@ -93,7 +95,8 @@ xdescribe('A pending suite', function() {
     Or you can simply omit the test function.
 </p>
 
-{% highlight php startinline %}
+{% highlight php %}
+<?php
 describe('A pending suite', function() {
     it('should have a pending spec');
 });
@@ -109,7 +112,8 @@ describe('A pending suite', function() {
     You can make any spec or suite "focused", by prefixing the function with an <strong>f</strong>.
 </p>
 
-{% highlight php startinline %}
+{% highlight php %}
+<?php
 describe('A suite with nested suites', function() {
     fcontext('A focused suite', function() {
         it('should execute this spec', function() {
@@ -134,7 +138,8 @@ describe('A suite with nested suites', function() {
     This allows focusing of a deeply nested spec without the pain of also marking all of its ancestors as focused.
 </p>
 
-{% highlight php startinline %}
+{% highlight php %}
+<?php
 describe('A suite with nested suites', function() {
     context('A suite with nested focused specs', function() {
         fit('should execute this spec', function() {
@@ -158,7 +163,8 @@ describe('A suite with nested suites', function() {
     If multiple specs or suites within a suite are focused, then all the focused specs will be executed:
 </p>
 
-{% highlight php startinline %}
+{% highlight php %}
+<?php
 describe('A suite with nested suites', function() {
     fit('should execute this spec', function() {
         // ...
@@ -193,7 +199,8 @@ describe('A suite with nested suites', function() {
     The linked example above demonstrates creating a custom DSL to support the following testing language:
 </p>
 
-{% highlight php startinline %}
+{% highlight php %}
+<?php
 Feature("chdir","
     As a PHP user
     I need to be able to change the current working directory",
